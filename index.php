@@ -12,7 +12,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php sscontent_content_nav( 'nav-above' ); ?>
-	
+				
 				<?php query_posts('cat=-3'); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -37,5 +37,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary .site-content -->
 
-<?php get_sidebar(); ?>
+<?php get_sidebar(); ?>BARF
 <?php get_footer(); ?>
