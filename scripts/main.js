@@ -13,24 +13,24 @@
 					$('.sticky').slideUp();
 				}
 			};
+			
+			$( function isoFilter(){
+				// Isotope setup
+				var $container = $('.filter-us').isotope({
+					itemSelector: '.thumb',
+					layoutMode: 'fitRows'
+				});
+				// On click, filter whatever is in the data-filter field
+				$('#filter').on( 'click', 'button', function() {
+					var filterValue = $( this ).attr('data-filter');
+					$container.isotope({ filter: filterValue });
+				});
+			});
 
 			$(document).ready(function() {
-				$('#photo-sel').carouFredSel({
-					auto: false,
-					pauseOnHover: true,
-					items: 5,
-					prev: '#prev2',
-					next: '#next2',
-					mousewheel: true,
-					scroll : {
-						items           : 2,
-						duration        : 200,                         
-						pauseOnHover    : true
-					},
-					swipe: {
-						onMouse: true,
-						onTouch: true
-					}
+				$('.btn-group button').click( function() { // Selector Button on/off script
+					$(this).addClass('active').siblings().removeClass('active');
 				});
 				checkY();
+				isoFilter();
 			});

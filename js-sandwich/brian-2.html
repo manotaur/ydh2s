@@ -1,0 +1,90 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body {background: #407FDB; color: #f4af4e;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function dropdowns(json, dropID) {
+			var li1 = "<li role='presentation' value='";
+			var li2 = "'><a role='menuitem' tabindex='-1' href='#' class='item";
+			$.ajax({
+            	url: json,
+				dataType: "text",
+				success: function(data) {
+                	var parsed = $.parseJSON(data);
+					for (i = 0; i < 4; i++) {
+						$(dropID + " ul").append(li1 + parsed[i].points + li2 + parsed[i].id + "'>"  + parsed[i].name + "</a></li>");
+					}
+					$("li").click(function() {
+						theParent = $(this).parents("div").attr('id');
+						console.log (theParent);
+						$("#" + theParent + " .choice").html(this.value);
+					});
+                }
+			});
+		}
+		function getResults() {
+			var trick1 = $("#d1a .choice").text();
+			var trick2 = $("#d1b .choice").text();
+			var trick3 = $("#d1c .choice").text();
+			var trick4 = $("#d1d .choice").text();
+			var theResults = parseInt(trick1) + parseInt(trick2) + parseInt(trick3) + parseInt(trick4);
+			console.log ("Results = " + theResults);
+			$("#totalPoints").html("Results = " + theResults);
+		}
+  		$(document).ready(function() {
+			dropdowns("flip.json", "#d1a");
+			dropdowns("grind.json", "#d1b");
+			dropdowns("flip.json", "#d1c");
+			dropdowns("stance.json", "#d1d");
+			
+			$("#tally").click(function() {
+				getResults();
+			});
+			
+		});
+	</script>
+	<h3>Team Name</h3>
+	<h1>Obstacle 1</h1>
+	<div class="dropdown" id="d1a">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			Flip In
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"></ul>
+		Your Choice: <span class="choice">1</span>
+	</div>
+	<div class="dropdown" id="d1b">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			Grind
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"></ul>
+		Your Choice: <span class="choice"></span>
+	</div>
+	<div class="dropdown" id="d1c">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			Flip Out
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"></ul>
+		Your Choice: <span class="choice"></span>
+	</div>
+	<div class="dropdown" id="d1d">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			Stance
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"></ul>
+		Your Choice: <span class="choice"></span>
+	</div>
+	<button type="button" class="btn" id="tally">
+		Add em up
+	</button>
+	<div id="totalPoints"></div>
+</body></html>

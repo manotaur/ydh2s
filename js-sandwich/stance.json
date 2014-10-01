@@ -1,0 +1,22 @@
+[
+{
+     "id": 0,
+     "name": "regular",
+     "points": "5"
+   },
+{
+     "id": 1,
+     "name": "nollie",
+     "points": "9"
+   },
+   {
+     "id": 2,
+     "name": "switch",
+     "points": "10"
+   },
+   {
+     "id": 3,
+     "name": "fakie",
+     "points": "7"
+   }
+]

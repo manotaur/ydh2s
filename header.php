@@ -31,31 +31,51 @@
     <meta name="description" content="">
 	<meta name="keywords" content="">
 		
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 		
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/scripts/main.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/bootstrap.min.js"></script>
 		
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div class="container">
+
 
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
-		<header id="masthead" class="site-header" role="banner" style="background: red;">
-			<hgroup id="branding">
-				<div class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</hgroup>
+		
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+ 		 <div class="container-fluid">
+    		<!-- Brand and toggle get grouped for better mobile display -->
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+      			</button>
+	  			
+      			<a class="navbar-brand" href="#">
+      				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
+	  				<h6>YOU DON'T HAVE 2 SETTLE</h6>
+      			</a>
 
-			<nav role="navigation" id="menu-wrapper" class="site-navigation main-navigation">
-				<h1 class="assistive-text"><?php _e( 'Menu', 'sscontent' ); ?></h1>
-				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sscontent' ); ?>"><?php _e( 'Skip to content', 'sscontent' ); ?></a></div>
-
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav>
-		</header>
+    		</div> <!-- end .navbar-header -->
+    		<!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li><a href="#">EVENTS</a></li>
+        			<li><a href="#">ARTICLES</a></li>
+    				<li><a href="#">PHOTOS</a></li>
+        			<li><a href="#">ABOUT</a></li>  
+       			    <li><a href="#">CONTACT</a></li>          	
+      			</ul>
+    	   </div><!-- /.navbar-collapse -->
+  		</div><!-- /.container-fluid -->
+	</nav>
+	</div><!-- end #page -->
