@@ -8,13 +8,12 @@ Template Name: Homepage
 
 <div id="home" class="container">
 	<div class="row">
-		<div class="col-xs-12 signup">
-			<p>You Don't Have To Settle is a Captain Planet-style DJ collective based out of Brooklyn.<br/>
-				We throw dance parties all over the finest borough in the land. Let's sweat.</p>
-			<div class="col-xs-3"></div>
-			<input type="text" class="col-xs-4" placeholder="Join our Mailing List">
-			<button>SIGN UP</button>
-		</div><!-- end .signup -->
+	
+<?php     if( function_exists( 'mc4wp_form' ) ) {
+    mc4wp_form();
+}
+?>
+
 	</div> <!-- end .row -->
 
 	<div class="front-content row">
