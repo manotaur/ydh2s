@@ -1,6 +1,6 @@
 <?php
-/**
- * The template for displaying Archive pages.
+/*
+  The template for displaying Archive pages.
  */
 
 add_theme_support('post-thumbnails');

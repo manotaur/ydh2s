@@ -1,15 +1,4 @@
-$(document).ready(function(){
 
-	$(".event-desc").hide();
-	$(".entry-details").hide();
-	$(".sharing").hide();
-	
-	$(".entry-info-wrap").hover(function(){
-		$(this).find(".event-desc, .entry-details, .sharing").show(400);
-	}, function(){
-		$(this).find(".event-desc, .entry-details, .sharing").hide(400);
-	});
-});
 			var startY = $('.header').offset.top + $('.header').outerHeight();
 			var startY = 158;
 
@@ -44,5 +33,4 @@ $(document).ready(function(){
 				});
 				checkY();
 				isoFilter();
-				
 			});

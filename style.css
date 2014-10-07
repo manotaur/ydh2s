@@ -82,9 +82,6 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 
 .container {}
 
-/* #content {background: fuchsia;} */
-#sidebar {float:right; width: 24%; background: yellow;}
-
 .btn-lg {border-radius: 10px;}
 .clearfix {*zoom: 1;}
 .clearfix:before,
@@ -102,7 +99,16 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .meta .price a {background: #b973f0;}
 .meta .djs a {background: aqua;}
 .meta .promoters a {background: #4cadff;}
-.meta .days-of-the-week a {background: #ff2527;}
+.days-of-the-week a {background: #ff2527;}
+
+/* Listings Pages */
+
+.listing {margin-top: 50px;}
+.listing .front-content, .listing .col-xs-10 {padding: 0;}
+.listing article {color: #fff;}
+.listing .main {padding-left: 8px;}
+.listing .entry-details a {color: #428bca;}
+.listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */

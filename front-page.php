@@ -3,16 +3,11 @@
 Template Name: Homepage
 */
 	add_theme_support('post-thumbnails');
-?>
-		<?php get_header(); ?>
+	get_header(); ?>
 
 <div id="home" class="container">
 	<div class="row">
-	
-<?php     if( function_exists( 'mc4wp_form' ) ) {
-    mc4wp_form();
-}
-?>
+		<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } ?>
 
 	</div> <!-- end .row -->
 
@@ -24,7 +19,7 @@ Template Name: Homepage
 					$featargs = array(
 						'post_status' => 'future,publish',
 						'category_name' => 'Featured',
-						'posts_per_page' => 8
+						'posts_per_page' => 3
 					);
 					query_posts($featargs);
 				?>
@@ -54,22 +49,23 @@ Template Name: Homepage
 				<div class="clearfix"></div>
 			
       		<div class="posts row filter-us">
-				<?php // Gets all event posts from the last week and the last 24 hours  
-					query_posts('category_name=Event&post_status=future,publish'); ?>
+				<?php // Gets all event posts from the last week and the last 24 hours
+					$eventargs = array(
+						'category_name' => 'Event',
+						'post_status' => 'future,publish',
+						'posts_per_page' => 6
+					);
+					query_posts($eventargs); ?>
 			
 				<?php if (have_posts()) : ?>
 					<?php while (have_posts()) : the_post(); ?>
-							
 						<?php 
 							$weekbegin=strtotime("-1 day");
 							$weekend=strtotime("+1 week");
 							$post_age = get_post_time();
-							if ($post_age >= $weekbegin && $post_age <= $weekend) { ?>
-							
-							<?php include 'post-thumb.php'; // Post thumbnail ?>
-							<!-- <div class="eventCard">< ? p h p include 'post-list.php'; ?></div> -->
-						<?php } ?>	
-					
+							if ($post_age >= $weekbegin && $post_age <= $weekend) { 
+								include 'post-thumb.php'; // Post thumbnail
+							} ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div><!-- end .posts -->

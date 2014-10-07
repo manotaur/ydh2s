@@ -56,15 +56,15 @@
 		</div><!-- .meta -->
 		
 		<div class="sharing">
-		<div>SHARE</div>
+			<div>SHARE</div>
 			<span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-   			<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"></a>
-   		</span>
-		<span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
-		</span>
+				<i class="fa fa-square fa-stack-2x"></i>
+				<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"></a>
+			</span>
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
+			</span>
 		</div>
 	</div></div><!-- .entry-info -->
 	
@@ -74,4 +74,4 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'sscontent' ), 'after' => '</div>' ) ); ?>
 	</div> .entry-content -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post -->
