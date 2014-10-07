@@ -1,45 +1,54 @@
+<?php while ( have_posts() ) : the_post(); ?>
 <div class="single event row">
-	<article id="post-<?php the_ID(); ?>">
-		<div class="flyer col-xs-3">
-			<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
+	
+	<header class="entry-header col-xs-12">
+		<div class="bg-flyer">
+			<?php echo get_the_post_thumbnail($page->ID, 'large'); ?>
 		</div>
-		<div class="main col-xs-9">
-			<header class="entry-header">
-				<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 			
-				<h5><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
-					<?php echo get_post_time('F j'); ?></h5>	
-			</header><!-- .entry-header -->
+		<h3><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
+			<?php echo get_post_time('F j'); ?></h3>
 		
 			<div class="entry-details meta row">
-				<div class="venue loc col-xs-5">
-					<h6>Venue</h6>
+				<div class="venue loc col-xs-12">
+					<h4>Venue</h4>
 					<?php the_terms( $post->ID, 'venues') ?>
 				</div>
-				<div class="neighborhood nabe col-xs-5">	
-					<h6>Neighborhood</h6>
+				<div class="neighborhood nabe col-xs-12">	
+					<h4>Neighborhood</h4>
 					<?php the_terms( $post->ID, 'neighborhood') ?>
 				</div>
-				<div class="price col-xs-2">	
-					<h6>Price</h6>
+				<div class="price col-xs-12">	
+					<h4>Price</h4>
 					<?php the_terms( $post->ID, 'price') ?>
 				</div>
 				<div class="djs dj col-xs-12">
-					<h6>Music by</h6>
+					<h4>Music by</h4>
 					<div class="promoters">
 						<?php the_terms( $post->ID, 'promoters', '', '', ''); ?>
 					</div>
 					<?php the_terms( $post->ID, 'djs', '', '', ''); ?>
 				</div>
 				<div class="genre col-xs-12">
-					<h6>Genre(s)</h6>
+					<h4>Genre(s)</h4>
 					<?php the_terms( $post->ID, 'genre', '', '', ''); ?>
 				</div>
 			</div><!-- end .entry-details -->
-
+	</header><!-- .entry-header -->	
+	
+	<article id="post-<?php the_ID(); ?>" class="front-content col-xs-9">
+		<div class="flyer col-xs-4">
+			<?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?>
+		</div>
+		<div class="main col-xs-8">
 			<div class="entry-summary row">
 				<?php the_content(); ?>
-			</div><!-- .entry-summary -->
+			</div>
 		</div>
 	</article><!-- #post-<?php the_ID(); ?> -->
+	<div class="col-xs-3">
+		<?php get_sidebar(); ?>
+	</div>
 </div><!-- end .single .event .row -->
+<?php endwhile; ?>

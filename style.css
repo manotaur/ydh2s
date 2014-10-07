@@ -1,12 +1,13 @@
-body {background: url('img/backgroundimage.jpg') #000 center top no-repeat; font-family: Helvetica, Arial, sans-serif;}
+body {background: url('img/backgroundimage.jpg') #000 center top no-repeat; font-family: Helvetica, Arial, sans-serif; margin-top: 31px;}
 ul {padding: 0;}
 li {list-style: none;}
 h1 {}
 h2, h3, h4, h5, h6, .btn {}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, 
+.col-xs-12 {padding: 0;}
 a:link {text-decoration: none;}
 
 .row {margin: 0;}
-.col-xs-12 {padding: 0;}
 
 .clearfix {*zoom: 1;}
 .clearfix:before,
@@ -27,7 +28,7 @@ h3.event-heading {text-align: center; height: 112px; background: url('img/bg-hea
 
 
 .signup {color: white; text-align: center; font-size: 18px; padding-bottom: 40px;}
-.signup p {padding: 76px 0 8px 0;}
+.signup p {padding: 0 0 8px 0;}
 .signup input {height: 40px; border: 1px solid #424242; border-radius: 5px; -moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); -webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);}
 .signup button, .all-events a {width: 134px; height: 39px; background: url('img/btn-signup.png') no-repeat; color: #fff; padding-top: 1px; border: none; float: left; margin-left: 20px;}
 .signup input[type="submit"] {opacity: 0;}
@@ -40,7 +41,7 @@ article.thumb {height: 480px; float: left; position: relative;}
 .posts {padding: 0;}
 .posts .col-xs-4 {padding: 0; overflow: hidden;}
 .thumb {display: table; vertical-align: middle;}
-.thumb .flyer {position: absolute; z-index: 1;}
+.flyer img {position: absolute; z-index: 1;}
 .thumb .entry-info-wrap {z-index: 2; position: relative; vertical-align: bottom; display: table-cell; width: 100%;}
 .thumb .entry-info {background: rgba(0,0,0,0.8); color: #fff; padding: 15px;}
 .entry-desc, h3.entry-title, .thumb .meta, .entry-details {border-bottom: 4px solid #fff; padding-bottom: 6px;}
@@ -80,18 +81,9 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 
 /* END CSS BY DAVE */
 
-.container {}
-
 .btn-lg {border-radius: 10px;}
-.clearfix {*zoom: 1;}
-.clearfix:before,
-.clearfix:after {display: table; content: ""; line-height: 0;}
-.clearfix:after {clear: both;}
-
-.eventCard {background: olive; width: 100%; padding: 15px 0 15px 0;}
 	
 /* Events */
-
 .meta a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
 .meta .venue a {background: #2a25ed; color: #ddd;}
 .meta .neighborhood a {background: #db009d;}
@@ -102,7 +94,6 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .days-of-the-week a {background: #ff2527;}
 
 /* Listings Pages */
-
 .listing {margin-top: 50px;}
 .listing .front-content, .listing .col-xs-10 {padding: 0;}
 .listing article {color: #fff;}
@@ -110,6 +101,17 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .listing .entry-details a {color: #428bca;}
 .listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
 .listing .flyer {overflow: hidden; padding: 0;}
+
+/* Single event Page */
+.single header {padding: 0; overflow: hidden;}
+.single .front-content {padding-left: 0; min-height: 600px;}
+.single .flyer {overflow: hidden; min-height: 600px;}
+.single .bg-flyer {position: absolute; z-index: 0;}
+.single header h1, .single header h3 {position: relative; z-index: 2; color: #fff; text-shadow: 2px 2px #000; margin: 50px 0 0 30px;}
+.single header h3 {margin-top: 0;}
+.single header h4 {color: #fff; text-shadow: 2px 2px #000;}
+.single .meta {margin: 0 0 25px 30px;}
+.single .entry-summary {padding: 15px; color: #fff;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */
