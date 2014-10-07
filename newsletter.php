@@ -1,19 +1,27 @@
 <?php
-/**
- * The template for displaying posts from the edditorial category, i.e. all blog posts
- */
+/*
+Template Name: Newsletter
+*/
 add_theme_support('post-thumbnails');
 get_header(); ?>
 
+<header class="page-header">
+	<h1 class="page-title">
+		Newsletters
+	</h1>
+</header>
+
 	<div id="content" class="newsletter">
+	
+	<?php $newsargs = array(
+			'category_name' => 'newsletter',
+			'posts_per_page' => 1
+			);
+			query_posts($newsargs); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="page-title">
-						Newsletters
-					</h1>
-				</header>
+
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
