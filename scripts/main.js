@@ -1,22 +1,21 @@
-$(document).ready(function(){
-
-	$(".event-desc").hide();
-	$(".entry-details").hide();
-	$(".sharing").hide();
-	
-	$(".entry-info-wrap").hover(function(){
-		$(this).find(".event-desc, .entry-details, .sharing").show(400);
-	}, function(){
-		$(this).find(".event-desc, .entry-details, .sharing").hide(400);
-	});
-});
-
 var startY = $('.header').offset.top + $('.header').outerHeight();
 var startY = 158;
 
 $(window).scroll(function(){
 	checkY();
 });
+
+function thumbHide(){
+	$(".featured .entry-desc").hide();
+	$(".events .entry-desc").hide();
+	$(".entry-details").hide();
+	$(".sharing").hide();
+	$(".entry-info-wrap").hover(function(){
+		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
+	}, function(){
+		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
+	});
+};
 
 function checkY(){
 	if( $(window).scrollTop() > startY ){
@@ -26,7 +25,7 @@ function checkY(){
 	}
 };
 			
-$( function isoFilter(){
+function isoFilter(){
 	// Isotope setup
 	var $container = $('.filter-us').isotope({
 		itemSelector: '.thumb',
@@ -37,7 +36,7 @@ $( function isoFilter(){
 		var filterValue = $( this ).attr('data-filter');
 		$container.isotope({ filter: filterValue });
 	});
-});
+};
 
 $(document).ready(function() {
 	$('.btn-group button').click( function() { // Selector Button on/off script
@@ -45,4 +44,5 @@ $(document).ready(function() {
 	});
 	checkY();
 	isoFilter();
+	thumbHide();
 });

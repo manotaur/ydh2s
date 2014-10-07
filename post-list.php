@@ -1,5 +1,7 @@
 <article id="post-<?php the_ID(); ?>" class="list row">
-	<div class="flyer col-xs-3" style="background: olive"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
+	<div class="flyer col-xs-3">
+		<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
+	</div>
 	<div class="main col-xs-9">
 		<header class="entry-header">
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>

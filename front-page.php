@@ -7,7 +7,7 @@ Template Name: Homepage
 
 <div id="home" class="container">
 	<div class="row">
-		<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } ?>
+		<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
 
 	</div> <!-- end .row -->
 
@@ -46,8 +46,7 @@ Template Name: Homepage
 					<button type="button" class="btn btn-default" data-filter=".indie">Indie</button>
 					<button type="button" class="btn btn-default" data-filter=".Free">Free</button>
 				</div>
-				<div class="clearfix"></div>
-			
+			</div>
       		<div class="posts row filter-us">
 				<?php // Gets all event posts from the last week and the last 24 hours
 					$eventargs = array(
@@ -68,6 +67,7 @@ Template Name: Homepage
 							} ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
+				<div class="clearfix"></div>
 			</div><!-- end .posts -->
 			<div class="all-events">
 				<a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a>

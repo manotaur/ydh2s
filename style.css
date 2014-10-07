@@ -109,6 +109,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .listing .main {padding-left: 8px;}
 .listing .entry-details a {color: #428bca;}
 .listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
+.listing .flyer {overflow: hidden; padding: 0;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */

@@ -20,7 +20,12 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php include 'post-list.php'; ?>
+					<?php 
+						$weekbegin=strtotime("-1 day");
+						$post_age = get_post_time();
+						if ($post_age >= $weekbegin) { 
+							include 'post-list.php'; // Post Listing
+						} ?>
 				<?php endwhile; ?>
 
 				<?php else : ?>
