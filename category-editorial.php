@@ -4,14 +4,14 @@
  */
 add_theme_support('post-thumbnails');
 get_header(); ?>
-<div id="content" class="container editorial">
+<div id="content" class="container editorial listing">
 	<h1 class="page-title">Articles</h1>
 	
 	<div class="front-content">
 		<div class="col-xs-10 list">
 			<?php if ( have_posts() ) : ?>		
 			<?php while ( have_posts() ) : the_post(); ?>
-			<?php include 'post-list.php'; ?>
+			<?php include 'article-list.php'; ?>
 			<?php endwhile; ?>
 
 			<?php else : ?>
