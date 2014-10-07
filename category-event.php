@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php 
+					<?php // Hide any events that have happened in the past and only show future events
 						$weekbegin=strtotime("-1 day");
 						$post_age = get_post_time();
 						if ($post_age >= $weekbegin) { 
