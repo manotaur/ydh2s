@@ -10,10 +10,10 @@ function thumbHide(){
 	$("#home .events .entry-desc").hide();
 	$("#home .entry-details").hide();
 	$("#home .sharing").hide();
-	$(".entry-info-wrap").hover(function(){
-		$(this).find("#home .entry-desc, #home .entry-details, #home .sharing").show(400);
+	$("#home .entry-info-wrap").hover(function(){
+		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
 	}, function(){
-		$(this).find("#home .entry-desc, #home .entry-details, #home .sharing").hide(400);
+		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
 	});
 };
 
