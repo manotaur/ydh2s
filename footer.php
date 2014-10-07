@@ -1,8 +1,7 @@
 <div class="container">
 
-<div class="row">
-	<footer class="col-xs-10 col-xs-offset-1">
-	<div class="navbar-right">
+<footer class="row">
+	<div class="share-buttons col-xs-12">
 		<span class="fa-stack fa-lg">
 			<i class="fa fa-circle fa-stack-2x"></i>
    			<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
@@ -12,6 +11,6 @@
 			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
 		</span>
 	</div>
-	</footer>
-</div><!-- end .row -->
+</footer>
+
 </div><!-- end .container -->

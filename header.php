@@ -60,7 +60,7 @@
         			<span class="icon-bar"></span>
       			</button>
 	  			
-      			<a class="navbar-brand" href="#">
+      			<a class="navbar-brand" href="http://localhost/ydh2s.com/">
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
 	  				<h6>YOU DON'T HAVE 2 SETTLE</h6>
       			</a>
@@ -69,11 +69,11 @@
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
-        			<li><a href="#">EVENTS</a></li>
-        			<li><a href="#">ARTICLES</a></li>
-    				<li><a href="#">PHOTOS</a></li>
-        			<li><a href="#">ABOUT</a></li>  
-       			    <li><a href="#">CONTACT</a></li>          	
+        			<li><a href="http://localhost/ydh2s.com/category/event/">EVENTS</a></li>
+        			<li><a href="http://localhost/ydh2s.com/category/editorial/">ARTICLES</a></li>
+        			<li><a href="http://localhost/ydh2s.com/about">ABOUT</a></li>
+        			<li><a href="http://localhost/ydh2s.com/newsletter/">NEWSLETTER</a></li> 
+       			    <li><a href="http://localhost/ydh2s.com/contact">CONTACT</a></li>          	
       			</ul>
     	   </div><!-- /.navbar-collapse -->
   		</div><!-- /.container-fluid -->

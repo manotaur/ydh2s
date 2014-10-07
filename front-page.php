@@ -19,7 +19,7 @@ Template Name: Homepage
 
 	<div class="front-content row">
 		<div class="col-xs-12 featured"><!-- Featured Events -->
-			<h3 class="section-heading row">FEATURED EVENTS</h3>
+			<h3 class="section-heading event-heading row">FEATURED EVENTS</h3>
 			<div class="posts row">
 				<?php 
 					$featargs = array(
@@ -40,7 +40,7 @@ Template Name: Homepage
 		</div><!-- end .featured -->
 
 		<div class="col-xs-12 events"><!-- All the week's events -->
-			<h3 class="section-heading row">MORE EVENTS</h3>
+			<h3 class="section-heading event-heading row">MORE EVENTS</h3>
 			<?php // echo "Today is ".date(l); ?>
 			<div class="filtering col-xs-12">
 				<h4>FILTER</h4>
@@ -74,10 +74,13 @@ Template Name: Homepage
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</div><!-- end .posts -->
+			<div class="all-events">
+				<a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a>
+			</div>
 		</div><!-- end .events -->
 								
 		<div class="row editorial">
-			<h3 class="section-heading-left">ARTICLES</h3>
+			<h3 class="section-heading row">ARTICLES</h3>
 			<div class="posts row">
 				<?php 
 					$editargs = array(
@@ -93,10 +96,7 @@ Template Name: Homepage
 					<?php endwhile; ?>
 				<?php endif; ?>
 				
-				<div class="clearfix"></div>
 			</div>
-			
-			<div class="clearfix"></div>
 		</div><!-- end .editorial -->
 				
 	</div><!-- end .front-content -->
