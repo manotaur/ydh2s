@@ -56,7 +56,15 @@
 		</div><!-- .meta -->
 		
 		<div class="sharing">
-			Sharing
+		<div>SHARE</div>
+			<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+   			<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"></a>
+   		</span>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
+		</span>
 		</div>
 	</div></div><!-- .entry-info -->
 	
