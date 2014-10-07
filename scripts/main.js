@@ -6,14 +6,14 @@ $(window).scroll(function(){
 });
 
 function thumbHide(){
-	$(".featured .entry-desc").hide();
-	$(".events .entry-desc").hide();
-	$(".entry-details").hide();
-	$(".sharing").hide();
+	$("#home .featured .entry-desc").hide();
+	$("#home .events .entry-desc").hide();
+	$("#home .entry-details").hide();
+	$("#home .sharing").hide();
 	$(".entry-info-wrap").hover(function(){
-		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
+		$(this).find("#home .entry-desc, #home .entry-details, #home .sharing").show(400);
 	}, function(){
-		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
+		$(this).find("#home .entry-desc, #home .entry-details, #home .sharing").hide(400);
 	});
 };
 

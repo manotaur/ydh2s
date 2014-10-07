@@ -4,31 +4,27 @@
  */
 add_theme_support('post-thumbnails');
 get_header(); ?>
-
-	<div id="content" class="editorial">
-
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<h1 class="page-title">
-						Editorial
-					</h1>
-				</header>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php include 'post-thumb.php'; ?>
-
-				<?php endwhile; ?>
+<div id="content" class="container editorial">
+	<h1 class="page-title">Articles</h1>
+	
+	<div class="front-content">
+		<div class="col-xs-10 list">
+			<?php if ( have_posts() ) : ?>		
+			<?php while ( have_posts() ) : the_post(); ?>
+			<?php include 'post-list.php'; ?>
+			<?php endwhile; ?>
 
 			<?php else : ?>
-
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
-
 			<?php endif; ?>
+			
+		</div><!-- .list -->		
+		<div class="col-xs-2"><?php get_sidebar(); ?></div>
+		<div class="clearfix"></div>
+	</div><!-- .front-content -->
 
-			</div><!-- #content -->
-		</section><!-- #primary .site-content -->
+</div><!-- #content -->
+</section><!-- #primary .site-content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
