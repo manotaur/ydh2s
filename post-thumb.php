@@ -2,7 +2,8 @@
 <article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-xs-4">	
 	<div class="flyer"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
 	
-	<div class="entry-info-wrap"><div class="entry-info">
+	<div class="entry-info-wrap">
+	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 		<h5><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
 				<?php echo get_post_time('F j'); ?></h5>
@@ -68,7 +69,8 @@
 				<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
 			</span>
 		</div>
-	</div></div><!-- .entry-info -->
+	</div><!-- .entry-info -->
+	</div><!-- .entry-info-wrap -->
 	
 	<!--
 	<div class="entry-content">
