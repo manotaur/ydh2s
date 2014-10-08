@@ -100,7 +100,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .listing .main {padding-left: 8px;}
 .listing .entry-details a {color: #428bca;}
 .listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
-.listing .flyer {overflow: hidden; padding: 0;}
+.listing .flyer {overflow: hidden; padding: 0; min-height: 375px;}
 
 /* Single event Page */
 .single header {padding: 0; overflow: hidden;}
