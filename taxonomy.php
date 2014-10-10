@@ -19,17 +19,31 @@ get_header(); ?>
 		
 		<div class="front-content">
 			<div class="col-xs-10 list">
-				<?php while ( have_posts() ) : the_post(); 
-					if ( in_category('event') ) : // Only include 'event' posts ?>
-						<?php include 'post-list.php'; ?>
-					<?php endif; 
-				endwhile; ?>
-
-	<?php else : ?>
+				<?php
+					$the_tax = $the_tax->labels->name;
+					$term = $term->slug;
+					echo $the_tax;
+					echo $term;
+					$taxArgs = array(
+						'date_query' => array(
+							array( // Show events less than a day old
+								'after' => '-1 day'
+							),
+						),
+						'category_name' => 'Event',
+						'order' => 'ASC',
+						$the_tax => $term->slug
+					);
+					$the_query = new WP_Query($taxArgs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-list.php'; 
+					}
+	else : ?>
 		<div class="front-content">
 			<div class="col-xs-10 list">
-				<p><?php _e('Sorry, no posts matched your criteria'); ?></p>
-	<?php endif; ?>
+				<?php _e('<p>Sorry, no posts matched your criteria</p>');
+	endif; ?>
 			</div>		
 			<div class="col-xs-2"><?php get_sidebar(); ?></div>
 			<div class="clearfix"></div>

@@ -9,26 +9,24 @@ get_header(); ?>
 
 	<div class="front-content">
 		<div class="col-xs-10 list">
-			<?php 
+			<?php
+				$today = getdate();
 				$eventArgs = array(
-					'post_status' => 'future,publish',
+						'date_query'        => array(
+							array( // Show events less than a day old
+								'after' => '-1 day'
+							),
+						),
 					'category_name' => 'Event',
-					'posts_per_page' => 10
+					'order' => 'ASC'
 				);
 				query_posts($eventArgs);
-			?>
-			<?php if ( have_posts() ) : ?>
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+						include 'post-list.php'; // Post Listing
+					endwhile;
 
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php // Hide any events that have happened in the past and only show future events
-						$weekbegin=strtotime("-1 day");
-						$post_age = get_post_time();
-						if ($post_age >= $weekbegin) { 
-							include 'post-list.php'; // Post Listing
-						} ?>
-				<?php endwhile; ?>
-
-				<?php else : ?>
+				else : ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
 			<?php endif; ?>
 		</div>		

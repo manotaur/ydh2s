@@ -15,20 +15,23 @@ Template Name: Homepage
 		<div class="col-xs-12 featured"><!-- Featured Events -->
 			<h3 class="section-heading event-heading row">FEATURED EVENTS</h3>
 			<div class="posts row">
-				<?php 
+				<?php			
 					$featargs = array(
-						'post_status' => 'future,publish',
+						'date_query'        => array(
+							array( // Show events less than a day old
+								'after' => '-23 hours'
+							),
+						),
 						'category_name' => 'Featured',
-						'posts_per_page' => 3
+						'order' => 'ASC'
 					);
 					query_posts($featargs);
+					if (have_posts()) :
+						while (have_posts()) : the_post();
+							include 'post-thumb.php'; // Post a thumbnail of the event
+						endwhile;
+					endif; 
 				?>
-					
-				<?php if (have_posts()) : ?>
-					<?php while (have_posts()) : the_post(); ?>
-						<?php include 'post-thumb.php'; ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
 				<div class="clearfix"></div>
 			</div><!-- end .posts -->
 		</div><!-- end .featured -->
@@ -49,25 +52,24 @@ Template Name: Homepage
 			</div>
 			<div class="clearfix"></div>
       		<div class="posts row filter-us">
-				<?php // Gets all event posts from the last week and the last 24 hours
-					$eventargs = array(
+				<?php
+					$eventArgs = array(
+						'date_query'        => array(
+							array( // Show events less than a day old, no more than a week upcoming
+								'after' => '-23 hours',
+								'before' => '+1 week'
+							),
+						),
 						'category_name' => 'Event',
-						'post_status' => 'future,publish',
+						'order' => 'ASC',
 						'posts_per_page' => 6
 					);
-					query_posts($eventargs); ?>
-			
-				<?php if (have_posts()) : ?>
-					<?php while (have_posts()) : the_post(); ?>
-						<?php 
-							$weekbegin=strtotime("-1 day");
-							$weekend=strtotime("+1 week");
-							$post_age = get_post_time();
-							if ($post_age >= $weekbegin && $post_age <= $weekend) { 
-								include 'post-thumb.php'; // Post thumbnail
-							} ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+					query_posts($eventArgs);
+					if (have_posts()) :
+						while (have_posts()) : the_post();
+							include 'post-thumb.php'; // Post thumbnail
+						endwhile;
+					endif; ?>
 			</div><!-- end .posts -->
 			<div class="all-events">
 				<a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a>
@@ -83,13 +85,11 @@ Template Name: Homepage
 						'posts_per_page' => 2
 					);
 					query_posts($editargs);
-				?>
-					
-				<?php if (have_posts()) : ?>
-					<?php while (have_posts()) : the_post(); ?>
-						<?php include 'article-thumb.php'; ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+					if (have_posts()) :
+						while (have_posts()) : the_post();
+							include 'article-thumb.php';
+						endwhile;
+					endif; ?>
 				
 			</div>
 		</div><!-- end .editorial -->
