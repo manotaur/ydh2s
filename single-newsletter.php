@@ -1,7 +1,4 @@
 <?php
-/*
-Template Name: Newsletter
-*/
 add_theme_support('post-thumbnails');
 get_header(); ?>
 <div class="container listing">
@@ -9,23 +6,11 @@ get_header(); ?>
 	<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
 
 	<h1 class="page-title">Newsletters</h1>
-	
-	<?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-	<?php the_content(); ?>
-	<?php endwhile; ?>
-	<?php endif; ?>
-			
 	<div class="front-content">
 		<div class="col-xs-10">
 	
-			<?php $newsargs = array(
-				'category_name' => 'newsletter',
-				'posts_per_page' => 1
-				);
-				query_posts($newsargs); ?>
 			<?php if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>		
 			<?php include 'newsletter-thumb.php'; ?>
 			<?php endwhile; ?>
 			<?php else : ?>

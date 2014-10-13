@@ -11,7 +11,8 @@
 				<?php echo get_post_time('F j'); ?></h5> 
 				
 -->
-
+<!-- don't need title, since it's already in the content
+		<?php the_title(); ?>  -->
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
 	

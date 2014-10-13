@@ -10,10 +10,9 @@
 				<?php echo get_post_time('F j'); ?></h5>	
 		</header><!-- .entry-header -->
 		
-		<?php the_tags(); ?>
-
 		<div class="entry-summary row">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sscontent' ) ); ?>
 		</div><!-- .entry-summary -->
+		<?php the_tags(); ?>
 	</div><!-- .main -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -22,6 +22,11 @@ a:link {text-decoration: none;}
 .navbar-header img.logo {width: 110px;}
 .navbar-default .nav li a {color: white; padding: 23px 15px 0 15px;}
 
+/* removes placeholder text in input field on focus */
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+
 /* CSS for the modal button:      */
 .close {color: white; opacity: 1;}
 
