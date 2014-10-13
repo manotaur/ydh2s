@@ -7,7 +7,7 @@ get_header(); ?>
 <div id="content" class="container editorial listing">
 	<h1 class="page-title">Articles</h1>
 	
-	<div><!-- removed .front-content class to remove black background -->
+	<div class="front-content">
 		<div class="col-xs-10 list">
 			<?php if ( have_posts() ) : ?>		
 			<?php while ( have_posts() ) : the_post(); ?>
