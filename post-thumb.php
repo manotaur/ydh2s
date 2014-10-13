@@ -5,7 +5,9 @@
 	<div class="entry-info-wrap">
 	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-		<h5><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
+		
+<!-- dayoftheweek was in a div that put it on its own line, so I took out the div and added .days-of-the-week to h5 -Dave -->
+		<h5 class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?>
 				<?php echo get_post_time('F j'); ?></h5>
 
 		<div class="entry-desc event-desc">

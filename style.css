@@ -83,6 +83,7 @@ h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .editorial h5 {margin-top: 0;}
 .editorial article {height: auto;}
 .editorial .image {max-height: 300px; overflow: hidden;}
+.meta .tags a {background: orange;}
 
 footer {padding: 4px 10px 70px 0; text-align: right;}
 

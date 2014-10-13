@@ -91,7 +91,8 @@ Template Name: Homepage
 						endwhile;
 					endif; ?>
 				
-			</div>
+			</div><!-- .posts -->
+		<h3><a href="http://localhost/ydh2s.com/category/editorial/">See More Articles</a></h3>
 		</div><!-- end .editorial -->
 				
 	</div><!-- end .front-content -->

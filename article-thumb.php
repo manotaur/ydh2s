@@ -18,7 +18,7 @@
 		<div class="meta">
 			<!-- Tags only, since this is an article post -->
 			<div class="tags">
-				<?php the_tags(); ?>
+				<?php the_tags("",""); ?>
 			</div>
 		</div><!-- .meta -->
 		<div class="clearfix"></div>

@@ -13,6 +13,11 @@
 		<div class="entry-summary row">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sscontent' ) ); ?>
 		</div><!-- .entry-summary -->
-		<?php the_tags(); ?>
+		<div class="meta">
+			<!-- Tags only, since this is an article post -->
+			<div class="tags">
+				<?php the_tags("",""); ?>
+			</div>
+		</div><!-- .meta -->
 	</div><!-- .main -->
 </article><!-- #post-<?php the_ID(); ?> -->
