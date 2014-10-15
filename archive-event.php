@@ -47,10 +47,20 @@ get_header(); ?>
 		<div class="front-content">
 			<div class="col-xs-10 list">
 				<?php
-					
-					while ( have_posts() ) : the_post();
-						include 'post-list.php'; ?>
-				<?php endwhile ?>
+					$archArgs = array(
+					//	'date_query' => array(
+					//		array( // Show events less than a day old
+					//			'after' => '-1 day'
+					//		),
+					//	),
+						'category_name' => 'Event',
+						'order' => 'ASC'
+					);
+					$the_query = new WP_Query($archArgs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-list.php'; 
+					} ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">

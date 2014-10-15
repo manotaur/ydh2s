@@ -20,10 +20,9 @@ get_header(); ?>
 		<div class="front-content">
 			<div class="col-xs-10 list">
 				<?php
-					$the_tax = $the_tax->labels->name;
-					$term = $term->slug;
-					echo $the_tax;
-					echo $term;
+					$taxonomy = $the_tax->labels->name;
+					$taxonomy = strtolower($taxonomy);
+					$slug= $term->slug;
 					$taxArgs = array(
 						'date_query' => array(
 							array( // Show events less than a day old
@@ -32,14 +31,15 @@ get_header(); ?>
 						),
 						'category_name' => 'Event',
 						'order' => 'ASC',
-						$the_tax => $term->slug
+						$taxonomy => $slug
 					);
 					$the_query = new WP_Query($taxArgs);
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
 						include 'post-list.php'; 
-					}
-	else : ?>
+					} ?>
+				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
+	<?php else : ?>
 		<div class="front-content">
 			<div class="col-xs-10 list">
 				<?php _e('<p>Sorry, no posts matched your criteria</p>');

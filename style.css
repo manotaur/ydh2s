@@ -109,17 +109,21 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .listing .entry-details a {color: #428bca;}
 .listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left;}
 .listing .flyer {overflow: hidden; padding: 0; min-height: 375px;}
+.next-prev {text-align: center; color: #fff; font-size: 18px; padding: 8px;}
+.next-prev a {color: #fff; padding: 5px;}
+.next-prev a:hover {background: #333;}
 
 /* Single event Page */
-.single header {padding: 0; overflow: hidden;}
+.single header {padding: 0; overflow: hidden;} 
+.single .header-info {background: rgba(0,0,0,0.5); z-index: 2; position: relative; padding: 50px 0 25px 30px;}
 .single .front-content {padding-left: 0; min-height: 600px;}
 .single .flyer {overflow: hidden; min-height: 600px;}
 .single .bg-flyer {position: absolute; z-index: 0;}
-.single header h1, .single header h3 {position: relative; z-index: 2; color: #fff; text-shadow: 2px 2px #000; margin: 50px 0 0 30px;}
+.single header h1, .single header h3 {position: relative; z-index: 2; color: #fff; text-shadow: 2px 2px #000;}
 .single header h3 {margin-top: 0;}
 .single header h4 {color: #fff; text-shadow: 2px 2px #000;}
-.single .meta {margin: 0 0 25px 30px;}
 .single .entry-summary {padding: 15px; color: #fff;}
+.single .front-content {padding: 0;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */
