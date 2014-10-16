@@ -1,6 +1,6 @@
 <?php
 /*
-	Displays posts by date
+	I don't think we're using this page, it can probably get deleted
 */
 add_theme_support('post-thumbnails');
 get_header(); ?>

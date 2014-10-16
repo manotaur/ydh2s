@@ -23,7 +23,8 @@ Template Name: Homepage
 							),
 						),
 						'category_name' => 'Featured',
-						'order' => 'ASC'
+						'order' => 'ASC',
+						'posts_per_page' => 3
 					);
 					query_posts($featargs);
 					if (have_posts()) :
@@ -35,6 +36,30 @@ Template Name: Homepage
 				<div class="clearfix"></div>
 			</div><!-- end .posts -->
 		</div><!-- end .featured -->
+		<div class="col-xs-12 picks"><!-- Featured Events -->
+			<h3 class="section-heading event-heading row">OUR PICKS</h3>
+			<div class="posts row">
+				<?php			
+					$featargs = array(
+						'date_query'        => array(
+							array( // Show events less than a day old
+								'after' => '-23 hours'
+							),
+						),
+						'category_name' => 'Pick',
+						'order' => 'ASC',
+						'posts_per_page' => 3
+					);
+					query_posts($featargs);
+					if (have_posts()) :
+						while (have_posts()) : the_post();
+							include 'post-thumb.php'; // Post a thumbnail of the event
+						endwhile;
+					endif; 
+				?>
+				<div class="clearfix"></div>
+			</div><!-- end .posts -->
+		</div><!-- end .picks -->
 
 		<div class="col-xs-12 events"><!-- All the week's events -->
 			<h3 class="section-heading event-heading row">MORE EVENTS</h3>

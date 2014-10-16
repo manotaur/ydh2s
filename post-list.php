@@ -23,8 +23,15 @@
 		<header class="entry-header">
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			
-			<h5><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
-				<?php echo get_post_time('F j'); ?></h5>	
+			<div class="day-date col-xs-12"><h5>
+				<?php $date_week = get_post_time('l');
+					$date_month = get_post_time('F');
+					$date_month_num = get_post_time('n');
+					$date_day = get_post_time('j');
+					$date_year = get_post_time('Y');
+					echo "<a href='http://localhost/ydh2s.com/$date_year/$date_month_num/$date_day'>
+						$date_week, $date_month $date_day</a>";
+				?></h5></div>
 		</header><!-- .entry-header -->
 		
 		<div class="entry-details meta row">

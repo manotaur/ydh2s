@@ -6,9 +6,15 @@
 	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 		
-<!-- dayoftheweek was in a div that put it on its own line, so I took out the div and added .days-of-the-week to h5 -Dave -->
-		<h5 class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?>
-				<?php echo get_post_time('F j'); ?></h5>
+		<div class="day-date col-xs-12">
+				<?php $date_week = get_post_time('l');
+					$date_month = get_post_time('F');
+					$date_month_num = get_post_time('n');
+					$date_day = get_post_time('j');
+					$date_year = get_post_time('Y');
+					echo "<a href='http://localhost/ydh2s.com/$date_year/$date_month_num/$date_day'>
+						$date_week, $date_month $date_day</a>";
+				?></div>
 
 		<div class="entry-desc event-desc">
 			<?php the_excerpt(); ?>
@@ -55,7 +61,8 @@
 				<?php the_terms( $post->ID, 'promoters', '', '', ''); ?>
 			</div>
 			<div class="days-of-the-week">
-				<?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?>
+				<?php // For now, replaced by linking the full date
+					// the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?>
 			</div>
 			<div class="clearfix"></div>
 		</div><!-- .meta -->

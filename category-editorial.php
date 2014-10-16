@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div><!-- .list -->		
-		<div class="col-xs-2"><?php get_sidebar(); ?></div>
+		<div class="col-xs-2"><?php get_sidebar('article'); ?></div>
 		<div class="clearfix"></div>
 	</div><!-- .front-content -->
 

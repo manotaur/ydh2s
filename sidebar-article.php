@@ -15,11 +15,11 @@
 			</aside> -->
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'sscontent' ); ?></h1>
-				
+				<h1 class="widget-title"><?php _e( 'More Articles', 'sscontent' ); ?></h1>
+				<ul>
 				<?php
 				$newsletterArgs = array(						
-					'category_name' => 'newsletter'
+					'category_name' => 'Editorial'
 				);
 				// The Query
 				$the_query = new WP_Query( $newsletterArgs );
@@ -38,6 +38,8 @@
 				/* Restore original Post Data */
 				wp_reset_postdata();
 				?>
+				
+				</ul>
 			</aside>
 
 

@@ -3,12 +3,10 @@
  * This Sidebar is being used to display time-specific content
  */
 ?>
-<div id="main-sidebars" style="background: purple;">
+<div id="main-sidebars">
 		
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-2' ); ?>
-		<?php echo "Today is ".date(l); ?>
-		<p>Ok so event posts will go here:</p>
 	</div>
 		
 		
@@ -20,7 +18,7 @@
 			</aside>
 			
 			<aside>			
-<!-- this displays each taxonomy label and its terms (see get_taxonomies and get_terms in WP codex) -->		
+			<!-- this displays each taxonomy label and its terms (see get_taxonomies and get_terms in WP codex) -->		
 			<?php 
 			$args = array(
   				'public'   => true,
