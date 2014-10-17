@@ -5,6 +5,15 @@ $(window).scroll(function(){
 	checkY();
 });
 
+//collapses header and logo on scroll
+function headerCollapse(){
+	$(window).scroll(function(){
+		$("nav").addClass("collapsed");
+		$(".logo").addClass("logoCollapsed");
+		$(".logoText").addClass("logoTextCollapsed");
+	});
+};
+
 function thumbHide(){
 	$("#home .featured .entry-desc").hide();
 	$("#home .events .entry-desc").hide();
@@ -45,4 +54,5 @@ $(document).ready(function() {
 	checkY();
 	isoFilter();
 	thumbHide();
+	headerCollapse();
 });

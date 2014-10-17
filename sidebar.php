@@ -17,48 +17,37 @@
 				<?php get_search_form(); ?>
 			</aside>
 			
-			<aside>			
-			<!-- this displays each taxonomy label and its terms (see get_taxonomies and get_terms in WP codex) -->		
-			<?php 
-			$args = array(
-  				'public'   => true,
-  				'_builtin' => false
-			); 
-			$output = 'objects'; // 'names' or 'objects'
-			$operator = 'and'; // 'and' or 'or'
-			$taxonomies = get_taxonomies( $args, $output, $operator ); 
-
-			if ( $taxonomies ) {
-  				foreach ( $taxonomies  as $taxonomy ) {
-    				echo '<h2>' . $taxonomy->label . '</h2>';
-    				$terms = get_terms($taxonomy->name);
- 					if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-     					echo "<ul>";
-     					foreach ( $terms as $term ) {
-       						echo "<li>" . $term->name . "</li>";     
-     					}
-     					echo "</ul>";
- 					}
-  				}
-			}
-			?>						
-			</aside>
-
 			<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Archives', 'sscontent' ); ?></h1>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
+			</aside>			
+			
+			<aside>			
+			<!-- this displays each taxonomy label and its terms (see get_taxonomy and get_terms in WP codex) -->		
+			<?php 
+			function taxonomy_and_terms($taxonomy_name){
+				$taxonomy = get_taxonomy($taxonomy_name);
+    			echo '<h2>' . $taxonomy->label . '</h2>';
+    			$terms = get_terms($taxonomy->name);
+ 				if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+     				echo "<ul>";
+     				foreach ( $terms as $term ) {
+       					echo "<li><a href='" . get_term_link($term,$terms) . "'>" . $term->name . "</a></li>";    
+     				}
+     				echo "</ul>";
+ 				}			
+			}
+			taxonomy_and_terms('neighborhood');
+			taxonomy_and_terms('genre');
+			taxonomy_and_terms('price');
+			taxonomy_and_terms('venues');
+			taxonomy_and_terms('djs');
+			taxonomy_and_terms('promoters');
+			?>						
 			</aside>
 			
-			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'sscontent' ); ?></h1>
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
-			</aside>
 		<?php endif; // end sidebar widget area ?>
 				
 	</div><!-- end #sidebar -->

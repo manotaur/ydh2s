@@ -16,11 +16,15 @@ a:link {text-decoration: none;}
 
 /* CSS BY DAVE IS BELOW */
 
-.navbar {background: black; border: none; height: 63px;}
+.navbar {background: black; border: none; height: 100px;}
+.collapsed {background: black; border: none; height: 63px;}
 .navbar h6 {margin: 4px 0 0 0;}
 .navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;}
-.navbar-header img.logo {width: 110px;}
+.navbar-header img.logo {width: 220px;}
+.navbar-header img.logoCollapsed {width: 110px;}
 .navbar-default .nav li a {color: white; padding: 23px 15px 0 15px;}
+.logoText {color: white;}
+.logoTextCollapsed {font-size: 14px;}
 
 /* removes placeholder text in input field on focus */
 input:focus::-webkit-input-placeholder { color:transparent; }
@@ -34,7 +38,7 @@ h3.section-heading {color: white; font-weight: 100; letter-spacing: 3px; margin-
 h3.event-heading {text-align: center; height: 112px; background: url('img/bg-header.png') no-repeat center top; padding: 50px 0; margin: 0;}
 
 
-.signup {color: white; text-align: center; font-size: 18px; padding-bottom: 40px;}
+.signup {color: white; text-align: center; font-size: 18px; padding: 50px 0 40px 0;}
 .signup p {padding: 0 0 8px 0;}
 .signup input {height: 40px; border: 1px solid #424242; border-radius: 5px; -moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); -webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);}
 .signup button, .all-events a {width: 134px; height: 39px; background: url('img/btn-signup.png') no-repeat; color: #fff; padding-top: 1px; border: none; float: left; margin-left: 20px;}

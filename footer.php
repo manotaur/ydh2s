@@ -10,7 +10,7 @@
 			<i class="fa fa-square fa-stack-2x"></i>
 			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
 		</span>
-	</div>
+	</div><!-- .share-buttons -->
 </footer>
 
 </div><!-- end .container -->

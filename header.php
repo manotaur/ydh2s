@@ -60,9 +60,9 @@
         			<span class="icon-bar"></span>
       			</button>
 	  			
-      			<a class="navbar-brand" href="http://localhost/ydh2s.com/">
+      			<a class="navbar-left" href="http://localhost/ydh2s.com/">
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
-	  				<h6>YOU DON'T HAVE 2 SETTLE</h6>
+	  				<h4 class="logoText">YOU DON'T HAVE 2 SETTLE</h4>
       			</a>
 
     		</div> <!-- end .navbar-header -->
@@ -75,6 +75,18 @@
         			<li><a href="http://localhost/ydh2s.com/newsletter/">NEWSLETTER</a></li> 
        			    <li><a href="http://localhost/ydh2s.com/contact">CONTACT</a></li>          	
       			</ul>
+      			
+      				<div class="share-buttons navbar-right">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+   			<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
+   		</span>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
+		</span>
+	</div><!-- .share-buttons -->
+      			
     	   </div><!-- /.navbar-collapse -->
   		</div><!-- /.container-fluid -->
 	</nav>
