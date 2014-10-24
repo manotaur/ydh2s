@@ -1,5 +1,5 @@
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="single event row">
+<div class="single event row front-content"> <!-- Dave added .front-content to make sidebar background black -->
 	
 	<header class="entry-header col-xs-12">
 		<div class="bg-flyer">
@@ -15,31 +15,31 @@
 		
 			<div class="entry-details meta row">
 				<div class="venue loc col-xs-12">
-					<h4>Venue</h4>
-					<h4><?php $venues = get_the_terms($post->ID, 'venues');
+					<h4 class="category-name">Venue</h4>
+					<h4 class="category-term"><?php $venues = get_the_terms($post->ID, 'venues');
 						the_terms( $post->ID, 'venues');
 						foreach ( $venues as $venue ) {
 							echo $venue->description;
 						}?></h4>
 				</div>
 				<div class="neighborhood nabe col-xs-12">	
-					<h4>Neighborhood</h4>
-					<?php the_terms( $post->ID, 'neighborhood') ?>
+					<h4 class="category-name">Neighborhood</h4>
+				<div class="category-term"><?php the_terms( $post->ID, 'neighborhood') ?></div>
 				</div>
 				<div class="price col-xs-12">	
-					<h4>Price</h4>
-					<?php the_terms( $post->ID, 'price') ?>
+					<h4 class="category-name">Price</h4>
+					<div class="category-term"><?php the_terms( $post->ID, 'price') ?></div>
 				</div>
-				<div class="djs dj col-xs-12">
-					<h4>Music by</h4>
-					<div class="promoters">
+				<div class="djs col-xs-12"><!-- Dave removed .dj because it was adding unwanted padding -->
+					<h4 class="category-name">Music by</h4>
+					<div class="promoters category-term">
 						<?php the_terms( $post->ID, 'promoters', '', '', ''); ?>
 					</div>
-					<?php the_terms( $post->ID, 'djs', '', '', ''); ?>
+					<div class="category-term"><?php the_terms( $post->ID, 'djs', '', '', ''); ?></div>
 				</div>
 				<div class="genre col-xs-12">
-					<h4>Genre(s)</h4>
-					<?php the_terms( $post->ID, 'genre', '', '', ''); ?>
+					<h4 class="category-name">Genre(s)</h4>
+					<div class="category-term"><?php the_terms( $post->ID, 'genre', '', '', ''); ?></div>
 				</div>
 			</div><!-- end .entry-details -->
 		</div>
@@ -60,5 +60,6 @@
 	<div class="col-xs-3">
 		<?php get_sidebar(); ?>
 	</div>
+	<div class="clearfix"></div>
 </div><!-- end .single .event .row -->
 <?php endwhile; ?>

@@ -8,9 +8,15 @@ $(window).scroll(function(){
 //collapses header and logo on scroll
 function headerCollapse(){
 	$(window).scroll(function(){
-		$("nav").addClass("collapsed");
-		$(".logo").addClass("logoCollapsed");
-		$(".logoText").addClass("logoTextCollapsed");
+		$("nav").animate({
+		height: "63px"
+		}, 1000);
+		$(".logo").animate({
+		width: "110px"
+		}, 1000);
+		$(".logoText").animate({
+		fontSize: "14px"
+		}, 1000);
 	});
 };
 
