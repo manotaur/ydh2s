@@ -8,9 +8,15 @@ $(window).scroll(function(){
 //collapses header and logo on scroll
 function headerCollapse(){
 	$(window).scroll(function(){
-		$("nav").addClass("collapsed");
-		$(".logo").addClass("logoCollapsed");
-		$(".logoText").addClass("logoTextCollapsed");
+		$("nav").animate({
+		height: "63px"
+			}, 1000);
+		$(".logo").animate({
+			width: "110px"
+			}, 1000);
+		$(".logoText").animate({
+			fontSize: "14px"
+			}, 1000);
 	});
 };
 
@@ -41,9 +47,10 @@ function isoFilter(){
 		layoutMode: 'fitRows'
 	});
 	// On click, filter whatever is in the data-filter field
-	$('#filter').on( 'click', 'button', function() {
+	$('#filter').on( 'click', 'a', function() {
 		var filterValue = $( this ).attr('data-filter');
 		$container.isotope({ filter: filterValue });
+		return false;
 	});
 };
 
@@ -51,6 +58,9 @@ $(document).ready(function() {
 	$('.btn-group button').click( function() { // Selector Button on/off script
 		$(this).addClass('active').siblings().removeClass('active');
 	});
+	$('#all-events').click( function() { // When the All Events button is clicked, navigate to all events
+		window.open("http://localhost/ydh2s.com/category/event/", "_self");
+	})
 	checkY();
 	isoFilter();
 	thumbHide();

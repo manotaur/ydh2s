@@ -7,6 +7,8 @@
 			include 'single-newsletter.php'; // Posts with category "newsletter" go to single-newsletter.php
 			elseif ( in_category('editorial') ):
 			include 'single-article.php'; // Posts with category "Editorial go to single-article.php
+			elseif ( in_category('venue') ):
+			include 'single-venue.php'; // Posts with category "venue" go to single-venue.php
 		else: // If this post is not an Event post, render this HTML below ?>
    			<div id="primary" class="single">
 				<div id="content">

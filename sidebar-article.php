@@ -3,7 +3,7 @@
  * This is the sidebar for the newsletter page
  */
 ?>
-<div id="main-sidebars">
+<div id="article-sidebar">
 			
 	<div id="sidebar" class="widget-area" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>

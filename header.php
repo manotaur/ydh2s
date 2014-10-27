@@ -69,7 +69,8 @@
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
-        			<li><a href="http://localhost/ydh2s.com/category/event/">EVENTS</a></li>
+        			<li><a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a></li>
+        			<li><a href="http://localhost/ydh2s.com/this-week">THIS WEEK</a></li>
         			<li><a href="http://localhost/ydh2s.com/category/editorial/">ARTICLES</a></li>
         			<li><a href="http://localhost/ydh2s.com/about">ABOUT</a></li>
         			<li><a href="http://localhost/ydh2s.com/newsletter/">NEWSLETTER</a></li> 

@@ -66,6 +66,7 @@ Template Name: Homepage
 			<?php // echo "Today is ".date(l); ?>
 			<div class="filtering col-xs-12">
 				<h4>FILTER</h4>
+				<!-- Old filters
 				<div class="btn-group" id="filter">
 					<button type="button" class="btn btn-default active" data-filter="*">All</button>
 					<button type="button" class="btn btn-default" data-filter=".Williamsburg">Williamsburg</button>
@@ -73,7 +74,48 @@ Template Name: Homepage
 					<button type="button" class="btn btn-default" data-filter=".electro">Electro</button>
 					<button type="button" class="btn btn-default" data-filter=".indie">Indie</button>
 					<button type="button" class="btn btn-default" data-filter=".Free">Free</button>
+				</div>-->
+				<div class="btn-group" id="filter">
+					<button type="button" class="btn btn-default active">
+						<a href="#" data-filter="*">All</a></button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						Neighborhood <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" data-filter=".Williamsburg">Williamsburg</a></li>
+							<li><a href="#" data-filter=".Bushwick">Bushwick</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Genre <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" data-filter=".90s">90s</a></li>
+							<li><a href="#" data-filter=".00s">00s</a></li>
+							<li><a href="#" data-filter=".britpop">Britpop</a></li>
+							<li><a href="#" data-filter=".indie">Indie</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Venues <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" data-filter=".Right">Baby's All Right</a></li>
+							<li><a href="#" data-filter=".Victory">the Grand Victory</a></li>
+							<li><a href="#" data-filter=".Output">Output</a></li>
+							<li><a href="#" data-filter=".Tandem">Tandem</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Price <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" data-filter=".Free">Free</a></li>
+						</ul>
+					</div>
 				</div>
+				
+				<button type="button" id="all-events" class="btn btn-primary">All Events</button>
 			</div>
 			<div class="clearfix"></div>
       		<div class="posts row filter-us">
@@ -96,9 +138,6 @@ Template Name: Homepage
 						endwhile;
 					endif; ?>
 			</div><!-- end .posts -->
-			<div class="all-events">
-				<a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a>
-			</div>
 		</div><!-- end .events -->
 								
 		<div class="row editorial">
