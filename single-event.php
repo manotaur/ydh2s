@@ -25,7 +25,7 @@
 				<div class="neighborhood nabe col-xs-12">	
 					<h4 class="category-name">Neighborhood</h4>
 					<div class="category-term"><?php the_terms( $post->ID, 'neighborhood') ?></div>
-				</div>
+				<div class="category-term"><?php the_terms( $post->ID, 'neighborhood') ?></div>
 				<div class="price col-xs-12">	
 					<h4 class="category-name">Price</h4>
 					<div class="category-term"><?php the_terms( $post->ID, 'price') ?></div>
