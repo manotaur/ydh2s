@@ -156,7 +156,7 @@ Template Name: Homepage
 					endif; ?>
 				
 			</div><!-- .posts -->
-		<h3><a href="http://localhost/ydh2s.com/category/editorial/">See More Articles</a></h3>
+			<h3><a href="http://localhost/ydh2s.com/category/editorial/">See More Articles</a></h3>
 		</div><!-- end .editorial -->
 				
 	</div><!-- end .front-content -->
