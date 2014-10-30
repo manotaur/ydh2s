@@ -10,11 +10,11 @@ get_header(); ?>
 
 	<h1 class="page-title">Newsletters</h1>
 	
-	<?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-	<?php the_content(); ?>
-	<?php endwhile; ?>
-	<?php endif; ?>
+	<?php if ( have_posts() ) : 
+		while ( have_posts() ) : the_post();
+			the_content();
+		endwhile;
+	endif; ?>
 			
 	<div class="front-content">
 		<div class="col-xs-10">
@@ -23,12 +23,12 @@ get_header(); ?>
 				'category_name' => 'newsletter',
 				'posts_per_page' => 1
 				);
-				query_posts($newsargs); ?>
-			<?php if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-			<?php include 'newsletter-thumb.php'; ?>
-			<?php endwhile; ?>
-			<?php else : ?>
+				query_posts($newsargs);
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+						include 'newsletter-thumb.php';
+					endwhile;
+				else : ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
 			<?php endif; ?>
 			

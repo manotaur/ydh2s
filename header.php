@@ -60,7 +60,7 @@
         			<span class="icon-bar"></span>
       			</button>
 	  			
-      			<a class="navbar-left" href="http://localhost/ydh2s.com/">
+      			<a class="navbar-left" href="<?php bloginfo('url'); ?>">
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
 	  				<h4 class="logoText">YOU DON'T HAVE 2 SETTLE</h4>
       			</a>
@@ -69,24 +69,24 @@
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
-        			<li><a href="http://localhost/ydh2s.com/category/event/">ALL EVENTS</a></li>
-        			<li><a href="http://localhost/ydh2s.com/this-week">THIS WEEK</a></li>
-        			<li><a href="http://localhost/ydh2s.com/category/editorial/">ARTICLES</a></li>
-        			<li><a href="http://localhost/ydh2s.com/about">ABOUT</a></li>
-        			<li><a href="http://localhost/ydh2s.com/newsletter/">NEWSLETTER</a></li> 
-       			    <li><a href="http://localhost/ydh2s.com/contact">CONTACT</a></li>          	
+        			<li><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
+        			<li><a href="<?php bloginfo('url'); ?>/this-week">THIS WEEK</a></li>
+        			<li><a href="<?php bloginfo('url'); ?>/category/editorial">ARTICLES</a></li>
+        			<li><a href="<?php bloginfo('url'); ?>/about">ABOUT</a></li>
+        			<li><a href="<?php bloginfo('url'); ?>/newsletter">NEWSLETTER</a></li> 
+       			    <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>          	
       			</ul>
       			
-      			<div class="share-buttons navbar-right">
-					<span class="fa-stack fa-lg">
-						<i class="fa fa-square fa-stack-2x"></i>
-   						<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
-   					</span>
-					<span class="fa-stack fa-lg">
-						<i class="fa fa-square fa-stack-2x"></i>
-						<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
-					</span>
-				</div><!-- .share-buttons -->
+      				<div class="share-buttons navbar-right">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+   			<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
+   		</span>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
+		</span>
+	</div><!-- .share-buttons -->
       			
     	   </div><!-- /.navbar-collapse -->
   		</div><!-- /.container-fluid -->

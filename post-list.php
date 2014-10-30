@@ -13,7 +13,9 @@
 					$date_month_num = get_post_time('n');
 					$date_day = get_post_time('j');
 					$date_year = get_post_time('Y');
-					echo "<a href='http://localhost/ydh2s.com/$date_year/$date_month_num/$date_day'>
+					echo "<a href='";
+					echo bloginfo('url');
+					echo "/$date_year/$date_month_num/$date_day'>
 						$date_week, $date_month $date_day</a>";
 				?></h5></div>
 		</header><!-- .entry-header -->
