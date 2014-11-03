@@ -8,8 +8,11 @@ $(window).scroll(function(){
 //collapses header and logo on scroll
 function headerCollapse(){
 	$(window).scroll(function(){
-		$("nav").animate({
+		$(".navbar").animate({
 		height: "63px"
+			}, 1000);
+		$(".nav").animate({
+		paddingTop: "0"
 			}, 1000);
 		$(".logo").animate({
 			width: "110px"
@@ -17,12 +20,14 @@ function headerCollapse(){
 		$(".logoText").animate({
 			fontSize: "14px"
 			}, 1000);
+		$(".share-buttons").hide(1000);
 	});
 };
 
 function thumbHide(){
 	$("#home .featured .entry-desc").hide();
 	$("#home .events .entry-desc").hide();
+	$("#home .picks .entry-desc").hide();
 	$("#home .entry-details").hide();
 	$("#home .sharing").hide();
 	$("#home .entry-info-wrap").hover(function(){

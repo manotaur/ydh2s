@@ -1,5 +1,5 @@
 <a href="#" data-toggle="modal" data-target="#modal-<?php the_ID(); ?>">
-	<?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?>
+	<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
 </a>
 <!-- Modal -->
 <div class="modal fade" id="modal-<?php the_ID(); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

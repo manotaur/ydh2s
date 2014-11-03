@@ -84,6 +84,7 @@ Template Name: Homepage
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#" data-filter=".Williamsburg">Williamsburg</a></li>
 							<li><a href="#" data-filter=".Bushwick">Bushwick</a></li>
+							<li><a href="#" data-filter=".Parkslope">Park Slope</a></li>
 						</ul>
 					</div>
 					<div class="btn-group">
