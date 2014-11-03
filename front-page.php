@@ -74,47 +74,38 @@ Template Name: Homepage
 					<button type="button" class="btn btn-default" data-filter=".electro">Electro</button>
 					<button type="button" class="btn btn-default" data-filter=".indie">Indie</button>
 					<button type="button" class="btn btn-default" data-filter=".Free">Free</button>
-				</div>-->
+				</div>-->			
+			
 				<div class="btn-group" id="filter">
 					<button type="button" class="btn btn-default active">
 						<a href="#" data-filter="*">All</a></button>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						Neighborhood <span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-filter=".Williamsburg">Williamsburg</a></li>
-							<li><a href="#" data-filter=".Bushwick">Bushwick</a></li>
-							<li><a href="#" data-filter=".Parkslope">Park Slope</a></li>
-						</ul>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Genre <span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-filter=".90s">90s</a></li>
-							<li><a href="#" data-filter=".00s">00s</a></li>
-							<li><a href="#" data-filter=".britpop">Britpop</a></li>
-							<li><a href="#" data-filter=".indie">Indie</a></li>
-						</ul>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Venues <span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-filter=".Right">Baby's All Right</a></li>
-							<li><a href="#" data-filter=".Victory">the Grand Victory</a></li>
-							<li><a href="#" data-filter=".Output">Output</a></li>
-							<li><a href="#" data-filter=".Tandem">Tandem</a></li>
-						</ul>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Price <span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-filter=".Free">Free</a></li>
-						</ul>
-					</div>
-				</div>
+
+					<!-- this displays each taxonomy label and its terms in the Isotope filters(see get_taxonomy and get_terms in WP codex) -->		
+					<?php 
+					function taxonomy_and_terms_filter($taxonomy_name){
+						echo '<div class="btn-group">';				
+						$taxonomy = get_taxonomy($taxonomy_name);
+						echo '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">' 
+						. $taxonomy->label . '<span class="caret"></span></button>';
+						echo '<ul class="dropdown-menu" role="menu">';
+						
+    					$terms = get_terms($taxonomy->name);
+ 						if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+     						foreach ( $terms as $term ) {
+     							$filter = explode(" ", $term->name); //creates an array, each word in taxonomy name is an item in the array
+       							echo '<li><a href="#" data-filter=".' . $filter[0] . '">' . $term->name . '</a></li>';    
+     						}
+ 						}
+ 						echo '</ul>';
+ 						echo '</div>';			
+					}
+					taxonomy_and_terms_filter('neighborhood');
+					taxonomy_and_terms_filter('genre');
+					taxonomy_and_terms_filter('venues');
+					taxonomy_and_terms_filter('price');
+					?>	
+						
+				</div><!-- #filter -->
 				
 				<button type="button" id="all-events" class="btn btn-primary">All Events</button>
 			</div>
