@@ -6,7 +6,6 @@ h2, h3, h4, h5, h6, .btn {}
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, 
 .col-xs-12 {padding: 0;}
 a:link {text-decoration: none;}
-
 .row {margin: 0;}
 
 .clearfix {*zoom: 1;}
@@ -152,7 +151,8 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
-	
+	.container {padding: 0 5px 0 5px;}
+	.front-content {padding: 0 10px 0 10px;}
 }
 /* iPad in portrait */
 @media only screen 
@@ -164,7 +164,10 @@ and (orientation : portrait) {
 
 /* iPhone */
 @media only screen and (min-width:320px) and (max-width:767px) {
-	
+	.container {padding: 0;}
+	.signup {padding: 50px 10px 40px 10px;}
+	.front-content {padding: 0 10px 0 10px;}
+	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}
 }
 
 /* iPhone 5/5S */
@@ -180,4 +183,5 @@ and (orientation : portrait) {
 and (min-device-width : 320px) 
 and (max-device-width : 767px) 
 and (orientation : portrait) {
+	.filtering .btn-group {margin-bottom: 5px;}
 }

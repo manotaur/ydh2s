@@ -1,5 +1,5 @@
 <?php include('tax-terms.php')  // Adds taxonomy class names to the post, via the $post_terms variable ?>
-<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-xs-4">	
+<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-md-4 col-sm-6 col-xs-12">	
 	<div class="flyer"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
 	
 	<div class="entry-info-wrap">

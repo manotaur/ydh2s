@@ -7,8 +7,9 @@ Template Name: Homepage
 
 <div id="home" class="container">
 	<div class="row">
-		<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
-
+		<div class="col-xs-12 signup">
+			<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
+		</div>
 	</div> <!-- end .row -->
 
 	<div class="front-content row">
