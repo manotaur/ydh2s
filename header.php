@@ -43,6 +43,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <?php wp_head(); ?>
 </head>
+<div class="spacer"></div>
 <body <?php body_class(); ?>>
 
 
@@ -50,7 +51,8 @@
 		<?php do_action( 'before' ); ?>
 		
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
- 		 <div class="container-fluid">
+ 		 <div class="container">
+ 		 <div class="row">
     		<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
       			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -89,6 +91,7 @@
 			</div><!-- .share-buttons -->
       			
     	   </div><!-- /.navbar-collapse -->
-  		</div><!-- /.container-fluid -->
+    	   </div><!-- .row -->
+  		</div><!-- /.container -->
 	</nav>
 	</div><!-- end #page -->

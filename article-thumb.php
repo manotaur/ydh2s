@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-xs-12">	
 	<div class="image col-xs-4">
-		<?php echo get_the_post_thumbnail($page->ID, 'large'); ?>
+		<?php echo get_the_post_thumbnail($page->ID, 'article-homepage-thumb'); ?>
 		<div class="clearfix"></div>
 	</div>
 	

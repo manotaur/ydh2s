@@ -11,6 +11,9 @@ function headerCollapse(){
 		$(".navbar").animate({
 		height: "63px"
 			}, 1000);
+		$(".spacer").animate({
+		height: "0"
+			}, 1000);
 		$(".nav").animate({
 		paddingTop: "0"
 			}, 1000);
@@ -76,3 +79,4 @@ $(document).ready(function() {
 	thumbHide();
 	headerCollapse();
 });
+

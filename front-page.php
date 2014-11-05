@@ -93,8 +93,19 @@ Template Name: Homepage
     					$terms = get_terms($taxonomy->name);
  						if ( !empty( $terms ) && !is_wp_error( $terms ) ){
      						foreach ( $terms as $term ) {
-     							$filter = explode(" ", $term->name); //creates an array, each word in taxonomy name is an item in the array
-       							echo '<li><a href="#" data-filter=".' . $filter[0] . '">' . $term->name . '</a></li>';    
+     							//creates an array, each word in taxonomy name is an item in the array,
+     							//with only alphanumeric characters:
+     							$filter = explode(" ", preg_replace("/[^A-Za-z0-9 ]/", '', $term->name));
+     							
+     							//adds a '.' to the beginning of each filter term:
+     							foreach ($filter as &$item){
+     								$item = '.' . $item;
+     							}
+     							
+     							// creates a single string of all filter terms, separated by commas:
+     							$filter_string = implode(", ", $filter);
+     							
+       							echo '<li><a href="#" data-filter="' . $filter_string . '">' . $term->name . '</a></li>';   
      						}
  						}
  						echo '</ul>';

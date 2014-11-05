@@ -15,14 +15,28 @@ a:link {text-decoration: none;}
 
 /* CSS BY DAVE IS BELOW */
 
-.navbar {background: black; border: none; height: 100px;}
+/*this removes a blue outline that appeared around the hamburger after it was clicked in Chrome*/
+button:focus {outline:0px !important; -webkit-appearance:none;}
+
+.navbar {background: black; border: none; height: 117px;}
 .navbar h6 {margin: 4px 0 0 0;}
-.navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;}
+/* .navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;} not needed anymore */
 .navbar-header img.logo {width: 220px;}
 .navbar-default .nav li a {color: white; padding: 23px 15px 0 15px;}
 .logoText {color: white;}
+.navbar-left {padding-top: 10px;}
 .not-found {padding-top: 20px;}
 .navbar-collapse {background: black;}
+.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -21px;}
+
+/*Firefox was rendering the top margin of the dropdown menu differently, but this took care of it: */
+@-moz-document url-prefix() {.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -2px;}}
+
+.navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{margin-top: -15px;}
+.navbar-collapse.in .share-buttons, .navbar-collapse.collapsing .share-buttons{padding: 20px 0 10px 10px;}
+.navbar-right {padding-top: 35px;}
+
+.spacer {height: 50px;}
 
 /* removes placeholder text in input field on focus */
 input:focus::-webkit-input-placeholder { color:transparent; }
@@ -31,12 +45,13 @@ input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 
 /* CSS for the modal button:      */
 .close {color: white; opacity: 1;}
+.modal-body {padding-left: 0;}
 
 h3.section-heading {color: white; font-weight: 100; letter-spacing: 3px; margin-top: 20px; padding-bottom: 20px;}
 h3.event-heading {text-align: center; height: 112px; background: url('img/bg-header.png') no-repeat center top; padding: 50px 0; margin: 0;}
 
 
-.signup {color: white; text-align: center; font-size: 18px; padding: 50px 0 40px 0;}
+.signup {color: white; text-align: center; font-size: 18px; padding: 10px 0 40px 0;}
 .signup p {padding: 0 0 8px 0;}
 .signup input {height: 40px; border: 1px solid #424242; border-radius: 5px; -moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); -webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);}
 .signup button, .all-events a {width: 134px; height: 39px; background: url('img/btn-signup.png') no-repeat; color: #fff; padding-top: 1px; border: none; float: left; margin-left: 20px;}
@@ -75,7 +90,7 @@ h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .all-events {text-align: center; margin-top: 40px;}
 .all-events a {color: #fff; float: left; display: block; margin: 0 45%; padding-top: 8px; font-weight: 500;}
 
-.editorial {padding-bottom: 40px; margin-top: 50px;}
+.editorial {padding-bottom: 40px; /*margin-top: 50px;*/}
 .editorial .entry-desc, .editorial h3.entry-title, .editorial .thumb .meta, .entry-details {border: none;}
 .editorial .entry-info-wrap {width: auto;}
 .editorial h3 {margin-bottom: 0;}
@@ -104,7 +119,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 
 /* Listings Pages */
 .page-header h1 {color: #161616;}
-.listing {margin-top: 50px;}
+/*.listing {margin-top: 50px;}*/
 .listing .front-content, .listing .col-xs-10 {padding: 0;}
 .listing article {color: #fff;}
 .listing .main {padding-left: 8px;}
@@ -130,14 +145,19 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */
-@media screen and (min-width: 768px){
-	.nav {
+@media screen and (min-width: 1151px){
+	.nav{
 		/* width: 456px; This breaks some things so Brian is hiding it now */
 		padding-top: 20px;
 		position: absolute;
 		margin-left: -228px;
   		left: 50%;
   	}
+}
+
+/*this adds some padding to the header content when the left/right margins disappear on smaller screens: */
+@media screen and (max-width: 767px){
+	.navbar-header{padding: 0 10px 0 10px;}
 }
 	
 /* 1024px */
@@ -183,4 +203,50 @@ and (min-device-width : 320px)
 and (max-device-width : 767px) 
 and (orientation : portrait) {
 	.filtering .btn-group {margin-bottom: 5px;}
+}
+
+/* collapse the Bootstrap navbar at a custom width */
+/* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
+@media (max-width: 1150px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .logo {
+    	padding-top: 10px;
+    }
+    .logoText {
+    	padding-bottom: 1px;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-right: 0;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
 }
