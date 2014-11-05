@@ -14,11 +14,16 @@ function headerCollapse(){
 		$(".nav").animate({
 		paddingTop: "0"
 			}, 1000);
+		$(".navbar-left").animate({
+			paddingTop: "1px"
+			}, 10);
 		$(".logo").animate({
-			width: "110px"
+			width: "110px",
+			paddingTop: "5px"
 			}, 1000);
 		$(".logoText").animate({
-			fontSize: "14px"
+			fontSize: "14px",
+			marginTop: "5px"
 			}, 1000);
 		$(".share-buttons").hide(1000);
 	});
