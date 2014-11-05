@@ -29,13 +29,13 @@ get_header(); ?>
 						rewind_posts();
 
 					} elseif ( is_day() ) {
-						printf( __( 'Daily Archives: %s'), '<span>' . get_the_date() . '</span>' );
+						printf( __( 'Events from %s'), '<span>' . get_the_date() . '</span>' );
 
 					} elseif ( is_month() ) {
-						printf( __( 'Monthly Archives: %s'), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+						printf( __( 'Events from %s'), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 					} elseif ( is_year() ) {
-						printf( __( 'Yearly Archives: %s'), '<span>' . get_the_date( 'Y' ) . '</span>' );
+						printf( __( 'Events from %s'), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 					} else {
 						_e( 'Archives');
