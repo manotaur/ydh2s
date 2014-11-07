@@ -16,7 +16,7 @@ a:link {text-decoration: none;}
 /* CSS BY DAVE IS BELOW */
 
 /*this removes a blue outline that appeared around the hamburger after it was clicked in Chrome*/
-button:focus {outline:0px !important; -webkit-appearance:none;}
+button:focus {outline:0px; -webkit-appearance:none;}
 
 .navbar {background: black; border: none; height: 117px;}
 .navbar h6 {margin: 4px 0 0 0;}
@@ -26,14 +26,14 @@ button:focus {outline:0px !important; -webkit-appearance:none;}
 .logoText {color: white;}
 .navbar-left {padding-top: 10px;}
 .not-found {padding-top: 20px;}
-.navbar-collapse {background: black;}
-.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -21px;}
+
+.navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
+.navbar-toggle {border: none;}
 
 /*Firefox was rendering the top margin of the dropdown menu differently, but this took care of it: */
 @-moz-document url-prefix() {.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -2px;}}
 
 .navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{margin-top: -15px;}
-.navbar-collapse.in .share-buttons, .navbar-collapse.collapsing .share-buttons{padding: 20px 0 10px 10px;}
 .navbar-right {padding-top: 35px;}
 
 .spacer {height: 50px;}
@@ -172,7 +172,10 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)  {
 	.container {padding: 0 5px 0 5px;}
 	.front-content {padding: 0 10px 0 10px;}
+	/*changes the size of the hamburger: */
+	.navbar-toggle .icon-bar {width: 28px; height: 4px;}
 }
+
 /* iPad in portrait */
 @media only screen 
 and (min-device-width : 768px) 
@@ -208,13 +211,16 @@ and (orientation : portrait) {
 /* collapse the Bootstrap navbar at a custom width */
 /* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
 @media (max-width: 1150px) {
+	.share-buttons{
+		display:none;
+	}
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+    .navbar-left, .navbar-right {
         float: none !important;
     }
-    .logo {
+   .logo {
     	padding-top: 10px;
     }
     .logoText {
@@ -235,9 +241,9 @@ and (orientation : portrait) {
     .navbar-collapse.collapse {
         display: none!important;
     }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
+    .navbar .navbar-nav {
+        float: none;
+ 		margin-top: 7.5px; 
     }
     .navbar-nav>li {
         float: none;
