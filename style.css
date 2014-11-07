@@ -13,8 +13,8 @@ a:link {text-decoration: none;}
 .clearfix:after {display: table; content: ""; line-height: 0;}
 .clearfix:after {clear: both;}
 
+.ie-logo {display: none;}
 /* CSS BY DAVE IS BELOW */
-
 /*this removes a blue outline that appeared around the hamburger after it was clicked in Chrome*/
 button:focus {outline:0px; -webkit-appearance:none;}
 
@@ -196,6 +196,8 @@ and (orientation : portrait) {
 @media only screen and (min-width:320px) and (max-width:767px) {
 	.container {padding: 0;}
 	.xs-hide {display: none;}
+	.navbar-header img.logo {width: 160px;}
+	.logotext {font-size: 15px;}
 	.signup {padding: 50px 10px 40px 10px;}
 	.front-content {padding: 0 10px 0 10px;}
 	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}

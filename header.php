@@ -64,6 +64,7 @@
 	  			
       			<a class="navbar-left" href="<?php bloginfo('url'); ?>">
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
+      				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.png" class="ie-logo" alt="YDH2S Logo">
 	  				<h4 class="logoText">YOU DON'T HAVE 2 SETTLE</h4>
       			</a>
 

@@ -46,7 +46,7 @@ function headerCollapse(){
 		paddingTop: "36px"
 			}, 1000);
 		$(".logo").animate({
-			width: "110px",
+			width: "100px",
 			}, 1000);
 		$(".navbar-header").animate({
 			paddingTop: "50px"
