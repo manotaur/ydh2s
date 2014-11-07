@@ -23,17 +23,23 @@ button:focus {outline:0px; -webkit-appearance:none;}
 /* .navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;} not needed anymore */
 .navbar-header img.logo {width: 220px;}
 .navbar-default .nav li a {color: white; padding: 23px 15px 0 15px;}
+.navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{margin-top: -15px;}
 .logoText {color: white;}
 .navbar-left {padding-top: 10px;}
 .not-found {padding-top: 20px;}
 
 .navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
-.navbar-toggle {border: none;}
+.navbar-toggle {border: none; margin: 30px 0 50px 0;}
+.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;}
+
+/* removes Bootstrap's default return to grey background color after button is pressed & gray background for button in hover state*/
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+	background-color: transparent;
+}
 
 /*Firefox was rendering the top margin of the dropdown menu differently, but this took care of it: */
 @-moz-document url-prefix() {.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -2px;}}
 
-.navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{margin-top: -15px;}
 .navbar-right {padding-top: 35px;}
 
 .spacer {height: 50px;}
@@ -180,7 +186,8 @@ and (max-device-width : 1024px)  {
 	.front-content {padding: 0 10px 0 10px;}
 	#sidebar h3 {font-size: 16px;}
 	/*changes the size of the hamburger: */
-	.navbar-toggle .icon-bar {width: 28px; height: 4px;}
+	/* commented out because the hamburger is bigger on all screens now */
+/*	.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;} */
 }
 
 /* iPad in portrait */
@@ -220,7 +227,7 @@ and (orientation : portrait) {
 /* collapse the Bootstrap navbar at a custom width */
 /* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
 @media (max-width: 1150px) {
-	.share-buttons{
+	.nav-share-buttons{
 		display:none;
 	}
     .navbar-header {
