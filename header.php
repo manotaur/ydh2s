@@ -43,9 +43,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <?php wp_head(); ?>
 </head>
-<div class="spacer"></div>
-<body <?php body_class(); ?>>
 
+<body <?php body_class(); ?>>
+	<div class="spacer"></div>
 
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
@@ -53,7 +53,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
  		 <div class="container">
  		 <div class="row">
-    		<!-- Brand and toggle get grouped for better mobile display -->
+
     		<div class="navbar-header">
       			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         			<span class="sr-only">Toggle navigation</span>

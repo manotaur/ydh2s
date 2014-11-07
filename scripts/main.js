@@ -6,7 +6,8 @@ $(window).scroll(function(){
 });
 
 //collapses header and logo on scroll
-function headerCollapse(){
+
+/*function headerCollapse(){
 	$(window).scroll(function(){
 		$(".navbar").animate({
 		height: "63px"
@@ -23,6 +24,32 @@ function headerCollapse(){
 		$(".logo").animate({
 			width: "110px",
 			paddingTop: "5px"
+			}, 1000);
+		$(".logoText").animate({
+			fontSize: "14px",
+			marginTop: "5px"
+			}, 1000);
+		$(".share-buttons").hide(1000);
+	});
+}; */
+
+//collapses header and logo on scroll
+function headerCollapse(){
+	$(window).scroll(function(){
+	$(".navbar").animate({
+		marginTop: "-54px"
+			}, 1000); 
+		$(".spacer").animate({
+		height: "0"
+			}, 1000);
+		$(".navbar-collapse").animate({
+		paddingTop: "36px"
+			}, 1000);
+		$(".logo").animate({
+			width: "110px",
+			}, 1000);
+		$(".navbar-header").animate({
+			paddingTop: "50px"
 			}, 1000);
 		$(".logoText").animate({
 			fontSize: "14px",
