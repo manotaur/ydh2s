@@ -1,3 +1,6 @@
+// It looks like we're not using this JS file, it should probably be deleted -Brian.
+
+
 var startY = $('.header').offset.top + $('.header').outerHeight();
 var startY = 158;
 

@@ -15,7 +15,7 @@
 			</aside> -->
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'sscontent' ); ?></h1>
+				<h3 class="widget-title"><?php _e( 'Archives', 'sscontent' ); ?></h3>
 				
 				<?php
 				$newsletterArgs = array(						

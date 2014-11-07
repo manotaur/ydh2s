@@ -38,11 +38,11 @@ get_header(); ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">
-			<div class="col-xs-10 list">
+			<div class="col-sm-10 col-xs-12 list">
 				<?php _e('<p>Sorry, no posts matched your criteria</p>');
 	endif; ?>
 			</div>		
-			<div class="col-xs-2"><?php get_sidebar(); ?></div>
+			<div class="col-sm-2 xs-hide"><?php get_sidebar(); ?></div>
 			<div class="clearfix"></div>
 		</div><!-- .front-content -->
 </div><!-- #taxonomy -->

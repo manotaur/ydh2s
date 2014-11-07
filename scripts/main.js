@@ -52,6 +52,10 @@ function checkY(){
 		$('.sticky').slideUp();
 	}
 };
+
+function filterState(){ // Selector Button on/off script
+	$(this).addClass('active').siblings().removeClass('active');
+}
 			
 function isoFilter(){
 	// Isotope setup
@@ -61,15 +65,16 @@ function isoFilter(){
 	});
 	// On click, filter whatever is in the data-filter field
 	$('#filter').on( 'click', 'a', function() {
-		var filterValue = $( this ).attr('data-filter');
+		var filterValue = $(this).attr('data-filter');
 		$container.isotope({ filter: filterValue });
+		$(this).closest('.btn-group').removeClass('open');
 		return false;
 	});
 };
 
 $(document).ready(function() {
-	$('.btn-group button').click( function() { // Selector Button on/off script
-		$(this).addClass('active').siblings().removeClass('active');
+	$('.btn-group button').click( function() {
+		filterState();
 	});
 	$('#all-events').click( function() { // When the All Events button is clicked, navigate to all events
 		window.open("http://localhost/ydh2s.com/category/event/", "_self");

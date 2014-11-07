@@ -19,7 +19,7 @@ get_header(); ?>
 	endif; ?>
 			
 	<div class="front-content">
-		<div class="col-xs-10">
+		<div class="col-sm-10 col-xs-12">
 	
 			<?php $newsargs = array(
 				'category_name' => 'newsletter',
@@ -34,8 +34,8 @@ get_header(); ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
 			<?php endif; ?>
 			
-		</div><!-- .col-xs-10 -->		
-		<div class="col-xs-2"><?php get_sidebar('newsletter'); ?></div>
+		</div><!-- .col-xs-12 -->		
+		<div class="col-sm-2 xs-hide"><?php get_sidebar('newsletter'); ?></div>
 		<div class="clearfix"></div>
 	</div><!-- .front-content -->
 </div><!-- #container -->

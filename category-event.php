@@ -8,7 +8,7 @@ get_header(); ?>
 	<h1 class="page-title">Events</h1>
 
 	<div class="front-content">
-		<div class="col-xs-10 list">
+		<div class="col-sm-10 col-xs-12 list">
 			<?php
 				$today = getdate();
 				$eventArgs = array(
@@ -30,7 +30,7 @@ get_header(); ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
 			<?php endif; ?>
 		</div>		
-		<div class="col-xs-2"><?php get_sidebar(); ?></div>
+		<div class="col-sm-2 xs-hide"><?php get_sidebar(); ?></div>
 		<div class="clearfix"></div>
 	</div><!-- .front-content -->
 </div><!-- #events -->

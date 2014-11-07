@@ -9,12 +9,12 @@
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	<article id="post-<?php the_ID(); ?>" class="front-content col-xs-12">
-		<div class="main col-xs-9">
+		<div class="main col-sm-9 col-xs-12">
 			<div class="entry-summary row">
 				<?php the_content(); // Event Description ?>
 			</div>
 		</div>
-		<div class="col-xs-3"><?php get_sidebar('newsletter'); ?></div>
+		<div class="col-sm-3 xs-hide"><?php get_sidebar('newsletter'); ?></div>
 	</article><!-- #post-<?php the_ID(); ?> -->
 
 </div><!-- end .single .event .row -->

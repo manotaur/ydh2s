@@ -5,26 +5,19 @@
 ?>
 <div id="article-sidebar">
 			
-	<div id="sidebar" class="widget-area" role="complementary">
+	<div id="sidebar" class="widget-area article-sidebar" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-		
-			<!-- don't need search form for newsletter sidebar
-			<aside id="search" class="widget widget_search">
-				<?php get_search_form(); ?>
-			</aside> -->
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'More Articles', 'sscontent' ); ?></h1>
+				<h3 class="widget-title"><?php _e( 'More Articles', 'sscontent' ); ?></h3>
 				<ul>
 				<?php
 				$newsletterArgs = array(						
-					'category_name' => 'Editorial'
+					'category_name' => 'Editorial',
+					'posts_per_page' => 10
 				);
-				// The Query
 				$the_query = new WP_Query( $newsletterArgs );
-
-				// The Loop
 				if ( $the_query->have_posts() ) {
 					echo '<ul>';
 					while ( $the_query->have_posts() ) {
@@ -40,6 +33,8 @@
 				?>
 				
 				</ul>
+				<h3>Tags</h3>
+				<?php wp_tag_cloud(); ?>
 			</aside>
 
 

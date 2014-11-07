@@ -7,7 +7,7 @@
 	<div class="article-info col-xs-8"> <!--.article-info is the same as .entry-info, but without the black background -->
 		<div class="headline">
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-			<h5><?php the_date(); ?></h5>
+			<h5><?php the_author_link(); ?>, <?php the_date(); ?></h5>
 		</div><!-- .headline -->
 
 		<div class="entry-desc">

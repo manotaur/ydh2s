@@ -1,11 +1,9 @@
-<?php
-/**
- * The template for displaying posts from the edditorial category, i.e. all blog posts
- */
-add_theme_support('post-thumbnails');
-get_header(); ?>
+<?php // This page displays tagged posts
+ 	add_theme_support('post-thumbnails');
+ 	get_header();
+?>
 <div id="content" class="container editorial listing">
-	<h1 class="page-title">Articles</h1>
+	<h1 class="page-title">Articles tagged with <?php single_tag_title() ?></h1>
 	
 	<div class="front-content">
 		<div class="col-sm-10 col-xs-12 list">

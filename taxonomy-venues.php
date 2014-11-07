@@ -23,11 +23,9 @@ get_header(); ?>
 		<div class="front-content">
 			<!-- Google Maps embed: -->
 			<iframe class="col-xs-12" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo $venue->description; ?>&output=embed"></iframe>
-			<div class="col-xs-10 list">
+			<div class="col-sm-10 col-xs-12 list">
 				<?php
-					$taxonomy = $the_tax->labels->name;
-					$taxonomy = strtolower($taxonomy);
-					$slug= $term->slug;
+					$slug = $term->slug;
 					$taxArgs = array(
 						'date_query' => array(
 							array( // Show events less than a day old
@@ -36,7 +34,7 @@ get_header(); ?>
 						),
 						'category_name' => 'Event',
 						'order' => 'ASC',
-						$taxonomy => $slug
+						'venues' => $slug
 					);
 					$the_query = new WP_Query($taxArgs);
 					while ( $the_query->have_posts() ) {
@@ -46,11 +44,11 @@ get_header(); ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">
-			<div class="col-xs-10 list">
+			<div class="col-sm-10 col-xs-12 list">
 				<?php _e('<p>Sorry, no posts matched your criteria</p>');
 	endif; ?>
 			</div>		
-			<div class="col-xs-2"><?php get_sidebar(); ?></div>
+			<div class="col-sm-2 xs-hide"><?php get_sidebar(); ?></div>
 			<div class="clearfix"></div>
 		</div><!-- .front-content -->
 </div><!-- #taxonomy -->

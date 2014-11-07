@@ -87,7 +87,7 @@ Template Name: Homepage
 						echo '<div class="btn-group">';				
 						$taxonomy = get_taxonomy($taxonomy_name);
 						echo '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">' 
-						. $taxonomy->label . '<span class="caret"></span></button>';
+							. $taxonomy->label . '<span class="caret"></span></button>';
 						echo '<ul class="dropdown-menu" role="menu">';
 						
     					$terms = get_terms($taxonomy->name);
@@ -160,7 +160,7 @@ Template Name: Homepage
 					endif; ?>
 				
 			</div><!-- .posts -->
-		<h3><a href="http://localhost/ydh2s.com/category/editorial/">See More Articles</a></h3>
+		<h3><a href="/category/editorial/">See More Articles</a></h3>
 		</div><!-- end .editorial -->
 				
 	</div><!-- end .front-content -->
