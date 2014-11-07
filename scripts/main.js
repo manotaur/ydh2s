@@ -6,34 +6,6 @@ $(window).scroll(function(){
 });
 
 //collapses header and logo on scroll
-
-/*function headerCollapse(){
-	$(window).scroll(function(){
-		$(".navbar").animate({
-		height: "63px"
-			}, 1000);
-		$(".spacer").animate({
-		height: "0"
-			}, 1000);
-		$(".nav").animate({
-		paddingTop: "0"
-			}, 1000);
-		$(".navbar-left").animate({
-			paddingTop: "1px"
-			}, 10);
-		$(".logo").animate({
-			width: "110px",
-			paddingTop: "5px"
-			}, 1000);
-		$(".logoText").animate({
-			fontSize: "14px",
-			marginTop: "5px"
-			}, 1000);
-		$(".share-buttons").hide(1000);
-	});
-}; */
-
-//collapses header and logo on scroll
 function headerCollapse(){
 	$(window).scroll(function(){
 	$(".navbar").animate({
@@ -45,6 +17,9 @@ function headerCollapse(){
 		$(".navbar-collapse").animate({
 		paddingTop: "36px"
 			}, 1000);
+		$(".navbar-toggle").animate({
+		paddingTop: "40px"
+			}, 1000);
 		$(".logo").animate({
 			width: "100px",
 			}, 1000);
@@ -55,7 +30,7 @@ function headerCollapse(){
 			fontSize: "14px",
 			marginTop: "5px"
 			}, 1000);
-		$(".share-buttons").hide(1000);
+		$(".nav-share-buttons").hide(1000);
 	});
 };
 

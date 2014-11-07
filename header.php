@@ -51,17 +51,20 @@
 		<?php do_action( 'before' ); ?>
 		
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
- 		 <div class="container">
- 		 <div class="row">
 
-    		<div class="navbar-header">
-      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+ 		 <div class="container">
+ 		 
+ 		 <div class="row">
+ 		 	      		<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         			<span class="sr-only">Toggle navigation</span>
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       			</button>
-	  			
+
+    		<div class="navbar-header">
+      			
+
       			<a class="navbar-left" href="<?php bloginfo('url'); ?>">
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.svg" class="logo" alt="YDH2S logo"/>
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.png" class="ie-logo" alt="YDH2S Logo">
@@ -80,7 +83,7 @@
        			    <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>          	
       			</ul>
       			
-    		<div class="share-buttons navbar-right">
+    		<div class="nav-share-buttons navbar-right">
 				<span class="fa-stack fa-lg">
 					<i class="fa fa-square fa-stack-2x"></i>
    					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
