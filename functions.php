@@ -4,6 +4,7 @@
 	add_image_size( 'list', 250, 250, array( 'center', 'center' ) );
 	add_image_size( 'article-homepage-thumb', 350, 350, array( 'center', 'center' ) );
 	add_image_size( 'flyer', 600, 600, array( 'center', 'center' ) );
+	add_image_size( 'modal', 1000, 600);
 	
 	
 	function include_category( $query ) {
