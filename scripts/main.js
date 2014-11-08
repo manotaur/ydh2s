@@ -14,11 +14,8 @@ function headerCollapse(){
 		$(".spacer").animate({
 		height: "0"
 			}, 1000);
-		$(".navbar-collapse").animate({
-		paddingTop: "36px"
-			}, 1000);
 		$(".navbar-toggle").animate({
-		paddingTop: "40px"
+		paddingTop: "55px"
 			}, 1000);
 		$(".logo").animate({
 			width: "100px",

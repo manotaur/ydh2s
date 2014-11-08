@@ -1,0 +1,12 @@
+/*
+
+
+	<!--[if lt IE 9]>  
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/ie.css" />  
+	<![endif]-->  
+	
+*/
+
+body {background: red;}
+.logo {display: none;}
+.ie-logo {display: block;}

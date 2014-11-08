@@ -22,14 +22,14 @@ button:focus {outline:0px; -webkit-appearance:none;}
 .navbar h6 {margin: 4px 0 0 0;}
 /* .navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;} not needed anymore */
 .navbar-header img.logo {width: 220px;}
-.navbar-default .nav li a {color: white; padding: 23px 15px 0 15px;}
-.navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{margin-top: -15px;}
+.navbar-default .nav li a {color: white; padding: 10px 15px 13px 15px;}
+.navbar-collapse.collapsing .nav{margin-top: -15px;}
 .logoText {color: white;}
 .navbar-left {padding-top: 10px;}
 .not-found {padding-top: 20px;}
 
 .navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
-.navbar-toggle {border: none; margin: 30px 0 50px 0;}
+.navbar-toggle {border: none; margin: 10px 0 50px 0;}
 .navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;}
 
 /* removes Bootstrap's default return to grey background color after button is pressed & gray background for button in hover state*/
@@ -41,7 +41,6 @@ button:focus {outline:0px; -webkit-appearance:none;}
 @-moz-document url-prefix() {.navbar-collapse.in, .navbar-collapse.collapsing {margin-top: -2px;}}
 
 .navbar-right {padding-top: 35px;}
-
 .spacer {height: 50px;}
 
 /* removes placeholder text in input field on focus */
@@ -203,6 +202,7 @@ and (orientation : portrait) {
 @media only screen and (min-width:320px) and (max-width:767px) {
 	.container {padding: 0;}
 	.xs-hide {display: none;}
+	.spacer {height: 70px;}
 	.navbar-header img.logo {width: 160px;}
 	.logotext {font-size: 15px;}
 	.signup {padding: 50px 10px 40px 10px;}
@@ -224,6 +224,12 @@ and (min-device-width : 320px)
 and (max-device-width : 767px) 
 and (orientation : portrait) {
 	.filtering .btn-group {margin-bottom: 5px;}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+	.logo {display: none;}
+	.ie-logo {display: block;}
 }
 
 /* collapse the Bootstrap navbar at a custom width */
