@@ -1,4 +1,4 @@
-<a href="#" data-toggle="modal" data-target="#modal-<?php the_ID(); ?>">
+<a href="#" class="modal-thumb" data-toggle="modal" data-target="#modal-<?php the_ID(); ?>">
 	<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
 </a>
 <!-- Modal -->

@@ -226,6 +226,7 @@ and (min-device-width : 320px)
 and (max-device-width : 767px) 
 and (orientation : portrait) {
 	.filtering .btn-group {margin-bottom: 5px;}
+	.modal-thumb img {width: 150px; height: auto;}
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
