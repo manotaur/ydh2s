@@ -25,7 +25,7 @@ button:focus {outline:0px; -webkit-appearance:none;}
 .navbar-default .nav li a {color: white; padding: 10px 15px 13px 15px;}
 .navbar-nav {margin-top: 45px;}
 .navbar-collapse.collapsing .nav{margin-top: -15px;}
-.logoText {color: white;}
+.logotext {color: white;}
 .navbar-left {padding-top: 10px; float: left;}
 .navbar-right {float: left;}
 .not-found {padding-top: 20px;}
@@ -191,6 +191,8 @@ and (max-device-width : 1024px)  {
 	.container {padding: 0 5px 0 5px;}
 	.front-content {padding: 0 10px 0 10px;}
 	#sidebar h3 {font-size: 16px;}
+	h4.logotext {font-size: 15px; margin-top: 5px;}
+	ul.nav {margin-top: 70px;}
 	/*changes the size of the hamburger: */
 	/* commented out because the hamburger is bigger on all screens now */
 /*	.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;} */
@@ -201,6 +203,12 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
+	.navbar-header img.logo {width: 160px;}
+	h4.logotext {font-size: 13px;}
+	ul.nav {margin-top: 63px;}
+	.navbar-default .nav li a {padding: 0 8px 0 8px;}
+	.nav-share-buttons {display: none;}
+	#all-events {margin-top: 10px;}
 	#sidebar {font-size: 10px;}
 	#sidebar h3 {font-size: 13px; letter-spacing: -1px;}
 }
@@ -210,12 +218,14 @@ and (orientation : portrait) {
 	.container {padding: 0;}
 	.xs-hide {display: none;}
 	.spacer {height: 70px;}
+	.navbar {height: 100px;}
+	.navbar-left {padding-top: 5px;}
 	.navbar-header img.logo {width: 160px;}
-	.logotext {font-size: 15px;}
+	h4.logotext {font-size: 15px; margin-top: 5px;}
+	.navbar-toggle {margin-top: 15px;}
 	.signup {padding: 50px 10px 40px 10px;}
 	.front-content {padding: 0 10px 0 10px;}
 	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}
-	.navbar {height: 100px;}
 }
 
 /* iPhone 5/5S */
@@ -225,6 +235,14 @@ and (orientation : portrait) {
 @media screen and (device-aspect-ratio: 2/3) {
 	
 }
+/* iPhone 6 */
+@media only screen and (-webkit-min-device-pixel-ratio : 2)
+    and (min-device-width : 375px) and (max-device-width : 667px)
+{ }
+/* iPhone 6+ */
+@media only screen and (-webkit-min-device-pixel-ratio : 2)
+    and (min-device-width : 414px) and (max-device-width : 736px) { 
+    }
 
 /* iPhone portrait */
 @media only screen 
@@ -243,12 +261,13 @@ and (orientation : portrait) {
 
 /* collapse the Bootstrap navbar at a custom width */
 /* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
-@media (max-width: 1150px) {
+@media (max-width: 767px) {
 	.nav-share-buttons{display:none;}
     .navbar-header {float: none;}
 	.logo {padding-top: 10px;}
-    .logoText {padding-bottom: 1px;}
+    .logotext {padding-bottom: 1px;}
     .navbar-toggle {display: block; margin-right: 0;}
+    .navbar-default .navbar-toggle .icon-bar {background-color: #fff;} 
     .navbar-collapse {border-top: 1px solid transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
     .navbar-fixed-top {top: 0; border-width: 0 0 1px;}
     .navbar-collapse.collapse {display: none;}

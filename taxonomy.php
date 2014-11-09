@@ -36,7 +36,6 @@ get_header(); ?>
 						'order' => 'ASC',
 						$taxonomy => $slug
 					);
-					echo $taxonomy."ZZZZ".$slug;
 					$the_query = new WP_Query($taxArgs);
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
