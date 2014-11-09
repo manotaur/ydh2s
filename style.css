@@ -51,7 +51,8 @@ input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 
 /* CSS for the modal button: */
-.close {color: white; opacity: 1;}
+.close, .modal-title {color: white; opacity: 1;}
+
 .modal-body {padding-left: 0;}
 
 h3.section-heading {color: white; font-weight: 100; letter-spacing: 3px; margin-top: 20px; padding-bottom: 20px;}
@@ -214,6 +215,7 @@ and (orientation : portrait) {
 	.signup {padding: 50px 10px 40px 10px;}
 	.front-content {padding: 0 10px 0 10px;}
 	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}
+	.navbar {height: 100px;}
 }
 
 /* iPhone 5/5S */
@@ -230,6 +232,7 @@ and (min-device-width : 320px)
 and (max-device-width : 767px) 
 and (orientation : portrait) {
 	.filtering .btn-group {margin-bottom: 5px;}
+	.modal-thumb img {width: 150px; height: auto;}
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

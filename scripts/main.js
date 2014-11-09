@@ -44,6 +44,12 @@ function thumbHide(){
 	});
 };
 
+//this makes sure modals are as wide as the images they contain:
+function modalWidth(){
+	var $width = $(".modal-body").find("img").width();
+	$(".modal-dialog").css("width", $width);
+};
+
 function checkY(){
 	if( $(window).scrollTop() > startY ){
 		$('.sticky').show();
@@ -82,5 +88,6 @@ $(document).ready(function() {
 	isoFilter();
 	thumbHide();
 	headerCollapse();
+	modalWidth();
 });
 
