@@ -27,13 +27,11 @@ Template Name: Homepage
 						'order' => 'ASC',
 						'posts_per_page' => 3
 					);
-					query_posts($featargs);
-					if (have_posts()) :
-						while (have_posts()) : the_post();
-							include 'post-thumb.php'; // Post a thumbnail of the event
-						endwhile;
-					endif; 
-				?>
+					$the_query = new WP_Query($featargs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-thumb.php'; // Post a thumbnail of the event
+					} ?>
 				<div class="clearfix"></div>
 			</div><!-- end .posts -->
 		</div><!-- end .featured -->
@@ -41,7 +39,7 @@ Template Name: Homepage
 			<h3 class="section-heading event-heading row">OUR PICKS</h3>
 			<div class="posts row">
 				<?php			
-					$featargs = array(
+					$pickargs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old
 								'after' => '-23 hours'
@@ -51,13 +49,11 @@ Template Name: Homepage
 						'order' => 'ASC',
 						'posts_per_page' => 3
 					);
-					query_posts($featargs);
-					if (have_posts()) :
-						while (have_posts()) : the_post();
-							include 'post-thumb.php'; // Post a thumbnail of the event
-						endwhile;
-					endif; 
-				?>
+					$the_query = new WP_Query($pickargs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-thumb.php'; // Post a thumbnail of the event
+					} ?>
 				<div class="clearfix"></div>
 			</div><!-- end .posts -->
 		</div><!-- end .picks -->
@@ -115,21 +111,20 @@ Template Name: Homepage
 				<?php
 					$eventArgs = array(
 						'date_query'        => array(
-							array( // Show events less than a day old, no more than a week upcoming
+							array( // Show events less than a day old (no more than a week upcoming hidden)
 								'after' => '-23 hours',
-								'before' => '+1 week'
+								//'before' => '+1 week'
 							),
 						),
 						'category_name' => 'Event',
 						'order' => 'ASC',
 						'posts_per_page' => 6
 					);
-					query_posts($eventArgs);
-					if (have_posts()) :
-						while (have_posts()) : the_post();
-							include 'post-thumb.php'; // Post thumbnail
-						endwhile;
-					endif; ?>
+					$the_query = new WP_Query($eventArgs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-thumb.php'; // Post a thumbnail of the event
+					} ?>
 			</div><!-- end .posts -->
 		</div><!-- end .events -->
 								
@@ -141,12 +136,11 @@ Template Name: Homepage
 						'category_name' => 'Editorial',
 						'posts_per_page' => 2
 					);
-					query_posts($editargs);
-					if (have_posts()) :
-						while (have_posts()) : the_post();
-							include 'article-thumb.php';
-						endwhile;
-					endif; ?>
+					$the_query = new WP_Query($editargs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'article-thumb.php'; // Post a thumbnail of the article
+					} ?>
 				
 			</div><!-- .posts -->
 		<h3><a href="/category/editorial/">See More Articles</a></h3>

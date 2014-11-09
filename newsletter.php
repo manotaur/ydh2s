@@ -19,23 +19,20 @@ get_header(); ?>
 	endif; ?>
 			
 	<div class="front-content">
-		<div class="col-sm-10 col-xs-12">
+		<div class="col-sm-9 col-xs-12">
 	
 			<?php $newsargs = array(
 				'category_name' => 'newsletter',
 				'posts_per_page' => 1
 				);
-				query_posts($newsargs);
-				if ( have_posts() ) :
-					while ( have_posts() ) : the_post();
-						include 'newsletter-thumb.php';
-					endwhile;
-				else : ?>
-				<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
-			<?php endif; ?>
+				$the_query = new WP_Query($newsargs);
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+					include 'newsletter-thumb.php';
+				} ?>
 			
 		</div><!-- .col-xs-12 -->		
-		<div class="col-sm-2 xs-hide"><?php get_sidebar('newsletter'); ?></div>
+		<div class="col-sm-3 xs-hide"><?php get_sidebar('newsletter'); ?></div>
 		<div class="clearfix"></div>
 	</div><!-- .front-content -->
 </div><!-- #container -->

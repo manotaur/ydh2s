@@ -7,14 +7,23 @@ Template Name: Event Listing
 <?php get_header(); ?>
 
 <div class="event-list">
-	<?php // Gets event posts which have been published or scheduled
-		query_posts('category_name=Event&post_status=future,publish'); ?>
-	<?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); ?>
-			<?php include 'post-thumb.php'; ?>
-		<?php endwhile; else: ?>
-		<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
-	<?php endif; ?>
+				<?php
+					$eventArgs = array(
+						'date_query'        => array(
+							array( // Show events less than a day old (no more than a week upcoming hidden)
+								'after' => '-23 hours',
+								//'before' => '+1 week'
+							),
+						),
+						'category_name' => 'Event',
+						'order' => 'ASC',
+						'posts_per_page' => 6
+					);
+					$the_query = new WP_Query($eventArgs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						include 'post-thumb.php'; // Post a thumbnail of the event
+					} ?>
 </div>
 
 <?php get_footer(); ?>

@@ -9,12 +9,12 @@ get_header(); ?>
 	
 	<div class="front-content">
 		<div class="col-sm-10 col-xs-12 list">
-			<?php if ( have_posts() ) : ?>		
-			<?php while ( have_posts() ) : the_post(); ?>
-			<?php include 'article-list.php'; ?>
-			<?php endwhile; ?>
+			<?php if ( have_posts() ) :
+				while ( have_posts() ) : the_post();
+					include 'article-list.php';
+				endwhile;
 
-			<?php else : ?>
+			else : ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?>, guy</p>
 			<?php endif; ?>
 			

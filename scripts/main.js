@@ -12,7 +12,7 @@ function headerCollapse(){
 		marginTop: "-54px"
 			}, 1000); 
 		$(".spacer").animate({
-		height: "0"
+		height: "63px"
 			}, 1000);
 		$(".navbar-toggle").animate({
 		paddingTop: "55px"

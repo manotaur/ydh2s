@@ -26,15 +26,11 @@ get_header(); ?>
 					'category_name' => 'Event',
 					'order' => 'ASC'
 				);
-				query_posts($eventArgs);
-				if ( have_posts() ) :
-					while ( have_posts() ) : the_post();
-						include 'post-list.php'; // Post Listing
-					endwhile;
-
-				else : ?>
-					<p><?php _e('Sorry, no events this week.'); ?>, guy</p>
-			<?php endif; ?>
+				$the_query = new WP_Query($eventArgs);
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+					include 'post-list.php'; // Post Listing
+				} ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">
