@@ -15,4 +15,10 @@
 		}
 	}
 	add_action( 'pre_get_posts', 'include_category' );
+	
+	//this shortens event description excerpts to 20 words on the homepage:
+	function custom_excerpt_length( $length ) {
+		return 20;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 ?>

@@ -55,11 +55,8 @@
  		 <div class="container">
  		 
  		 <div class="row">
- 		 	      		<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        			<span class="sr-only">Toggle navigation</span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
+ 		 	  <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        			<i class="fa fa-bars fa-3x"></i>
       			</button>
 
     		<div class="navbar-header">
@@ -82,13 +79,13 @@
       			</ul>
       			
     		<div class="nav-share-buttons navbar-right">
-				<span class="fa-stack fa-lg">
+				<span class="fa-stack fa-2x">
 					<i class="fa fa-square fa-stack-2x"></i>
-   					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
+   					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"><h6 class="social-button-text">DontSettleBK</h6></a>
    				</span>
-				<span class="fa-stack fa-lg">
+				<span class="fa-stack fa-2x">
 					<i class="fa fa-square fa-stack-2x"></i>
-					<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
+					<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"><h6 class="social-button-text">@YDH2S</h6></a>
 				</span>
 			</div><!-- .share-buttons -->
       			

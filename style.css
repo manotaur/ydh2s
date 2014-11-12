@@ -41,10 +41,14 @@ button:focus {outline:0px; -webkit-appearance:none;}
 .navbar-left {padding-top: 10px; float: left;}
 .navbar-right {float: left;}
 .not-found {padding-top: 20px;}
+.social-button-text {font-size: 8px; color: white;}
+
 
 .navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
 .navbar-toggle {border: none; margin: 10px 0 50px 0;}
-.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;}
+
+.fa-bars {color: white; margin-right: 20px;}
+/*.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;} don't need- using FA hamburger instead*/
 
 /* removes Bootstrap's default return to grey background color after button is pressed & gray background for button in hover state*/
 .navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
@@ -274,7 +278,7 @@ and (orientation : portrait) {
 
 /* collapse the Bootstrap navbar at a custom width */
 /* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 	.nav-share-buttons{display:none;}
     .navbar-header {float: none;}
 	.logo {padding-top: 10px;}
@@ -288,4 +292,5 @@ and (orientation : portrait) {
     .navbar-nav>li {float: none;}
     .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
     .collapse.in{display:block;}
+    .article-image{display: none;}
 }

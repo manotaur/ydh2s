@@ -8,26 +8,25 @@ $(window).scroll(function(){
 //collapses header and logo on scroll
 function headerCollapse(){
 	$(window).scroll(function(){
-	$(".navbar").animate({
-		marginTop: "-54px"
-			}, 1000); 
-		$(".spacer").animate({
-		height: "63px"
-			}, 1000);
-		$(".navbar-toggle").animate({
-		paddingTop: "55px"
-			}, 1000);
-		$(".logo").animate({
-			width: "100px",
-			}, 1000);
-		$(".navbar-header").animate({
-			paddingTop: "50px"
-			}, 1000);
-		$(".logotext").animate({
-			fontSize: "14px",
-			marginTop: "5px"
-			}, 1000);
-		$(".nav-share-buttons").hide(1000);
+	if ($(window).width() > 767){
+		$(".navbar").animate({
+			marginTop: "-54px"
+				}, 1000); 
+			$(".spacer").animate({
+			height: "63px"
+				}, 1000);
+			$(".navbar-toggle").animate({
+			paddingTop: "55px"
+				}, 1000);
+			$(".logo").animate({
+				width: "100px",
+				}, 1000);
+			$(".navbar-header").animate({
+				paddingTop: "60px"
+				}, 1000);
+			$(".logotext").hide();
+			$(".nav-share-buttons").hide(1000);
+		}
 	});
 };
 
