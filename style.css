@@ -1,4 +1,16 @@
 body {background: url('img/backgroundimage.jpg') #000 center top no-repeat; font-family: Helvetica, Arial, sans-serif;}
+body {
+background:
+-webkit-linear-gradient(45deg, hsla(340, 95%, 42%, 1) 0%, hsla(340, 95%, 42%, 0) 70%),
+-webkit-linear-gradient(315deg, hsla(233, 100%, 42%, 1) 10%, hsla(233, 100%, 42%, 0) 80%),
+-webkit-linear-gradient(225deg, hsla(336, 95%, 48%, 1) 10%, hsla(336, 95%, 48%, 0) 80%),
+-webkit-linear-gradient(135deg, hsla(106, 94%, 48%, 1) 100%, hsla(106, 94%, 48%, 0) 70%);
+background:
+linear-gradient(45deg, hsla(340, 95%, 42%, 1) 0%, hsla(340, 95%, 42%, 0) 70%),
+linear-gradient(135deg, hsla(233, 100%, 42%, 1) 10%, hsla(233, 100%, 42%, 0) 80%),
+linear-gradient(225deg, hsla(336, 95%, 48%, 1) 10%, hsla(336, 95%, 48%, 0) 80%),
+linear-gradient(315deg, hsla(106, 94%, 48%, 1) 100%, hsla(106, 94%, 48%, 0) 70%);
+}
 ul {padding: 0;}
 li {list-style: none;}
 h1 {}
@@ -112,6 +124,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .article-sidebar li {margin-bottom: 7px; line-height: 1.3em;}
 
 /* Newsletter */
+.newsletter-info {color: #fff;}
 .newsthumb {padding: 0 20px 20px 20px;}
 .newsletter .sharing {padding: 15px;}
 
@@ -136,7 +149,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 .day-date a {background: #ff2527; margin-bottom: 12px;}
 
 /* Listings Pages */
-.page-header h1, h1.page-title, h1.entry-title {color: #161616;}
+.signup, .page-header h1, h1.page-title, h1.entry-title, h4.entry-author {color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);}
 .listing .front-content, .listing .col-xs-10 {padding: 0;}
 .listing article {color: #fff;}
 .listing .main {padding-left: 8px;}

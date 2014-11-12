@@ -13,9 +13,9 @@ get_header(); ?>
 	<h1 class="page-title">Newsletters</h1>
 	
 	<?php if ( have_posts() ) : 
-		while ( have_posts() ) : the_post();
-			the_content();
-		endwhile;
+		while ( have_posts() ) : the_post();?>
+			<div class="newsletter-info"><?php the_content(); ?></div>
+		<?php endwhile;
 	endif; ?>
 			
 	<div class="front-content">
