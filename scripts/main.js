@@ -37,7 +37,7 @@ function thumbHide(){
 	$("#home .picks .entry-desc").hide();
 	$("#home .entry-details").hide();
 	$("#home .sharing").hide();
-	$("#home .entry-info-wrap").hover(function(){
+	$("#home .entry-info").hover(function(){
 		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
 	}, function(){
 		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
