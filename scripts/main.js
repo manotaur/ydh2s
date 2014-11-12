@@ -23,7 +23,7 @@ function headerCollapse(){
 		$(".navbar-header").animate({
 			paddingTop: "50px"
 			}, 1000);
-		$(".logoText").animate({
+		$(".logotext").animate({
 			fontSize: "14px",
 			marginTop: "5px"
 			}, 1000);
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		filterState();
 	});
 	$('#all-events').click( function() { // When the All Events button is clicked, navigate to all events
-		window.open("http://localhost/ydh2s.com/category/event/", "_self");
+		window.open("category/event/", "_self");
 	})
 	checkY();
 	isoFilter();
