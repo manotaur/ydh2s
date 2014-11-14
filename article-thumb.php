@@ -11,7 +11,7 @@
 		</div><!-- .headline -->
 
 		<div class="entry-desc">
-			<?php the_excerpt(); ?>
+			<?php custom_excerpt(160); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-desc -->
 		

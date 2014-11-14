@@ -18,7 +18,7 @@
 			</div><!-- .day-date -->
 		</div><!-- .row -->
 		<div class="entry-desc event-desc">
-			<?php the_excerpt(); ?>
+			<?php custom_excerpt(20); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-desc -->
 		

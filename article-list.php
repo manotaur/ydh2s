@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" class="list row">
-	<div class="flyer col-xs-3">
+	<div class="flyer article-image col-xs-3">
 		<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
 	</div>
 	<div class="main col-xs-9">
@@ -11,7 +11,7 @@
 		</header><!-- .entry-header -->
 		
 		<div class="entry-summary row">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sscontent' ) ); ?>
+			<?php the_content(); ?>
 		</div><!-- .entry-summary -->
 		<div class="meta">
 			<!-- Tags only, since this is an article post -->
