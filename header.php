@@ -50,7 +50,7 @@
 	<div id="page" class="hfeed site">
 		<?php do_action( 'before' ); ?>
 		
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top expanded-header" role="navigation">
 
  		 <div class="container">
  		 
@@ -66,8 +66,8 @@
 	  				<h4 class="logotext">YOU DON'T HAVE 2 SETTLE</h4>
       			</a>
 
-    		</div> <!-- end .navbar-header -->
-    		<!-- Collect the nav links, forms, and other content for toggling -->
+    		</div> <!-- .navbar-header -->
+    		<!-- the content in .navbar-collapse will collapse into the hamburger menu -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
         			<li><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
@@ -79,13 +79,13 @@
       			</ul>
       			
     		<div class="nav-share-buttons navbar-right">
-				<span class="fa-stack fa-2x">
+				<span class="fa-stack fa-lg">
 					<i class="fa fa-square fa-stack-2x"></i>
-   					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"><h6 class="social-button-text">DontSettleBK</h6></a>
+   					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"></a>
    				</span>
-				<span class="fa-stack fa-2x">
+				<span class="fa-stack fa-lg">
 					<i class="fa fa-square fa-stack-2x"></i>
-					<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"><h6 class="social-button-text">@YDH2S</h6></a>
+					<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"></a>
 				</span>
 			</div><!-- .share-buttons -->
       			
