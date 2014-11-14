@@ -30,7 +30,8 @@
 	<meta name="generator" content="Wordpress <?php bloginfo('version'); ?>" />
     <meta name="description" content="">
 	<meta name="keywords" content="">
-		
+	
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'><!-- Roboto Font -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
@@ -79,6 +80,16 @@
       			</ul>
       			
     		<div class="nav-share-buttons navbar-right">
+    			<a href="http://www.facebook.com/DontSettleBK" target="_blank">
+					<i class="fa fa-facebook fa-1x mediaIcon"></i>
+					<div>DontSettleBK</div>
+   				</a>
+    			<a href="http://twitter.com/YDH2S" target="_blank">
+					<i class="fa fa-twitter fa-1x mediaIcon"></i>
+					<div>@YDH2S</div>
+   				</a>
+    		
+    		<!--
 				<span class="fa-stack fa-2x">
 					<i class="fa fa-square fa-stack-2x"></i>
    					<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/DontSettleBK"><h6 class="social-button-text">DontSettleBK</h6></a>
@@ -87,6 +98,7 @@
 					<i class="fa fa-square fa-stack-2x"></i>
 					<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="http://twitter.com/YDH2S"><h6 class="social-button-text">@YDH2S</h6></a>
 				</span>
+				-->
 			</div><!-- .share-buttons -->
       			
     	   </div><!-- /.navbar-collapse -->

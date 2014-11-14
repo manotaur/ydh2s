@@ -14,7 +14,7 @@ get_header(); ?>
 					$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 					echo $term->name; // Get & display the section term  ?>
 			</h1>
-			<h3><?php $venues = get_the_terms($post->ID, 'venues');
+			<h3 class="entry-address"><?php $venues = get_the_terms($post->ID, 'venues');
 						foreach ( $venues as $venue ) {
 							echo $venue->description;
 						}?></h3>
