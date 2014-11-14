@@ -5,27 +5,76 @@ $(window).scroll(function(){
 	checkY();
 });
 
-//collapses header and logo on scroll
-function headerCollapse(){
+//collapses header and logo on scroll, expands if user scrolls to top
+function headerChange(){
 	$(window).scroll(function(){
-	if ($(window).width() > 767){
-		$(".navbar").animate({
-			marginTop: "-54px"
-				}, 1000); 
-			$(".spacer").animate({
-			height: "63px"
-				}, 1000);
-			$(".navbar-toggle").animate({
-			paddingTop: "55px"
-				}, 1000);
-			$(".logo").animate({
-				width: "100px",
-				}, 1000);
-			$(".navbar-header").animate({
-				paddingTop: "60px"
-				}, 1000);
-			$(".logotext").hide();
-			$(".nav-share-buttons").hide(1000);
+		//using Chrome's responsive web tester, the header on iPad portrait wouldn't collapse
+		//unless the number in this if statement was at least 762:
+		if ($(window).width() > 762) {
+			if ($("nav").hasClass("expanded-header")){
+				$(".navbar").animate({
+					marginTop: "-54px"
+					}, 1000); 
+					$(".spacer").animate({
+					height: "63px"
+					}, 1000);
+				$(".navbar-toggle").animate({
+					paddingTop: "55px"
+					}, 1000);
+				$(".navbar-nav").animate({
+					paddingTop: "20px"
+					}, 1000);
+				$(".logo").animate({
+					width: "100px",
+					}, 1000);
+				$(".navbar-header").animate({
+					paddingTop: "60px"
+					}, 1000);
+				$(".logotext").hide();
+				$(".nav-share-buttons").hide(1000);
+				$("nav").removeClass("expanded-header");
+				$("nav").addClass("collapsed-header");
+			} else if ($("nav").hasClass("collapsed-header") && ($(window).scrollTop() == 0)){
+				$(".navbar").animate({
+					marginTop: "0"
+					}, 1000); 
+				$(".spacer").animate({
+					height: "117px"
+					}, 1000);
+				$(".navbar-toggle").animate({
+					paddingTop: "0px"
+					}, 1000);
+				$(".navbar-nav").animate({
+					paddingTop: "0px"
+					}, 1000);
+				$(".logo").animate({
+					width: "220px"
+					}, 1000);
+				$(".navbar-header").animate({
+					paddingTop: "0px"
+					}, 1000);
+				$(".logotext").show(1000);
+				$(".nav-share-buttons").show(1000);
+				$("nav").removeClass("collapsed-header");				
+				$("nav").addClass("expanded-header");
+			}
+		}
+	});
+};
+
+//this function makes sure the proper CSS is maintained for elements in the header
+//if a user resizes the browser after the header expands/collapses on scroll:
+function checkWindowResize(){
+	$(window).resize(function() {
+		if ($(window).width() < 768){
+			$(".logo").css( "width", "100px" );
+			$(".logotext").css( "display", "none" );
+				if ($("nav").hasClass("collapsed-header")){
+					$(".navbar").css("height", "117px");
+				} 
+		} else if ($(window).width() > 768 && $("nav").hasClass("expanded-header")){
+			$(".logo").css( "width", "220px" );
+			$(".logotext").css( "display", "block" );		
 		}
 	});
 };
@@ -86,7 +135,8 @@ $(document).ready(function() {
 	checkY();
 	isoFilter();
 	thumbHide();
-	headerCollapse();
+	headerChange();
+	checkWindowResize();
 	modalWidth();
 });
 

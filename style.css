@@ -209,10 +209,9 @@ h4.entry-author, h3.entry-address {margin-top: 0;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */
-@media screen and (min-width: 1151px){
+@media screen and (min-width: 768px){
 	.nav{
 		/* width: 456px; This breaks some things so Brian is hiding it now */
-		padding-top: 20px;
 		position: absolute;
 		margin-left: -228px;
   		left: 50%;
@@ -262,12 +261,13 @@ and (orientation : portrait) {
 @media only screen and (min-width:320px) and (max-width:767px) {
 	.container {padding: 0;}
 	.xs-hide {display: none;}
-	.spacer {height: 70px;}
-	.navbar {height: 100px;}
+	.spacer {height: 0;}
+	.navbar {height: 63px;}
 	.navbar-left {padding-top: 5px;}
-	.navbar-header img.logo {width: 160px;}
-	h4.logotext {font-size: 15px; margin-top: 5px;}
-	.navbar-toggle {margin-top: 15px;}
+	.navbar-header img.logo {width: 100px;}
+/*	h4.logotext {font-size: 15px; margin-top: 5px;}  the logo text isn't displayed on mobile */
+	.logotext {display: none;}
+	.navbar-toggle {padding-top: 0;}
 	.signup {padding: 50px 10px 40px 10px;}
 	.front-content {padding: 0 10px 0 10px;}
 	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}
@@ -306,7 +306,7 @@ and (orientation : portrait) {
 
 /* collapse the Bootstrap navbar at a custom width */
 /* see http://stackoverflow.com/questions/22329606/bootstrap-navbar-collapse-media-query-on-custom-width */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 	.nav-share-buttons{display:none;}
     .navbar-header {float: none;}
 	.logo {padding-top: 10px;}
