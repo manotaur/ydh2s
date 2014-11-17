@@ -47,7 +47,10 @@
 		</div><!-- end .entry-details -->
 
 		<div class="entry-summary row">
-			<?php custom_excerpt(60); ?>
+			<?php
+			// this variable is assigned to a "read more" link & is passed into the custom excerpt function:  
+			$readMore = ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+			custom_excerpt(60, $readMore); ?>
 		</div><!-- .entry-summary -->
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

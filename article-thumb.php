@@ -11,7 +11,10 @@
 		</div><!-- .headline -->
 
 		<div class="entry-desc">
-			<?php custom_excerpt(160); ?>
+			<?php
+			// this variable is assigned to a "read more" link & is passed into the custom excerpt function: 
+			$readMore = ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+			custom_excerpt(160, $readMore); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-desc -->
 		
