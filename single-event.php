@@ -10,7 +10,7 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			
 			<h3><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
-				<?php echo get_post_time('F j'); ?></h3>
+				<?php echo get_post_time('l, F j'); ?></h3>
 		
 			<div class="entry-details meta row">
 				<div class="venue loc col-xs-12">
@@ -24,6 +24,7 @@
 				<div class="neighborhood nabe col-xs-12">	
 					<h4 class="category-name">Neighborhood</h4>
 					<div class="category-term"><?php the_terms( $post->ID, 'neighborhood') ?></div>
+				</div>
 				<div class="price col-xs-12">	
 					<h4 class="category-name">Price</h4>
 					<div class="category-term"><?php the_terms( $post->ID, 'price') ?></div>

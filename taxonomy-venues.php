@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="taxonomy" class="container listing">
 	<?php if ( have_posts() ) : ?>
-		<header class="page-header row">
+		<div class="outer-head">
 			<h1 class="page-title">
 				<?php $the_tax = get_taxonomy( get_query_var( 'taxonomy' ) );
 					$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
@@ -18,7 +18,7 @@ get_header(); ?>
 						foreach ( $venues as $venue ) {
 							echo $venue->description;
 						}?></h3>
-		</header>
+		</div>
 		
 		<div class="front-content">
 			<!-- Google Maps embed: -->

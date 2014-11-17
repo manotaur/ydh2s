@@ -10,13 +10,15 @@ get_header(); ?>
 			<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
 		</div>
 	</div> <!-- end .row -->
-	<h1 class="page-title">Newsletters</h1>
+	<div class="outer-head">
+		<h1 class="page-title">Newsletters</h1>
 	
-	<?php if ( have_posts() ) : 
-		while ( have_posts() ) : the_post();?>
-			<div class="newsletter-info"><?php the_content(); ?></div>
-		<?php endwhile;
-	endif; ?>
+		<?php if ( have_posts() ) : 
+			while ( have_posts() ) : the_post();?>
+				<div class="newsletter-info"><?php the_content(); ?></div>
+			<?php endwhile;
+		endif; ?>
+	</div>
 			
 	<div class="front-content">
 		<div class="col-sm-9 col-xs-12">

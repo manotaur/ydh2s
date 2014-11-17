@@ -35,7 +35,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-		
+	
+	<?php include_once("analytics.php") ?>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/scripts/main.js"></script>
@@ -56,9 +57,9 @@
  		 <div class="container">
  		 
  		 <div class="row">
- 		 	  <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        			<i class="fa fa-bars fa-3x"></i>
-      			</button>
+ 		 	<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        		<i class="fa fa-bars fa-3x"></i>
+      		</button>
 
     		<div class="navbar-header">
       			<a class="navbar-left" href="<?php bloginfo('url'); ?>">
@@ -79,19 +80,19 @@
        			    <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>          	
       			</ul>
       			
-    		<div class="nav-share-buttons navbar-right">
-    			<a href="http://www.facebook.com/DontSettleBK" target="_blank">
-					<i class="fa fa-facebook fa-1x mediaIcon"></i>
-					<div>DontSettleBK</div>
-   				</a>
-    			<a href="http://twitter.com/YDH2S" target="_blank">
-					<i class="fa fa-twitter fa-1x mediaIcon"></i>
-					<div>@YDH2S</div>
-   				</a>
-			</div><!-- .share-buttons -->
+	  			<div class="nav-share-buttons navbar-right">
+    				<a href="http://www.facebook.com/DontSettleBK" target="_blank">
+						<i class="fa fa-facebook fa-1x mediaIcon"></i>
+						<div>DontSettleBK</div>
+   					</a>
+   					<a href="http://twitter.com/YDH2S" target="_blank">
+						<i class="fa fa-twitter fa-1x mediaIcon"></i>
+						<div>@YDH2S</div>
+   					</a>
+				</div><!-- .share-buttons -->
       			
-    	   </div><!-- /.navbar-collapse -->
-    	   </div><!-- .row -->
+    	  	</div><!-- /.navbar-collapse -->
+    	</div><!-- .row -->
   		</div><!-- /.container -->
 	</nav>
 	</div><!-- end #page -->

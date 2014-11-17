@@ -24,16 +24,16 @@
 
 body {background: url('img/backgroundimage.jpg') #000 center top no-repeat; font-family: Helvetica, Arial, sans-serif; font-family: 'Roboto', Arial, sans-serif; font-weight: 200;}
 body {
-background:
--webkit-linear-gradient(45deg, hsla(340, 95%, 42%, 1) 0%, hsla(340, 95%, 42%, 0) 70%),
--webkit-linear-gradient(315deg, hsla(233, 100%, 42%, 1) 10%, hsla(233, 100%, 42%, 0) 80%),
--webkit-linear-gradient(225deg, hsla(336, 95%, 48%, 1) 10%, hsla(336, 95%, 48%, 0) 80%),
--webkit-linear-gradient(135deg, hsla(106, 94%, 48%, 1) 100%, hsla(106, 94%, 48%, 0) 70%);
-background:
-linear-gradient(45deg, hsla(340, 95%, 42%, 1) 0%, hsla(340, 95%, 42%, 0) 70%),
-linear-gradient(135deg, hsla(233, 100%, 42%, 1) 10%, hsla(233, 100%, 42%, 0) 80%),
-linear-gradient(225deg, hsla(336, 95%, 48%, 1) 10%, hsla(336, 95%, 48%, 0) 80%),
-linear-gradient(315deg, hsla(106, 94%, 48%, 1) 100%, hsla(106, 94%, 48%, 0) 70%);
+	background:
+		-webkit-linear-gradient(45deg, hsla(209, 81%, 42%, 1) 0%, hsla(209, 81%, 42%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(316, 95%, 32%, 1) 10%, hsla(316, 95%, 32%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(316, 90%, 63%, 1) 10%, hsla(316, 90%, 63%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(98, 95%, 0%, 1) 100%, hsla(98, 95%, 0%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(209, 81%, 42%, 1) 0%, hsla(209, 81%, 42%, 0) 70%),
+		linear-gradient(135deg, hsla(316, 95%, 32%, 1) 10%, hsla(316, 95%, 32%, 0) 80%),
+		linear-gradient(225deg, hsla(316, 90%, 63%, 1) 10%, hsla(316, 90%, 63%, 0) 80%),
+		linear-gradient(315deg, hsla(98, 95%, 0%, 1) 100%, hsla(98, 95%, 0%, 0) 70%);
 }
 b, strong {letter-spacing: 0.08em;}
 ul {padding: 0;}
@@ -56,7 +56,6 @@ button:focus {outline:0px; -webkit-appearance:none;}
 
 .navbar {background: black; border: none; height: 117px;}
 .navbar h6 {margin: 4px 0 0 0;}
-/* .navbar-default .navbar-brand {position: absolute; color: white; padding: 2px 2px 2px 300px;} not needed anymore */
 .navbar-header img.logo {width: 220px;}
 .navbar-default .nav li a {color: white; padding: 10px 15px 13px 15px;}
 .navbar-nav {margin-top: 45px;}
@@ -119,7 +118,7 @@ article.thumb {height: 480px; float: left; position: relative; overflow: hidden;
 h3.entry-title {margin: 0 0 6px 0;}
 h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .entry-desc p {margin: 0;}
-.entry-details {padding-top: 9px;}
+.entry-details {padding: 9px;}
 .entry-details h6 {text-transform: uppercase; font-size: 10px; letter-spacing: 1px; font-weight: bold; margin: 1px;}
 .entry-details a {color: #fff;}
 .entry-details .col-xs-5, .entry-details .col-xs-12 {padding: 0;}
@@ -150,7 +149,8 @@ h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .meta .tags a {background: orange;}
 .thumb .article-info {color: #fff; padding: 15px;}
 footer {padding: 4px 10px 70px 0; text-align: right;}
-#article-sidebar {padding: 0 10px 0 20px;}
+.single.article iframe.col-xs-12 {margin: 20px 0 20px 0;}
+#article-sidebar {padding: 0 10px 20px 20px;}
 .article-sidebar h3 {margin-bottom: 10px;}
 .article-sidebar li {margin-bottom: 7px; line-height: 1.3em;}
 
@@ -168,6 +168,11 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 #sidebar h3 {text-transform: uppercase; margin: 15px 0 10px 0; font-size: 20px;}
 #main-sidebars {padding: 0 10px 0 0;}
 .single #main-sidebars {padding-left: 10px;}
+
+/* Footer */
+footer .credits {color: #161616; text-align: left;}
+footer .credits a {color: #222; font-weight: 400;}
+footer .credits a:hover {text-decoration: underline;}
 	
 /* Events */
 .day-date a, .meta a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left; color: #000; font-weight: 500;}
@@ -181,6 +186,7 @@ footer {padding: 4px 10px 70px 0; text-align: right;}
 
 /* Listings Pages */
 .signup, .page-header h1, h1.page-title, h1.entry-title, h4.entry-author, h3.entry-address {color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);}
+.outer-head {color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);}
 h4.entry-author, h3.entry-address {margin-top: 0;}
 .listing .front-content, .listing .col-xs-10 {padding: 0;}
 .listing article {color: #fff;}
@@ -196,16 +202,20 @@ h4.entry-author, h3.entry-address {margin-top: 0;}
 /* Single event Page */
 .single header {padding: 0; overflow: hidden;} 
 .single .header-info {background: rgba(0,0,0,0.5); z-index: 2; position: relative; padding: 50px 0 25px 30px;}
+.event .header-info {padding: 5px 20px 5px 20px;}
 .single .front-content {padding-left: 0; min-height: 600px;}
 .single .flyer {overflow: hidden; min-height: 250px;}
 .single .bg-flyer {position: absolute; z-index: 0;}
 .single header h1, .single header h3 {position: relative; z-index: 2; color: #fff; text-shadow: 2px 2px #000;}
 .single header h3 {margin-top: 0;}
-.single header h4 {color: #fff; text-shadow: 2px 2px #000;}
+.single header h4 {color: #fff; text-shadow: 2px 2px #000; font-family: 'roboto', Helvetica, Arial, sans-serif;}
 .single .entry-summary {padding: 25px; color: #fff; max-width: 750px;}
 .single .front-content {padding: 0;}
 .category-name {float: left;}
 .category-term {float: left; margin: 8px; font-weight: 500;}
+
+/* Editorial */
+iframe.spotify {width: 300px; height: 380px;}
 
 /* this media query is by Dave- centers the nav when not in hamburger mode */
 /* the centering idea is from http://designshack.net/articles/css/how-to-center-anything-with-css/ */
@@ -236,7 +246,6 @@ and (max-device-width : 1024px)  {
 	.front-content {padding: 0 10px 0 10px;}
 	#sidebar h3 {font-size: 16px;}
 	h4.logotext {font-size: 15px; margin-top: 5px;}
-	ul.nav {margin-top: 70px;}
 	/*changes the size of the hamburger: */
 	/* commented out because the hamburger is bigger on all screens now */
 /*	.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;} */
@@ -259,18 +268,23 @@ and (orientation : portrait) {
 
 /* iPhone */
 @media only screen and (min-width:320px) and (max-width:767px) {
+	h1 {font-size: 26px;}
 	.container {padding: 0;}
 	.xs-hide {display: none;}
-	.spacer {height: 0;}
+	.spacer {height: 63px;}
 	.navbar {height: 63px;}
 	.navbar-left {padding-top: 5px;}
 	.navbar-header img.logo {width: 100px;}
-/*	h4.logotext {font-size: 15px; margin-top: 5px;}  the logo text isn't displayed on mobile */
 	.logotext {display: none;}
 	.navbar-toggle {padding-top: 0;}
 	.signup {padding: 50px 10px 40px 10px;}
+	.signup p {font-size: 15px;}
 	.front-content {padding: 0 10px 0 10px;}
 	.filtering button {padding: 6px 8px 6px 8px; font-size: 12px;}
+	.outer-head {padding: 0 8px 0 8px;}
+	.single header h3 {font-size: 21px;}
+	.single header h4, .category-term {font-size: 15px; margin: 4px 0 5px 5px;}
+	.single .entry-summary {padding: 8px;} 
 }
 
 /* iPhone 5/5S */
@@ -315,8 +329,8 @@ and (orientation : portrait) {
     .navbar-default .navbar-toggle .icon-bar {background-color: #fff;} 
     .navbar-collapse {border-top: 1px solid transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
     .navbar-fixed-top {top: 0; border-width: 0 0 1px;}
-    .navbar-collapse.collapse {display: none;}
-    .navbar .navbar-nav {float: none; margin-top: 7.5px;}
+    /*.navbar-collapse.collapse {display: none;}*/
+    .navbar .navbar-nav {float: none;}
     .navbar-nav>li {float: none;}
     .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
     .collapse.in{display:block;}

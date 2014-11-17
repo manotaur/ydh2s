@@ -5,7 +5,9 @@
 add_theme_support('post-thumbnails');
 get_header(); ?>
 <div id="events" class="container listing">
-	<h1 class="page-title">Events</h1>
+	<div class="outer-head">
+		<h1 class="page-title">Events</h1>
+	</div>
 
 	<div class="front-content">
 		<div class="col-sm-10 col-xs-12 list">

@@ -5,8 +5,10 @@
 			<?php if( function_exists( 'mc4wp_form' ) ) { mc4wp_form(); } // Mailchimp for WP plugin ?>
 		</div>
 	</div> <!-- end .row -->
-
-	<h1 class="entry-title"><?php the_title(); ?></h1>
+	
+	<div class="outer-head">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</div>
 
 	<article id="post-<?php the_ID(); ?>" class="front-content col-xs-12">
 		<div class="main col-sm-9 col-xs-12">

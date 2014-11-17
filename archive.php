@@ -7,11 +7,11 @@ get_header(); ?>
 <div id="taxonomy" class="container listing">
 
 <?php if ( have_posts() ) : ?>
-		<header class="page-header row">
+		<div class="outer-head">
 			<h1 class="page-title">
 				<?php
 					if ( is_category() ) {
-						printf( __( 'Category Archives: %s'), '<span>' . single_cat_title( '', false ) . '</span>' );
+						printf( __( 'Category: %s'), '<span>' . single_cat_title( '', false ) . '</span>' );
 
 					} elseif ( is_tag() ) {
 						printf( __( 'Tag Archives: %s'), '<span>' . single_tag_title( '', false ) . '</span>' );
@@ -29,7 +29,7 @@ get_header(); ?>
 						rewind_posts();
 
 					} elseif ( is_day() ) {
-						printf( __( 'Events from %s'), '<span>' . get_the_date() . '</span>' );
+						printf( __( 'Events from %s'), '<span>' . get_the_date( 'l, F j' ) . '</span>' );
 
 					} elseif ( is_month() ) {
 						printf( __( 'Events from %s'), '<span>' . get_the_date( 'F Y' ) . '</span>' );
@@ -41,7 +41,7 @@ get_header(); ?>
 						_e( 'Archives');
 
 					} ?></h1>
-		</header>
+		</div>
 		<?php rewind_posts(); ?>
 		
 		<div class="front-content">

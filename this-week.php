@@ -7,9 +7,9 @@ get_header(); ?>
 <div id="taxonomy" class="container listing">
 
 <?php if ( have_posts() ) : ?>
-		<header class="page-header row">
+		<div class="outer-head">
 			<h1 class="page-title">This Week's Events</h1>
-		</header>
+		</div>
 		<?php rewind_posts(); ?>
 		
 		<div class="front-content">

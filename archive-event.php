@@ -7,7 +7,7 @@ get_header(); ?>
 <div id="taxonomy" class="container listing">
 
 <?php if ( have_posts() ) : ?>
-		<header class="page-header row">
+		<div class="outer-head">
 			<h1 class="page-title">
 				<?php
 					if ( is_category() ) {
@@ -41,7 +41,7 @@ get_header(); ?>
 						_e( 'Archives');
 
 					} ?></h1>
-		</header>
+		</div>
 		<?php rewind_posts(); ?>
 		
 		<div class="front-content">

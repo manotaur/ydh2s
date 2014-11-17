@@ -14,7 +14,7 @@ Template Name: Homepage
 
 	<div class="front-content row">
 		<div class="col-xs-12 featured"><!-- Featured Events -->
-			<h3 class="section-heading event-heading row">FEATURED EVENTS</h3>
+			<a href="<?php bloginfo('url'); ?>/featured/"><h3 class="section-heading event-heading row">FEATURED EVENTS</h3></a>
 			<div class="posts row">
 				<?php			
 					$featargs = array(
@@ -36,7 +36,7 @@ Template Name: Homepage
 			</div><!-- end .posts -->
 		</div><!-- end .featured -->
 		<div class="col-xs-12 picks"><!-- Featured Events -->
-			<h3 class="section-heading event-heading row">OUR PICKS</h3>
+			<a href="<?php bloginfo('url'); ?>/pick/"><h3 class="section-heading event-heading row">OUR PICKS</h3></a>
 			<div class="posts row">
 				<?php			
 					$pickargs = array(
@@ -59,7 +59,7 @@ Template Name: Homepage
 		</div><!-- end .picks -->
 
 		<div class="col-xs-12 events"><!-- All the week's events -->
-			<h3 class="section-heading event-heading row">MORE EVENTS</h3>
+			<a href="<?php bloginfo('url'); ?>/category/event/"><h3 class="section-heading event-heading row">MORE EVENTS</h3></a>
 			<?php // echo "Today is ".date(l); ?>
 			<div class="filtering col-xs-12">
 				<h4>FILTER</h4>

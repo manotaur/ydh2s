@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div id="taxonomy" class="container listing">
 	<?php if ( have_posts() ) : ?>
-		<header class="page-header row">
+		<div class="outer-head">
 			<h1 class="page-title">
 				<?php $the_tax = get_taxonomy( get_query_var( 'taxonomy' ) );
 					$taxonomy = $the_tax->labels->name;
@@ -19,7 +19,7 @@ get_header(); ?>
 				<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 					echo $term->name; // Get & display the section term  ?>
 			</h1>
-		</header>
+		</div>
 		
 		<div class="front-content">
 			<div class="col-sm-10 col-xs-12 list">
