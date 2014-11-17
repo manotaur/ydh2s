@@ -256,14 +256,18 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-	.navbar-header img.logo {width: 160px;}
-	h4.logotext {font-size: 13px;}
 	ul.nav {margin-top: 63px;}
 	.navbar-default .nav li a {padding: 0 8px 0 8px;}
 	.nav-share-buttons {display: none;}
 	#all-events {margin-top: 10px;}
 	#sidebar {font-size: 10px;}
 	#sidebar h3 {font-size: 13px; letter-spacing: -1px;}
+	.spacer {height: 0;}
+	.navbar {height: 63px;}
+	.navbar-header img.logo {width: 100px; padding-top: 5px;}
+	.logotext {display: none;}
+	.nav-share-buttons {display:none;}
+	.navbar-nav {margin-top:10px;}
 }
 
 /* iPhone */
@@ -284,7 +288,8 @@ and (orientation : portrait) {
 	.outer-head {padding: 0 8px 0 8px;}
 	.single header h3 {font-size: 21px;}
 	.single header h4, .category-term {font-size: 15px; margin: 4px 0 5px 5px;}
-	.single .entry-summary {padding: 8px;} 
+	.single .entry-summary {padding: 8px;}
+	.front-content .thumb {height: 320px;}
 }
 
 /* iPhone 5/5S */

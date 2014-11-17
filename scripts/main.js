@@ -8,10 +8,8 @@ $(window).scroll(function(){
 //collapses header and logo on scroll, expands if user scrolls to top
 function headerChange(){
 	$(window).scroll(function(){
-		//using Chrome's responsive web tester, the header on iPad portrait wouldn't collapse
-		//unless the number in this if statement was at least 762:
-		if ($(window).width() > 762) {
-			if ($("nav").hasClass("expanded-header")){
+		if ($(window).width() > 768) {
+			if ($("nav").hasClass("expanded-header") && ($(window).scrollTop() > 50)){
 				$(".navbar").animate({
 					marginTop: "-54px"
 					}, 1000); 
@@ -34,7 +32,7 @@ function headerChange(){
 				$(".nav-share-buttons").hide(1000);
 				$("nav").removeClass("expanded-header");
 				$("nav").addClass("collapsed-header");
-			} else if ($("nav").hasClass("collapsed-header") && ($(window).scrollTop() == 0)){
+			} else if ($("nav").hasClass("collapsed-header") && ($(window).scrollTop() < 50)){
 				$(".navbar").animate({
 					marginTop: "0"
 					}, 1000); 
@@ -85,11 +83,13 @@ function thumbHide(){
 	$("#home .picks .entry-desc").hide();
 	$("#home .entry-details").hide();
 	$("#home .sharing").hide();
+	if ($(window).width() > 1024){
 	$("#home .entry-info").hover(function(){
 		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
 	}, function(){
 		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
 	});
+	}
 };
 
 //this makes sure modals are as wide as the images they contain:

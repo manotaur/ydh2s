@@ -9,7 +9,7 @@
         	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
         	<h4 class="modal-title" id="myModalLabel"><?php the_title(); ?></h4>
       	</div><!-- .modal-header -->
-      	<div class="modal-body">
+      	<div class="modal-body" data-dismiss="modal">
       		<?php echo get_the_post_thumbnail($page->ID, 'modal'); ?>
       	</div><!-- .modal-body -->
   	</div><!-- .modal-dialog -->

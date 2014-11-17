@@ -47,7 +47,7 @@
 		</div><!-- end .entry-details -->
 
 		<div class="entry-summary row">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sscontent' ) ); ?>
+			<?php custom_excerpt(60); ?>
 		</div><!-- .entry-summary -->
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
