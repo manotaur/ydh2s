@@ -129,6 +129,9 @@ $(document).ready(function() {
 	$('.btn-group button').click( function() {
 		filterState();
 	});
+	$('.mc4wp-alert').click(function() {
+		$('.mc4wp-alert').fadeOut("slow");
+	})
 	$('#all-events').click( function() { // When the All Events button is clicked, navigate to all events
 		window.open("category/event/", "_self");
 	})

@@ -28,8 +28,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>;" charset="<?php bloginfo('version'); ?>" />
 	<meta name="generator" content="Wordpress <?php bloginfo('version'); ?>" />
-    <meta name="description" content="">
-	<meta name="keywords" content="">
 	
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'><!-- Roboto Font -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
