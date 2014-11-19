@@ -1,5 +1,5 @@
 <?php include('tax-terms.php')  // Adds taxonomy class names to the post, via the $post_terms variable ?>
-<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-md-4 col-sm-6 col-xs-12">	
+<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-md-3 col-sm-6 col-xs-12">	
 	<div class="flyer"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
 	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
@@ -22,6 +22,7 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-desc -->
 		
+		<!-- let's hide this section, it's not really necessary
 		<div class="entry-details row">
 			<div class="loc col-xs-5">
 				<h6>Location</h6>
@@ -35,7 +36,8 @@
 				<h6>Music by</h6>
 				<?php the_terms( $post->ID, 'djs') ?>
 			</div>
-		</div><!-- end .entry-details -->
+		</div> 
+		end .entry-details -->
 		
 		<div class="meta">
 			<!-- I don't know that we need tags anymore now that we're using taxonomies, but here's the code
@@ -80,11 +82,5 @@
 			</span>
 		</div>
 	</div><!-- .entry-info -->
-	
-	<!--
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sscontent' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'sscontent' ), 'after' => '</div>' ) ); ?>
-	</div> .entry-content -->
 
 </article><!-- #post -->

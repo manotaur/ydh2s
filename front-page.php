@@ -47,7 +47,7 @@ Template Name: Homepage
 						),
 						'category_name' => 'Pick',
 						'order' => 'ASC',
-						'posts_per_page' => 3
+						'posts_per_page' => 4
 					);
 					$the_query = new WP_Query($pickargs);
 					while ( $the_query->have_posts() ) {
@@ -105,10 +105,9 @@ Template Name: Homepage
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu">		
        						<li><a href="#" data-filter=".free2">Free</a></li>
-       						<li><a href="#" data-filter=".tenandunder, .free2">$</a></li>   
-							<li><a href="#" data-filter=".twentyandunder, .tenandunder, .free2">$$</a></li>
-							<li><a href="#" data-filter=".thirtyandunder, .twentyandunder, .tenandunder, .free2">$$$</a></li>
-							<li><a href="#" data-filter=".overthirty, .thirtyandunder, .twentyandunder, .tenandunder, .free2">$$$$</a></li>
+       						<li><a href="#" data-filter=".tenandunder, .free2">$10 or less</a></li>   
+							<li><a href="#" data-filter=".twentyandunder, .tenandunder, .free2">$20 or less</a></li>
+							<li><a href="#" data-filter=".thirtyandunder, .twentyandunder, .tenandunder, .free2">$30 or less</a></li>
  						</ul>
  					</div>												
 				</div><!-- #filter -->
@@ -116,6 +115,7 @@ Template Name: Homepage
 				<button type="button" id="all-events" class="btn btn-primary">All Events</button>
 			</div>
 			<div class="clearfix"></div>
+			<div class="posts-container">
       		<div class="posts row filter-us">
 				<?php
 					$eventArgs = array(
@@ -127,14 +127,15 @@ Template Name: Homepage
 						),
 						'category_name' => 'Event',
 						'order' => 'ASC',
-						'posts_per_page' => 6
+						'posts_per_page' => 32
 					);
 					$the_query = new WP_Query($eventArgs);
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
 						include 'post-thumb.php'; // Post a thumbnail of the event
 					} ?>
-			</div><!-- end .posts -->
+      		</div><!-- end .posts -->
+			</div><!-- end .posts-container -->
 		</div><!-- end .events -->
 								
 		<div class="row editorial">

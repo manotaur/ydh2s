@@ -65,7 +65,6 @@
       				<img src="<?php bloginfo('template_directory');?>/img/ydh2s-logo.png" class="ie-logo logo" alt="YDH2S Logo">
 	  				<h4 class="logotext">YOU DON'T HAVE 2 SETTLE</h4>
       			</a>
-
     		</div> <!-- .navbar-header -->
     		<!-- the content in .navbar-collapse will collapse into the hamburger menu -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
