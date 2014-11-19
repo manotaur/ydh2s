@@ -94,8 +94,17 @@ function thumbHide(){
 
 //this makes sure modals are as wide as the images they contain:
 function modalWidth(){
-	var $width = $(".modal-body").find("img").width();
-	$(".modal-dialog").css("width", $width);
+	$(".modal").each(function(){
+		var $width = $(".modal-body", this).find("img").width();
+		$(".modal-dialog", this).css("width", $width);
+	});
+};
+
+//Neighborhood & Price fields were overlapping on iPhone5 and older in portrait, so this puts the price field on its own line:
+function priceOnMobile(){
+	if ($(window).width() < 320){
+		$(".price").removeClass("col-xs-2").addClass("col-xs-12");
+	}
 };
 
 function checkY(){
@@ -141,5 +150,6 @@ $(document).ready(function() {
 	headerChange();
 	checkWindowResize();
 	modalWidth();
+	priceOnMobile();
 });
 

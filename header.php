@@ -70,6 +70,7 @@
     		<!-- the content in .navbar-collapse will collapse into the hamburger menu -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
+      				<li id="home-link"><a href="<?php bloginfo('url'); ?>">HOME</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/this-week">THIS WEEK</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/category/editorial">ARTICLES</a></li>

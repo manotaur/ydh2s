@@ -99,9 +99,18 @@ Template Name: Homepage
 					taxonomy_and_terms_filter('neighborhood');
 					taxonomy_and_terms_filter('genre');
 					taxonomy_and_terms_filter('venues');
-					taxonomy_and_terms_filter('price');
-					?>	
-						
+					?>					
+					<div class="btn-group">				
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Price
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">		
+       						<li><a href="#" data-filter=".free2">Free</a></li>
+       						<li><a href="#" data-filter=".tenandunder, .free2">$</a></li>   
+							<li><a href="#" data-filter=".twentyandunder, .tenandunder, .free2">$$</a></li>
+							<li><a href="#" data-filter=".thirtyandunder, .twentyandunder, .tenandunder, .free2">$$$</a></li>
+							<li><a href="#" data-filter=".overthirty, .thirtyandunder, .twentyandunder, .tenandunder, .free2">$$$$</a></li>
+ 						</ul>
+ 					</div>												
 				</div><!-- #filter -->
 				
 				<button type="button" id="all-events" class="btn btn-primary">All Events</button>
