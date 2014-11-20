@@ -60,18 +60,8 @@ Template Name: Homepage
 
 		<div class="col-xs-12 events"><!-- All the week's events -->
 			<a href="<?php bloginfo('url'); ?>/category/event/"><h3 class="section-heading event-heading row">MORE EVENTS</h3></a>
-			<?php // echo "Today is ".date(l); ?>
 			<div class="filtering col-xs-12">
-				<h4>FILTER</h4>
-				<!-- Old filters
-				<div class="btn-group" id="filter">
-					<button type="button" class="btn btn-default active" data-filter="*">All</button>
-					<button type="button" class="btn btn-default" data-filter=".Williamsburg">Williamsburg</button>
-					<button type="button" class="btn btn-default" data-filter=".Bushwick">Bushwick</button>
-					<button type="button" class="btn btn-default" data-filter=".electro">Electro</button>
-					<button type="button" class="btn btn-default" data-filter=".indie">Indie</button>
-					<button type="button" class="btn btn-default" data-filter=".Free">Free</button>
-				</div>-->			
+				<h4>FILTER</h4>		
 			
 				<div class="btn-group" id="filter">
 					<button type="button" class="btn btn-default active">

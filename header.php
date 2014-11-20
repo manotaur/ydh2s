@@ -25,6 +25,8 @@
 	?></title>
 
 	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory');?>/img/favicon.png"/>
+	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory');?>/img/you-128.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>;" charset="<?php bloginfo('version'); ?>" />
 	<meta name="generator" content="Wordpress <?php bloginfo('version'); ?>" />
