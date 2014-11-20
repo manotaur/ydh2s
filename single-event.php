@@ -41,6 +41,20 @@
 					<div class="category-term"><?php the_terms( $post->ID, 'genre', '', '', ''); ?></div>
 				</div>
 			</div><!-- end .entry-details -->
+			<div class="buy-tickets">
+				<?php 
+					if(get_field('buy_tickets_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
+						 </button>';
+					}
+					if(get_field('rsvp_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
+						</button>';
+					}
+				?>
+			</div><!-- .buy-tickets -->
 		</div><!-- end .header-info -->
 	</header><!-- .entry-header -->	
 	

@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" class="list row">
-	<div class="flyer article-image col-xs-3">
+	<div class="flyer list-thumb article-image col-xs-3">
 		<?php echo get_the_post_thumbnail($page->ID, 'list'); ?>
 	</div>
 	<div class="main col-xs-9">

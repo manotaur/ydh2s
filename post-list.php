@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" class="list row">
-	<div class="flyer col-xs-3">
-		<?php  	get_template_part('modal'); ?>
+	<div class="flyer list-thumb col-xs-3">
+		<?php get_template_part('modal'); ?>
 	</div><!-- .flyer -->
    
 	<div class="main col-xs-9">
@@ -52,5 +52,19 @@
 			$readMore = ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 			custom_excerpt(60, $readMore); ?>
 		</div><!-- .entry-summary -->
-	</div>
+			<div class="buy-tickets">
+				<?php 
+					if(get_field('buy_tickets_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
+						 </button>';
+					}
+					if(get_field('rsvp_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
+						</button>';
+					}
+				?>
+			</div><!-- .buy-tickets -->
+	</div><!-- .main -->
 </article><!-- #post-<?php the_ID(); ?> -->

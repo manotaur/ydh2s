@@ -1,5 +1,5 @@
 <?php include('tax-terms.php')  // Adds taxonomy class names to the post, via the $post_terms variable ?>
-<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-md-3 col-sm-6 col-xs-12">	
+<article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?><?php echo $thumbWidth ?>">	
 	<div class="flyer"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
 	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
@@ -71,16 +71,32 @@
 		</div><!-- .meta -->
 		
 		<div class="sharing">
-			<div>SHARE</div>
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-square fa-stack-2x"></i>
-				<a class="fa fa-facebook fa-stack-1x mediaIcon" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"></a>
-			</span>
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-square fa-stack-2x"></i>
-				<a class="fa fa-twitter fa-stack-1x mediaIcon" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
-			</span>
-		</div>
+			<div class="buy-tickets thumbnail-buttons">
+				<?php 
+					if(get_field('buy_tickets_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
+						 </button>';
+					}
+					if(get_field('rsvp_link')){
+						echo '<button type="button" class="btn btn-default">
+							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
+						</button>';
+					}
+				?>
+			</div><!-- .buy-tickets -->
+			<div class="thumbnail-buttons">
+				<div>SHARE</div>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<a class="fa fa-facebook fa-stack-1x" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"></a>
+				</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<a class="fa fa-twitter fa-stack-1x" target="_blank" href="https://twitter.com/share?text=<?php the_title(); ?>:&url=<?php the_permalink(); ?>"></a>
+				</span>
+			</div><!-- .thumbnail-buttons -->
+		</div><!-- .sharing -->
 	</div><!-- .entry-info -->
 
 </article><!-- #post -->
