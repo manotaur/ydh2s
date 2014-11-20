@@ -16,7 +16,9 @@ Template Name: Homepage
 		<div class="col-xs-12 featured"><!-- Featured Events -->
 			<a href="<?php bloginfo('url'); ?>/featured/"><h3 class="section-heading event-heading row">FEATURED EVENTS</h3></a>
 			<div class="posts row">
-				<?php			
+				<?php
+					//the $thumbWidth variable is used in post-thumb.php to determine the width of the thumb
+					$thumbWidth = ' col-sm-6 col-xs-12';			
 					$featargs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old
@@ -38,7 +40,9 @@ Template Name: Homepage
 		<div class="col-xs-12 picks"><!-- Featured Events -->
 			<a href="<?php bloginfo('url'); ?>/pick/"><h3 class="section-heading event-heading row">OUR PICKS</h3></a>
 			<div class="posts row">
-				<?php			
+				<?php
+					//the $thumbWidth variable is used in post-thumb.php to determine the width of the thumb
+					$thumbWidth = ' col-md-3 col-sm-6 col-xs-12';			
 					$pickargs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old
@@ -74,8 +78,7 @@ Template Name: Homepage
 				</div>-->			
 			
 				<div class="btn-group" id="filter">
-					<button type="button" class="btn btn-default active">
-						<a href="#" data-filter="*">All</a></button>
+					<button type="button" class="btn btn-default active single-filter" data-filter="*">All</button>
 
 					<!-- this displays each taxonomy label and its terms in the Isotope filters(see get_taxonomy and get_terms in WP codex) -->		
 					<?php 
@@ -90,7 +93,7 @@ Template Name: Homepage
  						if ( !empty( $terms ) && !is_wp_error( $terms ) ){
      						foreach ( $terms as $term ) {
      							$filter = '.' . preg_replace("/[^A-Za-z0-9 ]/", '', $term->slug);							
-       							echo '<li><a href="#" data-filter="' . $filter . '">' . $term->name . '</a></li>';   
+       							echo '<li><a href="#" class="single-filter" data-filter="' . $filter . '">' . $term->name . '</a></li>';
      						}
  						}
  						echo '</ul>';
@@ -118,6 +121,8 @@ Template Name: Homepage
 			<div class="posts-container">
       		<div class="posts row filter-us">
 				<?php
+					//the $thumbWidth variable is used in post-thumb.php to determine the width of the thumb
+					$thumbWidth = ' col-md-3 col-sm-6 col-xs-12';
 					$eventArgs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old (no more than a week upcoming hidden)

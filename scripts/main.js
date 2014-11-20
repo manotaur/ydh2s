@@ -82,12 +82,11 @@ function thumbHide(){
 	$("#home .events .entry-desc").hide();
 	$("#home .picks .entry-desc").hide();
 	$("#home .entry-details").hide();
-	$("#home .sharing").hide();
 	if ($(window).width() > 1024){
 	$("#home .entry-info").hover(function(){
-		$(this).find(".entry-desc, .entry-details, .sharing").show(400);
+		$(this).find(".entry-desc, .entry-details").show(400);
 	}, function(){
-		$(this).find(".entry-desc, .entry-details, .sharing").hide(400);
+		$(this).find(".entry-desc, .entry-details").hide(400);
 	});
 	}
 };
@@ -126,7 +125,7 @@ function isoFilter(){
 		layoutMode: 'fitRows'
 	});
 	// On click, filter whatever is in the data-filter field
-	$('#filter').on( 'click', 'a', function() {
+	$('#filter').on( 'click', '.single-filter', function() {
 		var filterValue = $(this).attr('data-filter');
 		$container.isotope({ filter: filterValue });
 		$(this).closest('.btn-group').removeClass('open');
