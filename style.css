@@ -218,7 +218,9 @@ h4.entry-author, h3.entry-address {margin-top: 0;}
 
 /* these center thumb images on listing pages- see http://stackoverflow.com/questions/14562457/center-oversized-image-in-div */
 .list-thumb {position: relative; overflow: hidden;}
-.list-thumb img{position: absolute; top: -9999px; bottom: -9999px; left: -9999px; right: -9999px; margin: auto;}
+.list-thumb .modal-thumb img{position: absolute; top: -9999px; bottom: -9999px; left: -9999px; right: -9999px; margin: auto;}
+.modal-header {background: rgba(0,0,0,0.5);}
+.modal-body {padding-top: 0;}
 
 /* Single event Page */
 .single header {padding: 0; overflow: hidden;} 

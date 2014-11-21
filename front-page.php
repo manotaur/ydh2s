@@ -97,10 +97,10 @@ Template Name: Homepage
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Price
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu">		
-       						<li><a href="#" data-filter=".free2">Free</a></li>
-       						<li><a href="#" data-filter=".tenandunder, .free2">$10 or less</a></li>   
-							<li><a href="#" data-filter=".twentyandunder, .tenandunder, .free2">$20 or less</a></li>
-							<li><a href="#" data-filter=".thirtyandunder, .twentyandunder, .tenandunder, .free2">$30 or less</a></li>
+       						<li><a href="#" class="single-filter" data-filter=".free2">Free</a></li>
+       						<li><a href="#" class="single-filter" data-filter=".tenandunder, .free2">$10 or less</a></li>   
+							<li><a href="#" class="single-filter" data-filter=".twentyandunder, .tenandunder, .free2">$20 or less</a></li>
+							<li><a href="#" class="single-filter" data-filter=".thirtyandunder, .twentyandunder, .tenandunder, .free2">$30 or less</a></li>
  						</ul>
  					</div>												
 				</div><!-- #filter -->
