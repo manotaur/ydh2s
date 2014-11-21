@@ -55,12 +55,12 @@
 			<div class="buy-tickets">
 				<?php 
 					if(get_field('buy_tickets_link')){
-						echo '<button type="button" class="btn btn-default">
-							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
+						echo '<button type="button" class="btn btn-success">
+							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">Tickets</a>
 						 </button>';
 					}
 					if(get_field('rsvp_link')){
-						echo '<button type="button" class="btn btn-default">
+						echo '<button type="button" class="btn btn-info">
 							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
 						</button>';
 					}

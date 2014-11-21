@@ -22,7 +22,7 @@ get_header(); ?>
 		</div>
 		
 		<div class="front-content">
-			<div class="col-sm-10 col-xs-12 list">
+			<div class="col-sm-10 col-xs-12 listed">
 				<?php
 					$taxonomy = strtolower($taxonomy);
 					$slug = $term->slug;

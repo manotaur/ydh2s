@@ -118,8 +118,7 @@ function filterState(){ // Selector Button on/off script
 	$(this).addClass('active').siblings().removeClass('active');
 }
 			
-function isoFilter(){
-	// Isotope setup
+function isoFilter(){ // Isotope setup
 	var $container = $('.filter-us').isotope({
 		itemSelector: '.thumb',
 		layoutMode: 'fitRows'
@@ -132,6 +131,17 @@ function isoFilter(){
 		return false;
 	});
 };
+
+function navDrop(){	// Dropdown for nav menu
+	$(".nav-drop").hover(
+		function() {
+			console.log("Hovered");
+			$("ul.drop-menu").addClass("hover-on");
+		}, function() {
+			console.log("Unhovered");
+			$("ul.drop-menu").removeClass("hover-on");
+	});
+}
 
 $(document).ready(function() {
 	$('.btn-group button').click( function() {
@@ -150,5 +160,6 @@ $(document).ready(function() {
 	checkWindowResize();
 	modalWidth();
 	priceOnMobile();
+	navDrop();
 });
 

@@ -10,8 +10,9 @@ get_header(); ?>
 	</div>
 
 	<div class="front-content">
-		<div class="col-sm-10 col-xs-12 list">
+		<div class="col-sm-10 col-xs-12 listed">
 			<?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$today = getdate();
 				$eventArgs = array(
 						'date_query'        => array(
@@ -20,7 +21,8 @@ get_header(); ?>
 							),
 						),
 					'category_name' => 'Event',
-					'order' => 'ASC'
+					'order' => 'ASC',
+					'paged' => $paged
 				);
 					$the_query = new WP_Query($eventArgs);
 					while ( $the_query->have_posts() ) {

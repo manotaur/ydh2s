@@ -45,7 +45,7 @@ get_header(); ?>
 		<?php rewind_posts(); ?>
 		
 		<div class="front-content">
-			<div class="col-xs-10 list">
+			<div class="col-xs-10 listed">
 				<?php
 					$archArgs = array(
 					//	'date_query' => array(

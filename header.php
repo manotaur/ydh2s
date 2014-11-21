@@ -71,8 +71,18 @@
     		<!-- the content in .navbar-collapse will collapse into the hamburger menu -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
-      				<li id="home-link"><a href="<?php bloginfo('url'); ?>">HOME</a></li>
-        			<li><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
+      				<li class="mobile-link"><a href="<?php bloginfo('url'); ?>">HOME</a></li>
+	  				<li class="mobile-link"><a href="<?php bloginfo('url'); ?>/featured">FEATURED</a></li>
+	  				<li class="mobile-link"><a href="<?php bloginfo('url'); ?>/pick">OUR PICKS</a></li>
+	  				<li class="mobile-link"><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
+      				<li class="nav-drop">
+      					EVENTS<span class="caret"></span>
+	  					<ul class="drop-menu" role="menu">
+	  						<li><a href="<?php bloginfo('url'); ?>/featured">FEATURED</a></li>
+	  						<li><a href="<?php bloginfo('url'); ?>/pick">OUR PICKS</a></li>
+	  						<li><a href="<?php bloginfo('url'); ?>/category/event">ALL EVENTS</a></li>
+						</ul>
+      				</li>
         			<li><a href="<?php bloginfo('url'); ?>/this-week">THIS WEEK</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/category/editorial">ARTICLES</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/about">ABOUT</a></li>

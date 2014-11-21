@@ -8,7 +8,7 @@ get_header(); ?>
 	<h1 class="page-title">Articles</h1>
 	
 	<div class="front-content">
-		<div class="col-sm-10 col-xs-12 list">
+		<div class="col-sm-10 col-xs-12 listed">
 			<?php if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
 					include 'article-list.php';

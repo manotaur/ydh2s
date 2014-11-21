@@ -63,10 +63,6 @@
 			<div class="promoters">
 				<?php the_terms( $post->ID, 'promoters', '', '', ''); ?>
 			</div>
-			<div class="days-of-the-week">
-				<?php // For now, replaced by linking the full date
-					// the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?>
-			</div>
 			<div class="clearfix"></div>
 		</div><!-- .meta -->
 		
@@ -74,12 +70,12 @@
 			<div class="buy-tickets thumbnail-buttons">
 				<?php 
 					if(get_field('buy_tickets_link')){
-						echo '<button type="button" class="btn btn-default">
-							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
+						echo '<button type="button" class="btn btn-success">
+							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">Tickets</a>
 						 </button>';
 					}
 					if(get_field('rsvp_link')){
-						echo '<button type="button" class="btn btn-default">
+						echo '<button type="button" class="btn btn-info">
 							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
 						</button>';
 					}

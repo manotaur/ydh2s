@@ -44,12 +44,12 @@
 			<div class="buy-tickets">
 				<?php 
 					if(get_field('buy_tickets_link')){
-						echo '<button type="button" class="btn btn-default">
+						echo '<button type="button" class="btn btn-success">
 							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">TICKETS</a>
 						 </button>';
 					}
 					if(get_field('rsvp_link')){
-						echo '<button type="button" class="btn btn-default">
+						echo '<button type="button" class="btn btn-info">
 							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
 						</button>';
 					}
@@ -59,7 +59,7 @@
 	</header><!-- .entry-header -->	
 	
 	<article id="post-<?php the_ID(); ?>" class="front-content col-sm-9 col-xs-12">
-		<div class="flyer col-sm-4 col-xs-12">
+		<div class="flyer col-xs-4 col-xs-12">
 			<?php get_template_part('modal'); ?>
 		</div><!-- .flyer -->
 		<div class="main col-sm-8 col-xs-12">

@@ -65,15 +65,21 @@ button:focus {outline:0px; -webkit-appearance:none;}
 .navbar-left {padding-top: 10px; float: left;}
 .navbar-right {float: left;}
 .not-found {padding-top: 20px;}
-#home-link {display: none;}
+.nav .mobile-link {display: none;}
 
-.nav-share-buttons a {font-size: 13px; color: white; float: left; clear: both; padding-bottom: 5px; width: 100%px}
+.nav-share-buttons a {font-size: 13px; color: white; float: left; clear: both; padding-bottom: 5px; width: 100%}
 .nav-share-buttons a:hover {text-decoration: underline;}
 .nav-share-buttons i {font-size: 24px; margin-top: 3px; line-height: 15px; width: 20px; float: left;}
-.nav-share-buttons div {float: right; padding-left: 5px;}
+.nav-share-buttons div {float: left; padding-left: 5px;}
 
 .navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
 .navbar-toggle {border: none; margin: 10px 0 50px 0;}
+
+.navbar-nav li.nav-drop {color: #fff; padding: 10px 15px 13px 15px;}
+ul.drop-menu {display: none; background: #000; padding: 8px 15px; margin-left: -30px; position: absolute; width: 140px;}
+ul.drop-menu.hover-on {display: block;}
+.navbar-default .nav ul.drop-menu li {padding: 5px 0 5px 0;}
+.navbar-default .nav .drop-menu li a:hover {border-radius: 0;}
 
 .fa-bars {color: white; margin-right: 20px;}
 /*.navbar-toggle .icon-bar {width: 40px; height: 5px; margin-bottom: 10px; margin-right: 20px;} don't need- using FA hamburger instead*/
@@ -120,6 +126,7 @@ article.thumb {height: 480px; float: left; position: relative; overflow: hidden;
 .flyer img {position: absolute; z-index: 1;}
 .thumb .entry-info {background: rgba(0,0,0,0.8); color: #fff; padding: 15px; z-index: 2; position: absolute; bottom: 0; width: 100%;}
 .entry-desc, h3.entry-title, .thumb .meta, .entry-details {border-bottom: 4px solid #fff; padding-bottom: 6px;}
+.meta.entry-details {padding-left: 0;}
 h3.entry-title {margin: 0 0 6px 0;}
 h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .entry-desc p {margin: 0;}
@@ -132,7 +139,9 @@ h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .thumb .meta a {color: #000;}
 .posts-container {padding-top: 20px; overflow: hidden; width: 100%; height: 980px;}
 .buy-tickets button {margin-right: 8px;}
-.sharing .buy-tickets button {margin-top: 20px;} /* adds top margin to buy/rsvp buttons on homepage thumbs */
+.sharing button, .buy-tickets button {padding: 5px;}
+.sharing button a, .buy-tickets button a {color: #fff;}
+.sharing .buy-tickets button {margin-top: 21px;} /* adds top margin to buy/rsvp buttons on homepage thumbs */
 .header-info .buy-tickets button {margin-bottom: 20px;} /* adds bottom margin to buy/rsvp buttons on single event pages */
 .thumbnail-buttons {float:left;}
 
@@ -201,9 +210,7 @@ h4.entry-author, h3.entry-address {margin-top: 0;}
 .listing .front-content, .listing .col-xs-10 {padding: 0;}
 .listing article {color: #fff;}
 .listing .main {padding-left: 8px;}
-/* No longer needed?
-.listing {margin-top: 50px;}*/
-/*.listing h5 a {padding: 2px 4px 2px 4px; margin: 0 4px 4px 0; float: left; color: #000;}*/
+.listing .listed {padding-top: 10px;}
 .listing .flyer {overflow: hidden; padding: 0; min-height: 375px;}
 .next-prev {text-align: center; color: #fff; font-size: 18px; padding: 8px;}
 .next-prev a {color: #fff; padding: 5px;}
@@ -284,6 +291,7 @@ and (orientation : portrait) {
 	.navbar-header img.logo {width: 100px; padding-top: 5px;}
 	.logotext {display: none;}
 	ul.navbar-nav {margin-top: 23px;}
+	.navbar-nav li.nav-drop {padding-top: 0px;}
 }
 
 /* iPhone */
@@ -295,6 +303,7 @@ and (orientation : portrait) {
 	.navbar {height: 63px;}
 	.navbar-left {padding-top: 5px;}
 	.navbar-header img.logo {width: 100px;}
+	.navbar-nav li.nav-drop {display: none;}
 	.logotext {display: none;}
 	.navbar-toggle {padding-top: 0;}
 	.signup {padding: 50px 10px 40px 10px;}
@@ -313,7 +322,8 @@ and (orientation : portrait) {
 
 /* iPhone <5 */
 @media screen and (device-aspect-ratio: 2/3) {
-	
+	.signup input {font-size: 13px;}
+	.signup button {font-size: 14px; width: 100px; height: 28px; background: none; float: left; border: 1px solid #fff;}
 }
 /* iPhone 6 */
 @media only screen and (-webkit-min-device-pixel-ratio : 2)
@@ -331,6 +341,7 @@ and (max-device-width : 767px)
 and (orientation : portrait) {
 	.filtering .btn-group {margin-bottom: 5px;}
 	.modal-thumb img {width: 150px; height: auto;}
+	.single .flyer {min-height: 150px;}
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -356,5 +367,5 @@ and (orientation : portrait) {
     .navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
     .collapse.in{display:block;}
     .article-image{display: none;}
-    #home-link {display: block;}
+    .nav .mobile-link {display: block;}
 }
