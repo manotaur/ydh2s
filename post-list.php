@@ -1,9 +1,9 @@
 <article id="post-<?php the_ID(); ?>" class="list row">
-	<div class="flyer list-thumb col-xs-3">
+	<div class="flyer list-thumb col-xs-12 col-sm-3">
 		<?php get_template_part('modal'); ?>
 	</div><!-- .flyer -->
    
-	<div class="main col-xs-9">
+	<div class="main col-xs-12 col-sm-9">
 		<header class="entry-header">
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			

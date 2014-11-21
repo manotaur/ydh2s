@@ -1,10 +1,10 @@
 <article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?> col-xs-12">	
-	<div class="image article-image col-xs-4">
+	<div class="image article-image col-sm-4"> <!-- the thumb image disappears on mobile & small tablet, so no need for a col-xs class -->
 		<?php echo get_the_post_thumbnail($page->ID, 'article-homepage-thumb'); ?>
 		<div class="clearfix"></div>
 	</div>
 	
-	<div class="article-info col-xs-8"> <!--.article-info is the same as .entry-info, but without the black background -->
+	<div class="article-info col-xs-12 col-sm-8"> <!--.article-info is the same as .entry-info, but without the black background -->
 		<div class="headline">
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<h5><?php the_author_link(); ?>, <?php the_date(); ?></h5>

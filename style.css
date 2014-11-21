@@ -225,6 +225,7 @@ h4.entry-author, h3.entry-address {margin-top: 0;}
 .single header h4 {color: #fff; text-shadow: 2px 2px #000; font-family: 'roboto', Helvetica, Arial, sans-serif;}
 .single .entry-summary {padding: 25px; color: #fff; max-width: 750px;}
 .single .front-content {padding: 0;}
+.single-event-desc {padding-top: 10px;}
 .category-name {float: left;}
 
 .category-term {float: left; margin: 8px; font-weight: 500;}
@@ -306,6 +307,8 @@ and (orientation : portrait) {
 	.single header h4, .category-term {font-size: 15px; margin: 4px 0 5px 5px;}
 	.single .entry-summary {padding: 8px;}
 	.front-content .thumb {height: 320px;}
+	.listing .flyer {min-height: 80px; overflow: hidden}
+	.listing .flyer img {width:100%; height: auto;}
 }
 
 /* iPhone 5/5S */
