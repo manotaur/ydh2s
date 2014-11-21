@@ -70,14 +70,10 @@
 			<div class="buy-tickets thumbnail-buttons">
 				<?php 
 					if(get_field('buy_tickets_link')){
-						echo '<button type="button" class="btn btn-success">
-							<a class="fa fa-ticket" target="_blank" href="' . get_field('buy_tickets_link') . '">Tickets</a>
-						 </button>';
+						echo '<a class="fa fa-ticket btn btn-success" target="_blank" href="' . get_field('buy_tickets_link') . '">Tickets</a>';
 					}
 					if(get_field('rsvp_link')){
-						echo '<button type="button" class="btn btn-info">
-							<a target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>
-						</button>';
+						echo '<a class="btn btn-info" target="_blank" href="' . get_field('rsvp_link') . '">RSVP</a>';
 					}
 				?>
 			</div><!-- .buy-tickets -->

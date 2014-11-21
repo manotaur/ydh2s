@@ -138,11 +138,11 @@ h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .thumb .meta {padding: 6px 0 2px 0;}
 .thumb .meta a {color: #000;}
 .posts-container {padding-top: 20px; overflow: hidden; width: 100%; height: 980px;}
-.buy-tickets button {margin-right: 8px;}
-.sharing button, .buy-tickets button {padding: 5px;}
-.sharing button a, .buy-tickets button a {color: #fff;}
-.sharing .buy-tickets button {margin-top: 21px;} /* adds top margin to buy/rsvp buttons on homepage thumbs */
-.header-info .buy-tickets button {margin-bottom: 20px;} /* adds bottom margin to buy/rsvp buttons on single event pages */
+.buy-tickets a {margin-right: 8px;}
+.sharing button, .buy-tickets a {padding: 5px;}
+.sharing button a, .buy-tickets a {color: #fff;}
+.sharing .buy-tickets a {margin-top: 21px;} /* adds top margin to buy/rsvp buttons on homepage thumbs */
+.header-info .buy-tickets a {margin-bottom: 20px;} /* adds bottom margin to buy/rsvp buttons on single event pages */
 .thumbnail-buttons {float:left;}
 
 /* Filtering */
@@ -320,6 +320,7 @@ and (orientation : portrait) {
 	.front-content .thumb {height: 320px;}
 	.listing .flyer {min-height: 80px; overflow: hidden}
 	.listing .flyer img {width:100%; height: auto;}
+	.buy-tickets {padding-bottom: 15px;}
 }
 
 /* iPhone 5/5S */
