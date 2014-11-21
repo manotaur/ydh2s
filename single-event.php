@@ -66,9 +66,9 @@
 			<!-- Google Maps embed: -->
 			<iframe class="col-xs-12" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo $venue->description; ?>&output=embed"></iframe>
 			<div class="entry-summary row">
-				<?php the_content(); // Event Description ?>
-			</div>
-		</div>
+				<div class="single-event-desc"><?php the_content(); // Event Description ?></div>
+			</div><!-- .entry summary -->
+		</div><!-- .main -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 	<div class="col-sm-3 xs-hide">
 		<?php get_sidebar(); ?>
