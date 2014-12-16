@@ -14,7 +14,7 @@ Template Name: Homepage
 
 	<div class="front-content row">
 		<div class="col-xs-12 featured"><!-- Featured Events -->
-			<a href="<?php bloginfo('url'); ?>/featured/"><h3 class="section-heading event-heading row">FEATURED EVENTS</h3></a>
+			<a href="<?php bloginfo('url'); ?>/featured/"><h3 class="section-heading event-heading row">FEATURED PICKS</h3></a>
 			<div class="posts row">
 				<?php
 					//the $thumbWidth variable is used in post-thumb.php to determine the width of the thumb
@@ -27,7 +27,7 @@ Template Name: Homepage
 						),
 						'category_name' => 'Featured',
 						'order' => 'ASC',
-						'posts_per_page' => 3
+						'posts_per_page' => 2
 					);
 					$the_query = new WP_Query($featargs);
 					while ( $the_query->have_posts() ) {
@@ -38,7 +38,7 @@ Template Name: Homepage
 			</div><!-- end .posts -->
 		</div><!-- end .featured -->
 		<div class="col-xs-12 picks"><!-- Featured Events -->
-			<a href="<?php bloginfo('url'); ?>/pick/"><h3 class="section-heading event-heading row">OUR PICKS</h3></a>
+			<a href="<?php bloginfo('url'); ?>/pick/"><h3 class="section-heading event-heading row">MORE PICKS</h3></a>
 			<div class="posts row">
 				<?php
 					//the $thumbWidth variable is used in post-thumb.php to determine the width of the thumb
@@ -46,7 +46,7 @@ Template Name: Homepage
 					$pickargs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old
-								'after' => '-23 hours'
+								'after' => '-12 hours'
 							),
 						),
 						'category_name' => 'Pick',
@@ -63,7 +63,7 @@ Template Name: Homepage
 		</div><!-- end .picks -->
 
 		<div class="col-xs-12 events"><!-- All the week's events -->
-			<a href="<?php bloginfo('url'); ?>/category/event/"><h3 class="section-heading event-heading row">MORE EVENTS</h3></a>
+			<a href="<?php bloginfo('url'); ?>/category/event/"><h3 class="section-heading event-heading row">ALL PARTIES</h3></a>
 			<div class="filtering col-xs-12">
 				<h4>FILTER</h4>		
 			
@@ -116,7 +116,7 @@ Template Name: Homepage
 					$eventArgs = array(
 						'date_query'        => array(
 							array( // Show events less than a day old (no more than a week upcoming hidden)
-								'after' => '-23 hours',
+								'after' => '-12 hours',
 								//'before' => '+1 week'
 							),
 						),
