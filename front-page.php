@@ -70,29 +70,12 @@ Template Name: Homepage
 				<div class="btn-group" id="filter">
 					<button type="button" class="btn btn-default active single-filter" data-filter="*">All</button>
 
-					<!-- this displays each taxonomy label and its terms in the Isotope filters(see get_taxonomy and get_terms in WP codex) -->		
+					<!-- this displays each taxonomy label and its terms in the Isotope filters(function is in functions.php) -->		
 					<?php 
-					function taxonomy_and_terms_filter($taxonomy_name){
-						echo '<div class="btn-group">';				
-						$taxonomy = get_taxonomy($taxonomy_name);
-						echo '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">' 
-							. $taxonomy->label . '<span class="caret"></span></button>';
-						echo '<ul class="dropdown-menu" role="menu">';
-						
-    					$terms = get_terms($taxonomy->name);
- 						if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-     						foreach ( $terms as $term ) {
-     							$filter = '.' . preg_replace("/[^A-Za-z0-9 ]/", '', $term->slug);							
-       							echo '<li><a href="#" class="single-filter" data-filter="' . $filter . '">' . $term->name . '</a></li>';
-     						}
- 						}
- 						echo '</ul>';
- 						echo '</div>';			
-					}
 					taxonomy_and_terms_filter('neighborhood');
 					taxonomy_and_terms_filter('genre');
 					taxonomy_and_terms_filter('venues');
-					?>					
+					?>
 					<div class="btn-group">				
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Price
 						<span class="caret"></span></button>

@@ -30,4 +30,29 @@ function custom_excerpt($new_length = 20, $new_more = '...') {
   $output = '<p>' . $output . '</p>';
   echo $output;
 }
+
+//this displays each taxonomy label and its terms in the Isotope filters(see get_taxonomy and get_terms in WP codex) -->		
+function taxonomy_and_terms_filter($taxonomy_name){
+	echo '<div class="btn-group">';				
+	$taxonomy = get_taxonomy($taxonomy_name);
+	
+	//create dropdown menu for each taxonomy
+	echo '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">' 
+		. $taxonomy->label . '<span class="caret"></span></button>';
+	echo '<ul class="dropdown-menu" role="menu">';
+	
+	//get the terms for the current taxonomy					
+    $terms = get_terms($taxonomy->name);
+ 	if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+ 		//loop through each term in the taxonomy
+     	foreach ( $terms as $term ) {
+     		//add a filter menu item for the term
+     		$filter = '.' . preg_replace("/[^A-Za-z0-9 ]/", '', $term->slug);							
+       		echo '<li><a href="#" class="single-filter" data-filter="' . $filter . '">' . $term->name . '</a></li>';
+		}
+ 	}
+ 	echo '</ul>';
+ 	echo '</div>';			
+}
+
 ?>

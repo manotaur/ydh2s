@@ -22,25 +22,41 @@
 							echo $venue->description;
 						}?></h4>
 				</div>
-				<div class="neighborhood nabe col-xs-12">	
-					<h4 class="category-name">Neighborhood</h4>
-					<div class="category-term"><?php the_terms( $post->ID, 'neighborhood') ?></div>
-				</div>
-				<div class="price col-xs-12">	
-					<h4 class="category-name">Price</h4>
-					<div class="category-term"><?php the_terms( $post->ID, 'price') ?></div>
-				</div>
-				<div class="djs col-xs-12"><!-- Dave removed .dj because it was adding unwanted padding -->
-					<h4 class="category-name">Music by</h4>
-					<div class="promoters category-term">
-						<?php the_terms( $post->ID, 'promoters', '', '', ''); ?>
-					</div>
-					<div class="category-term"><?php the_terms( $post->ID, 'djs', '', '', ''); ?></div>
-				</div>
-				<div class="genre col-xs-12">
-					<h4 class="category-name">Genre(s)</h4>
-					<div class="category-term"><?php the_terms( $post->ID, 'genre', '', '', ''); ?></div>
-				</div>
+				<?php if (has_term('', 'neighborhood')){
+					echo '<div class="neighborhood nabe col-xs-12">';	
+						echo '<h4 class="category-name">Neighborhood</h4>';
+						echo '<div class="category-term">';  
+							the_terms( $post->ID, "neighborhood"); 
+						echo '</div>';
+					echo '</div>';
+				}?>
+				<?php if (has_term('', 'price')){
+					echo '<div class="price col-xs-12">';	
+						echo '<h4 class="category-name">Price</h4>';
+						echo '<div class="category-term">';
+							the_terms( $post->ID, 'price');
+						echo '</div>';
+					echo '</div>';
+				}?>
+				<?php if (has_term('', 'promoters') || has_term('', 'djs')){
+					echo '<div class="djs col-xs-12">'; 
+						echo '<h4 class="category-name">Music by</h4>';
+						echo '<div class="promoters category-term">';
+							the_terms( $post->ID, 'promoters', '', '', '');
+						echo '</div>';
+						echo '<div class="category-term">';
+							the_terms( $post->ID, 'djs', '', '', '');
+						echo '</div>';
+					echo '</div>';
+				}?>
+				<?php if (has_term('', 'genre')){
+				echo '<div class="genre col-xs-12">';
+					echo '<h4 class="category-name">Genre(s)</h4>';
+					echo '<div class="category-term">';
+						the_terms( $post->ID, 'genre', '', '', '');
+					echo '</div>';
+				echo '</div>';
+				}?>
 			</div><!-- end .entry-details -->
 			<div class="buy-tickets">
 				<?php 

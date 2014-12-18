@@ -44,7 +44,7 @@ get_header(); ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">
-			<div class="col-sm-10 col-xs-12 list">
+			<div class="col-sm-10 col-xs-12 listed">
 				<?php _e('<p>Sorry, no posts matched your criteria</p>');
 	endif; ?>
 			</div>		
