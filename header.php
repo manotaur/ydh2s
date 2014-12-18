@@ -87,20 +87,43 @@
         			<li><a href="<?php bloginfo('url'); ?>/category/editorial">ARTICLES</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/about">ABOUT</a></li>
         			<li><a href="<?php bloginfo('url'); ?>/newsletter">NEWSLETTER</a></li> 
-       			    <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>          	
+       			    <li><a href="<?php bloginfo('url'); ?>/contact">CONTACT</a></li>  
+       			    <li class="modal-signup-button">
+						<a href="#" data-toggle="modal" class="signup-link" data-target=".mailing-list-modal">
+							<i class="fa fa-envelope fa-lg"></i>
+						</a>
+						<!-- Modal -->
+						<div class="modal fade mailing-list-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  							<div class="modal-dialog">
+      							<div class="modal-header">
+        							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+      							</div><!-- .modal-header -->
+      							<div class="mailing-list-modal-body">
+									<div class="signup">
+										<p>Join our mailing list and stay up to date on all the best dance parties in Brooklyn.</p>
+										<div class="col-md-3 col-xs-0"></div>
+										<label for="mc4wp_email"></label>
+										<div class="col-md-4 col-xs-7">
+											<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Join our Mailing List" required>
+										</div>
+										<button>SIGN UP<input type="submit" /></button>
+									</div><!-- .signup -->
+      							</div><!-- .mailing-list-modal-body -->
+  							</div><!-- .modal-dialog -->
+						</div><!-- .modal -->
+					</li>        	
       			</ul>
-      			
-	  			<div class="nav-share-buttons navbar-right">
+
+	  			<div class="navbar-right nav-share-buttons">
     				<a href="http://www.facebook.com/DontSettleBK" target="_blank">
 						<i class="fa fa-facebook fa-1x mediaIcon"></i>
-						<div>DontSettleBK</div>
+						<div class="social-button-text">DontSettleBK</div>
    					</a>
    					<a href="http://twitter.com/YDH2S" target="_blank">
 						<i class="fa fa-twitter fa-1x mediaIcon"></i>
-						<div>@YDH2S</div>
+						<div class="social-button-text">@YDH2S</div>
    					</a>
-				</div><!-- .share-buttons -->
-      			
+				</div><!-- .nav-share-buttons -->	
     	  	</div><!-- /.navbar-collapse -->
     	</div><!-- .row -->
   		</div><!-- /.container -->

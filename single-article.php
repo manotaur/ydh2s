@@ -10,8 +10,14 @@
 			<div class="main col-sm-9 col-xs-12">
 				<div class="entry-summary row">
 					<?php the_content(); // Event Description ?>
-				</div>
-			</div>
+					<div class="meta">
+						<!-- Tags only, since this is an article post -->
+						<div class="tags">
+							<?php the_tags("",""); ?>
+						</div><!-- .tags -->
+					</div><!-- .meta -->
+				</div><!-- .entry-summary -->
+			</div><!-- .main -->
 			<div class="col-sm-3 xs-hide"><?php get_sidebar('article'); ?></div>
 		</article><!-- end article -->
 

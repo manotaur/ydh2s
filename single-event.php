@@ -10,7 +10,8 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			
 			<h3><div class="days-of-the-week"><?php the_terms( $post->ID, 'dayoftheweek', '', '', ''); ?></div>
-				<?php echo get_post_time('l, F j'); ?></h3>
+				<?php echo get_post_time('l, F j g:i a'); ?></h3>
+				
 		
 			<div class="entry-details meta row">
 				<div class="venue loc col-xs-12">

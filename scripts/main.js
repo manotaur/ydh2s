@@ -23,15 +23,18 @@ function headerChange(){
 					paddingTop: "20px"
 					}, 1000);
 				$(".logo").animate({
-					width: "100px",
+					width: "100px"
 					}, 1000);
 				$(".navbar-header").animate({
 					paddingTop: "60px"
 					}, 1000);
 				$(".logotext").hide();
-				$(".nav-share-buttons").hide(1000);
+				$(".nav-share-buttons").animate({
+					paddingTop: "65px"
+					}, 1000);
 				$("nav").removeClass("expanded-header");
 				$("nav").addClass("collapsed-header");
+				$(".signup-link").css("visibility", "visible");
 			} else if ($("nav").hasClass("collapsed-header") && ($(window).scrollTop() < 50)){
 				$(".navbar").animate({
 					marginTop: "0"
@@ -52,9 +55,12 @@ function headerChange(){
 					paddingTop: "0px"
 					}, 1000);
 				$(".logotext").show(1000);
-				$(".nav-share-buttons").show(1000);
+				$(".nav-share-buttons").animate({
+					paddingTop: "40px"
+					}, 1000);
 				$("nav").removeClass("collapsed-header");				
 				$("nav").addClass("expanded-header");
+				$(".signup-link").css("visibility", "hidden");
 			}
 		}
 	});

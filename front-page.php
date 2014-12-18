@@ -21,8 +21,8 @@ Template Name: Homepage
 					$thumbWidth = ' col-sm-6 col-xs-12';			
 					$featargs = array(
 						'date_query'        => array(
-							array( // Show events less than a day old
-								'after' => '-23 hours'
+							array( // Show events less than 6 hours old
+								'after' => '-6 hours'
 							),
 						),
 						'category_name' => 'Featured',
@@ -45,8 +45,8 @@ Template Name: Homepage
 					$thumbWidth = ' col-md-3 col-sm-6 col-xs-12';			
 					$pickargs = array(
 						'date_query'        => array(
-							array( // Show events less than a day old
-								'after' => '-12 hours'
+							array( // Show events less than 6 hours old
+								'after' => '-6 hours'
 							),
 						),
 						'category_name' => 'Pick',
@@ -105,7 +105,7 @@ Template Name: Homepage
  					</div>												
 				</div><!-- #filter -->
 				
-				<button type="button" id="all-events" class="btn btn-primary">All Events</button>
+				<button type="button" id="all-events" class="btn btn-primary">View All Events</button>
 			</div>
 			<div class="clearfix"></div>
 			<div class="posts-container">
@@ -115,8 +115,8 @@ Template Name: Homepage
 					$thumbWidth = ' col-md-3 col-sm-6 col-xs-12';
 					$eventArgs = array(
 						'date_query'        => array(
-							array( // Show events less than a day old (no more than a week upcoming hidden)
-								'after' => '-12 hours',
+							array( // Show events less than 6 hours old (no more than a week upcoming hidden)
+								'after' => '-6 hours',
 								//'before' => '+1 week'
 							),
 						),

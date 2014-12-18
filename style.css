@@ -51,8 +51,12 @@ a:link {text-decoration: none;}
 
 .ie-logo {display: none;}
 /* CSS BY DAVE IS BELOW */
-/*this removes a blue outline that appeared around the hamburger after it was clicked in Chrome*/
+/*these remove a blue outline that appeared around the hamburger and email signup button (in collapsed header) after being clicked in Chrome*/
 button:focus {outline:0px; -webkit-appearance:none;}
+.signup-link:focus {outline:0px; -webkit-appearance:none;}
+
+/*this prevents the signup button in the collapsed header from turning gray */
+.navbar-default .navbar-nav>li>.signup-link:focus {color: white;}
 
 .navbar {background: black; border: none; height: 117px;}
 .navbar h6 {margin: 4px 0 0 0;}
@@ -67,10 +71,20 @@ button:focus {outline:0px; -webkit-appearance:none;}
 .not-found {padding-top: 20px;}
 .nav .mobile-link {display: none;}
 
+
 .nav-share-buttons a {font-size: 13px; color: white; float: left; clear: both; padding-bottom: 5px; width: 100%}
 .nav-share-buttons a:hover {text-decoration: underline;}
 .nav-share-buttons i {font-size: 24px; margin-top: 3px; line-height: 15px; width: 20px; float: left;}
 .nav-share-buttons div {float: left; padding-left: 5px;}
+.signup-link{visibility: hidden;}
+.mailing-list-modal-body{background-color: black;}
+
+/* this is needed for the signup modal in the header to work */ 
+/* otherwise the default Bootstrap CSS breaks it, since the modal is inside a fixed header */
+/* see http://stackoverflow.com/questions/18580203/bootstrap-modal-window-is-grayed-out */
+.modal-backdrop {
+    z-index: 1020;
+}
 
 .navbar-collapse.in, .navbar-collapse.collapsing {position: absolute; background: black; top: 100%; width: 150px; padding-bottom: 10px;}
 .navbar-toggle {border: none; margin: 10px 0 50px 0;}
@@ -103,8 +117,9 @@ input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 /* Mailchimp for Wordpress alert styling */
 .signup .mc4wp-success {background-color: rgba(0,0,0,0.7); color: #fff; position: absolute; top: 40px;}
 
-/* CSS for the modal button: */
+/* CSS for the modal close buttons: */
 .close, .modal-title {color: white; opacity: 1;}
+.mailing-list-modal .close{margin-top: -10px;}
 
 .modal-body {padding-left: 0;}
 
@@ -130,6 +145,7 @@ article.thumb {height: 480px; float: left; position: relative; overflow: hidden;
 h3.entry-title {margin: 0 0 6px 0;}
 h3.entry-title a {color: #fff; text-transform: uppercase; font-size: 20px;}
 .entry-desc p {margin: 0;}
+.entry-desc a {color: white;}
 .entry-details {padding: 9px;}
 .entry-details h6 {text-transform: uppercase; font-size: 10px; letter-spacing: 1px; font-weight: bold; margin: 1px;}
 .entry-details a {color: #fff;}

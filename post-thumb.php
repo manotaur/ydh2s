@@ -1,6 +1,10 @@
 <?php include('tax-terms.php')  // Adds taxonomy class names to the post, via the $post_terms variable ?>
 <article id="post-<?php the_ID(); ?>" class="thumb <?php echo $post_terms ?><?php echo $thumbWidth ?>">	
-	<div class="flyer"><?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?></div>
+	<div class="flyer">
+		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+			<?php echo get_the_post_thumbnail($page->ID, 'category-thumb'); ?>
+		</a>
+	</div>
 	<div class="entry-info">
 		<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 		<div class="row">
@@ -18,8 +22,10 @@
 			</div><!-- .day-date -->
 		</div><!-- .row -->
 		<div class="entry-desc event-desc">
-			<?php custom_excerpt(20); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
+			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'sscontent' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+				<?php custom_excerpt(20); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:'), 'after' => '</div>' ) ); ?>
+			</a>
 		</div><!-- .entry-desc -->
 		
 		<!-- let's hide this section, it's not really necessary
