@@ -131,6 +131,7 @@ h3.event-heading {text-align: center; height: 112px; background: url('img/alt-di
 .signup input {height: 40px; border: 1px solid #424242; border-radius: 5px; -moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); -webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5); box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);}
 .signup button, .all-events a {width: 134px; height: 39px; background: url('img/btn-signup.png') no-repeat; color: #fff; padding-top: 1px; border: none; float: left; margin-left: 20px;}
 .signup input[type="submit"] {opacity: 0;}
+.mailing-list-modal-body .signup button {margin-left: 45px;} /* extra margin-left needed for the signup button in the modal */
 
 .front-content {border-top: 1px solid #ccc; background: #161616; padding: 0 40px 0 40px;}
 
@@ -220,6 +221,8 @@ footer .credits a:hover {text-decoration: underline;}
 .meta .djs a {background: aqua;}
 .meta .promoters a {background: #4cadff;}
 .day-date a {background: #ff2527; margin-bottom: 12px;}
+
+.no-events-message {color: #fff; padding-left: 8px;}
 
 /* Listings Pages */
 .signup, .page-header h1, h1.page-title, h1.entry-title, h4.entry-author, h3.entry-address {color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);}

@@ -37,10 +37,18 @@ get_header(); ?>
 						$taxonomy => $slug
 					);
 					$the_query = new WP_Query($taxArgs);
+					$counter = 0;
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
 						include 'post-list.php'; 
+						$counter++; // counts the number of posts. if it's 0, the no-events-message is shown
 					} ?>
+					
+					<?php if ($counter == 0) {
+						echo '<div class="no-events-message">Sorry, there are no upcoming events in this genre.</div>';
+						}
+					?>
+					
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">

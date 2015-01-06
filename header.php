@@ -100,7 +100,7 @@
       							</div><!-- .modal-header -->
       							<div class="mailing-list-modal-body">
 									<div class="signup">
-										<p>Join our mailing list and stay up to date on all the best dance parties in Brooklyn.</p>
+										<p>Join our mailing list and stay up to date on all the best</p><p>dance parties in Brooklyn.</p>
 										<div class="col-md-3 col-xs-0"></div>
 										<label for="mc4wp_email"></label>
 										<div class="col-md-4 col-xs-7">
