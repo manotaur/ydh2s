@@ -51,11 +51,12 @@
 						echo '</div>';
 					echo '</div>';
 				}?>
-				<?php if (has_term('', 'genre')){
+				<?php if (has_term('', 'genre') || has_term('', 'subgenre')){
 				echo '<div class="genre col-xs-12">';
 					echo '<h4 class="category-name">Genre(s)</h4>';
 					echo '<div class="category-term">';
 						the_terms( $post->ID, 'genre', '', '', '');
+						the_terms( $post->ID, 'subgenre', '', '', '');
 					echo '</div>';
 				echo '</div>';
 				}?>

@@ -23,23 +23,9 @@
 			<aside>			
 			<!-- this displays each taxonomy label and its terms (see get_taxonomy and get_terms in WP codex) -->		
 			<?php 
-			function taxonomy_and_terms($taxonomy_name){
-				$taxonomy = get_taxonomy($taxonomy_name);
-    			echo '<h3>' . $taxonomy->label . '</h3>';
-    			$terms = get_terms($taxonomy->name, array( 'hide_empty' => 0));
-    			//foreach ($terms as $term) {
-    			//	echo $term->name;	    			
-    			//}
- 				if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-     				echo "<ul>";
-     				foreach ( $terms as $term ) {
-       					echo "<li><a href='" . get_term_link($term,$terms) . "'>" . $term->name . "</a></li>";    
-     				}
-     				echo "</ul>";
- 				}			
-			}
 			taxonomy_and_terms('neighborhood');
 			taxonomy_and_terms('genre');
+			terms_only('subgenre');
 			taxonomy_and_terms('price');
 			taxonomy_and_terms('venues');
 			taxonomy_and_terms('djs');

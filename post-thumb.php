@@ -58,7 +58,9 @@
 				<?php the_terms( $post->ID, 'neighborhood', '', '', ''); ?>
 			</div>
 			<div class="genre">
-				<?php the_terms( $post->ID, 'genre', '', '', ''); ?>
+				<?php the_terms( $post->ID, 'genre', '', '', '');
+					the_terms( $post->ID, 'subgenre', '', '', ''); 
+				?>
 			</div>
 			<div class="price">
 				<?php the_terms( $post->ID, 'price', '', '', ''); ?>

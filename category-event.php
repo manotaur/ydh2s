@@ -16,8 +16,8 @@ get_header(); ?>
 				$today = getdate();
 				$eventArgs = array(
 						'date_query'        => array(
-							array( // Show events less than a day old
-								'after' => '-1 day'
+							array( // Show events less than 6 hours old
+								'after' => '-6 hours'
 							),
 						),
 					'category_name' => 'Event',

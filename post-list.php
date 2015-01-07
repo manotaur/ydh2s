@@ -42,7 +42,8 @@
 			</div>
 			<div class="genre col-xs-12">
 				<h6>Genre(s)</h6>
-				<?php the_terms( $post->ID, 'genre', '', '', ''); ?>
+				<?php the_terms( $post->ID, 'genre', '', '', '');
+					the_terms( $post->ID, 'subgenre', '', '', ''); ?>
 			</div>
 		</div><!-- end .entry-details -->
 

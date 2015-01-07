@@ -46,11 +46,28 @@ get_header(); ?>
 		
 		<div class="front-content">
 			<div class="col-sm-10 col-xs-12 listed">
-				<?php
-					
-					while ( have_posts() ) : the_post();
-						include 'post-list.php'; ?>
-				<?php endwhile ?>
+			<?php
+				$category = get_term_by('name', single_cat_title('',false), 'category'); //get the category
+				$category_slug = $category->slug; // get the slug for the category
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$today = getdate();
+				$eventArgs = array(
+						'date_query'        => array(
+							array( // Show events less than 6 hours old
+								'after' => '-6 hours'
+							),
+						),
+					'category_name' => 'Event',
+					'order' => 'ASC',
+					'paged' => $paged
+				);
+					$the_query = new WP_Query($eventArgs);
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+							if ( in_category( $category_slug )) { // include a post if it's in the category
+								include 'post-list.php'; 
+							}
+					} ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
 	<?php else : ?>
 		<div class="front-content">
