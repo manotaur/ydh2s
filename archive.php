@@ -59,7 +59,8 @@ get_header(); ?>
 						),
 					'category_name' => 'Event',
 					'order' => 'ASC',
-					'paged' => $paged
+					'paged' => $paged,
+					'posts_per_page' => -1 // events further in the future don't show up without this
 				);
 					$the_query = new WP_Query($eventArgs);
 					while ( $the_query->have_posts() ) {
@@ -69,6 +70,7 @@ get_header(); ?>
 							}
 					} ?>
 				<div class="next-prev"><p><?php posts_nav_link(); ?></p></div>
+			
 	<?php else : ?>
 		<div class="front-content">
 			<div class="col-sm-10 col-xs-12 list">
