@@ -19,7 +19,7 @@
 				
 				<?php
 				$newsletterArgs = array(						
-					'category_name' => 'newsletter'
+					'category_name' => 'newsletters'
 				);
 				// The Query
 				$the_query = new WP_Query( $newsletterArgs );

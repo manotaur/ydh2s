@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="col-sm-9 col-xs-12">
 	
 			<?php $newsargs = array(
-				'category_name' => 'newsletter',
+				'category_name' => 'newsletters',
 				'posts_per_page' => 1
 				);
 				$the_query = new WP_Query($newsargs);
